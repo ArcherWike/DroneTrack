@@ -1,0 +1,12 @@
+### DotnetCore ###
+# .NET Core build folders
+bin/
+obj/
+
+## Visual Studio ##
+.vs/
+*.user
+*.suo
+*.log
+*.bak
+*.tmp
