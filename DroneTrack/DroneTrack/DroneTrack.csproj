@@ -14,4 +14,10 @@
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3965-prerelease" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Source\map.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

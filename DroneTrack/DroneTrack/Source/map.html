@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        #map {
+            height: 100vh;
+            width: 100%;
+            margin: 0;
+            background: transparent !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        var map = L.map('map').setView([52.23, 21.01], 6); // Środek Polski
+
+        function createDroneIconHtml(color) {
+
+            const svg = `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.021 39.957" width="40px" height="40px">
+            <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="12" cy="12" rx="8" ry="8" />
+            <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="28" cy="12" rx="8" ry="8" />
+            <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="12" cy="28" rx="8" ry="8" />
+            <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="28" cy="28" rx="8" ry="8" />
+            </svg>`;
+
+            return svg.replace(/\s+/g, ' ').trim();
+        }
+
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            subdomains: 'abcd',
+            maxZoom: 20
+        }).addTo(map);
+
+
+        function addMarker(id, lat, lng, text) {
+            console.log("JS otrzymał polecenie dodania markera:", id, lat, lng);
+
+            let marker = L.marker([lat, lng], {
+                icon: droneIcon,           
+                databaseId: id             
+            }).addTo(map);
+
+
+            marker.bindPopup("Baza ID: " + id);
+
+            console.log("Dodano marker o ID: " + id); // DevTools
+        }
+
+
+        function highlightMarkers(activeIds) {
+            console.log("Otrzymano ID do podświetlenia:", activeIds);
+
+            map.eachLayer(function (layer) {
+                if (layer instanceof L.Marker && layer.options.databaseId) {
+                    const isSelected = activeIds.includes(Number(layer.options.databaseId));
+                    const newColor = isSelected ? 'red' : 'gray';
+                    layer.setIcon(L.divIcon({ html: createDroneIconHtml(newColor), className: '' }));
+                }
+            });
+        }
+
+
+        map.on('click', function (e) {
+            var lat = e.latlng.lat;
+            var lng = e.latlng.lng;
+
+
+            var data = {
+                lat: lat,
+                lng: lng,
+                radius: 0.0,
+                action: "map_click"
+            };
+            window.chrome.webview.postMessage({ type: "NEW_MARKER", data: data });
+        });
+
+
+        let filterCircle;
+
+        map.on('mousedown', function (e) {
+            return;
+
+            if (e.originalEvent.button === 2) {
+
+
+                map.dragging.disable();
+
+
+
+                if (filterCircle) map.removeLayer(filterCircle);
+                filterCircle = L.circle(e.latlng, { radius: 0, color: 'red' }).addTo(map);
+
+                map.on('mousemove', onMouseMove);
+            }
+        });
+
+        function onMouseMove(e) {
+            if (filterCircle) {
+                let radius = map.distance(filterCircle.getLatLng(), e.latlng);
+                filterCircle.setRadius(radius);
+            }
+        }
+
+        map.on('mouseup', function (e) {
+            if (e.originalEvent.button === 2) {
+
+                map.dragging.enable();
+
+                map.off('mousemove', onMouseMove);
+
+                let data = {
+                    lat: filterCircle.getLatLng().lat,
+                    lng: filterCircle.getLatLng().lng,
+                    radius: filterCircle.getRadius()
+                };
+                window.chrome.webview.postMessage({ type: "SPATIAL_FILTER", data: data });
+            }
+        });
+
+
+
+
+
+
+
+        map.getContainer().addEventListener('contextmenu', e => e.preventDefault());
+    </script>
+</body>
+</html>
