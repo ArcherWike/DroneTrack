@@ -43,15 +43,11 @@ namespace DroneTrack.Source.Elements
                 Dispatcher.Invoke(() =>
                 {
                     var culture = System.Globalization.CultureInfo.InvariantCulture;
-                    string lat = m.Lat.ToString(culture);
-                    string lng = m.Lng.ToString(culture);
-
-                    string script = $"addMarker({m.DroneId}, {lat}, {lng});";
-
+                    string script = $"addMarker({m.DroneId}, {m.Lat.ToString(culture)}, {m.Lng.ToString(culture)});";
                     MapView.CoreWebView2.ExecuteScriptAsync(script);
                 });
             });
-        
+
 
             string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
             string htmlPath = System.IO.Path.Combine(baseDirectory, "Source", "map.html");

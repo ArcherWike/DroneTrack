@@ -74,7 +74,7 @@ namespace DroneTrack.Source.ViewModels
                 MessageBox.Show("Czas trwania lotu musi być większy niż 5 minut.", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-            if (_delayMinutes <= 0)
+            if (_delayMinutes < 0)
             {
                 MessageBox.Show("Minimalne opóźnienie startu to 0 minut.", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;

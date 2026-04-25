@@ -37,11 +37,11 @@
         }).addTo(map);
 
 
-        function addMarker(id, lat, lng, text) {
+        function addMarker(id, lat, lng) {
             console.log("JS otrzymał polecenie dodania markera:", id, lat, lng);
 
             let marker = L.marker([lat, lng], {
-                icon: droneIcon,           
+                //icon: droneIcon,      //TODO: drone icon don't work     
                 databaseId: id             
             }).addTo(map);
 
