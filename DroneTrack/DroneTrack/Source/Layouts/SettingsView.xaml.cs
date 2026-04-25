@@ -16,8 +16,11 @@ using System.Windows.Shapes;
 namespace DroneTrack.Source.Layouts
 {
     /// <summary>
-    /// Interaction logic for SettingsView.xaml
+    /// Klasa reprezentująca widok ustawień aplikacji (SettingsView).
     /// </summary>
+    /// Główne funkcjonalności:
+    /// - Wyświetlanie i modyfikacja ustawień aplikacji, takich jak konfiguracja bazy danych, preferencje użytkownika itp.
+    /// - Zarządzenie flotą za pomocą interaktywnego formularza
     public partial class SettingsView : UserControl
     {
         public SettingsView()
