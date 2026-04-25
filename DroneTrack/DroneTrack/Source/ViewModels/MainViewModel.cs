@@ -9,36 +9,39 @@ using CommunityToolkit.Mvvm.Input;
 
 using DroneTrack.Source.ViewModels;
 using DroneTrack.Source.Layouts;
+using DroneTrack.Source.Data;
 
 namespace DroneTrack.Source.ViewModels
 {
     public partial class MainViewModel : ObservableObject
     {
+        private readonly DatabaseService _databaseService = new DatabaseService();
+
         // Obiekty widoków są tworzone raz i trzymane w pamięci
-        private readonly ManagementViewModel _managementVM = new ManagementViewModel();
-        private readonly UserViewModel _userVM = new UserViewModel();
-        private readonly SettingsViewModel _settingsVM = new SettingsViewModel();
+        private readonly ManagementViewModel _managementVM;
+        private readonly SettingsViewModel _settingsVM;
 
         [ObservableProperty]
         private object _currentView;
 
         public MainViewModel()
         {
-            _currentView = _managementVM; // Widok startowy
+            _databaseService = new DatabaseService();
+            _managementVM = new ManagementViewModel(_databaseService);
+            _settingsVM = new SettingsViewModel(_databaseService);
+            _currentView = _managementVM;
         }
 
         [RelayCommand]
         private void Navigate(string destination)
         {
-            if(destination == "Management") CurrentView = new ManagementViewModel();
-            else if (destination == "User") CurrentView = new UserViewModel();
-            //CurrentView = destination switch
-            //{
-            //    "Management" => _managementVM,
-            //    "User" => _userVM,
-            //    "Settings" => _settingsVM,
-            //    _ => _managementVM
-            //};
+            CurrentView = destination switch
+            {
+                "Management" => (object)_managementVM,
+                "User" => new UserViewModel(_databaseService),
+                "Settings" => _settingsVM,
+                _ => _managementVM
+            };
         }
     }
 }

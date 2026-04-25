@@ -1,12 +1,13 @@
 ﻿<UserControl x:Class="DroneTrack.Source.Layouts.UserView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DroneTrack.Source.Layouts"
              mc:Ignorable="d" 
+             xmlns:elements="clr-namespace:DroneTrack.Source.Elements"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <elements:Map></elements:Map>
     </Grid>
 </UserControl>

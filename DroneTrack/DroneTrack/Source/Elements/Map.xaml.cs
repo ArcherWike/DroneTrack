@@ -22,7 +22,7 @@ using Microsoft.Web.WebView2.Core;
 namespace DroneTrack.Source.Elements
 {
     /// <summary>
-    /// Interaction logic for Map.xaml
+    /// klasa hostująca komponent WebView2, zarządza dwukierunkową komunikacją między logiką C# a mapą JavaScript
     /// </summary>
     public partial class Map : UserControl
     {
@@ -36,14 +36,14 @@ namespace DroneTrack.Source.Elements
         {
             await MapView.EnsureCoreWebView2Async(null);
 
-            MapView.CoreWebView2.WebMessageReceived += OnMapClick;
+            MapView.CoreWebView2.WebMessageReceived += WebMessageReceived;
 
             WeakReferenceMessenger.Default.Register<AddMarkerMessage>(this, (r, m) =>
             {
                 Dispatcher.Invoke(() =>
                 {
                     var culture = System.Globalization.CultureInfo.InvariantCulture;
-                    string script = $"addMarker({m.DroneId}, {m.Lat.ToString(culture)}, {m.Lng.ToString(culture)});";
+                    string script = $"addMarker({m.DroneId}, {m.Lat.ToString(culture)}, {m.Lng.ToString(culture)}, {m.DurationMinutes.ToString(culture)});";
                     MapView.CoreWebView2.ExecuteScriptAsync(script);
                 });
             });
@@ -55,27 +55,37 @@ namespace DroneTrack.Source.Elements
             MapView.CoreWebView2.Navigate(new Uri(htmlPath).AbsoluteUri);
         }
 
-        private void OnMapClick(object sender, CoreWebView2WebMessageReceivedEventArgs e)
+        private void WebMessageReceived(object sender, CoreWebView2WebMessageReceivedEventArgs e)
         {
             try
             {
                 string json = e.WebMessageAsJson;
                 var message = JsonSerializer.Deserialize<MapMessage>(json);
 
+                if (message?.type == "MAP_READY")
+                {
+                    WeakReferenceMessenger.Default.Send(new MapReadyMessage());
+                }
+
                 if (message?.type == "NEW_MARKER")
                 {
-                    double lat = message.data.lat;
-                    double lng = message.data.lng;
-
-                    WeakReferenceMessenger.Default.Send(new MapClickedMessage(lat, lng));
-
-                    System.Diagnostics.Debug.WriteLine($"Mapa wysłała wiadomość: {lat}, {lng}");
+                    AddNewMarker(message);
                 }
             }
             catch (Exception ex)
             {
                 System.Diagnostics.Debug.WriteLine($"Błąd Mapy: {ex.Message}");
             }
+        }
+
+        private void AddNewMarker(MapMessage message)
+        {
+            double lat = message.data.lat;
+            double lng = message.data.lng;
+
+            WeakReferenceMessenger.Default.Send(new MapClickedMessage(lat, lng));
+
+            System.Diagnostics.Debug.WriteLine($"Mapa wysłała wiadomość: {lat}, {lng}");
         }
     }
 }

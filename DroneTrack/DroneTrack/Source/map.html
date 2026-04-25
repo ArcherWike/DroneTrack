@@ -20,12 +20,12 @@
         function createDroneIconHtml(color) {
 
             const svg = `
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.021 39.957" width="40px" height="40px">
-            <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="12" cy="12" rx="8" ry="8" />
-            <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="28" cy="12" rx="8" ry="8" />
-            <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="12" cy="28" rx="8" ry="8" />
-            <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="28" cy="28" rx="8" ry="8" />
-            </svg>`;
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.021 39.957" width="40px" height="40px">
+                <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="12" cy="12" rx="8" ry="8" />
+                <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="28" cy="12" rx="8" ry="8" />
+                <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="12" cy="28" rx="8" ry="8" />
+                <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="28" cy="28" rx="8" ry="8" />
+                </svg>`;
 
             return svg.replace(/\s+/g, ' ').trim();
         }
@@ -37,18 +37,66 @@
         }).addTo(map);
 
 
-        function addMarker(id, lat, lng) {
+        function addMarker(id, lat, lng, durationMinutes) {
             console.log("JS otrzymał polecenie dodania markera:", id, lat, lng);
 
+            let totalLeftSeconds = durationMinutes * 60;
+            let secondsLeft = 0;
+            let timerInterval = null;
+
             let marker = L.marker([lat, lng], {
-                //icon: droneIcon,      //TODO: drone icon don't work     
-                databaseId: id             
+                //icon: droneIcon,      //TODO: drone icon don't work
+                databaseId: id
             }).addTo(map);
 
+            const backgroundTimer = setInterval(() => {
+                totalLeftSeconds--;
+                if (totalLeftSeconds <= 0) {
+                    clearInterval(backgroundTimer);
+                    stopDisplayTimer();
+                    map.removeLayer(marker);
+                }
+            }, 1000);
 
-            marker.bindPopup("Baza ID: " + id);
+            function getPopupText() {
+                let mins = Math.floor(totalLeftSeconds / 60);
+                let secs = totalLeftSeconds % 60;
+                let timeStr = `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+                return `<b>Dron ID:</b> ${id}<br/><b>Czas:</b> ${timeStr}`;
+            }
 
-            console.log("Dodano marker o ID: " + id); // DevTools
+            function updatePopup()
+            {
+                if (timerInterval)
+                {
+                    marker.setPopupContent(getPopupText());
+                    console.log(`Update dymka dla drona ${id}`);
+                }
+            }
+
+            function startDisplayTimer()
+            {
+                updatePopup();
+                timerInterval = setInterval(updatePopup, 1000);
+            }
+
+            function stopDisplayTimer()
+            {
+                if (timerInterval) {
+                    clearInterval(timerInterval);
+                    timerInterval = null;
+                }
+            }
+
+            marker.on('popupopen', function () {
+                startDisplayTimer();
+            });
+
+            marker.on('popupclose', function () {
+                stopDisplayTimer();
+            });
+
+            marker.bindPopup(getPopupText()).openPopup();
         }
 
 
@@ -128,7 +176,9 @@
 
 
 
-        map.getContainer().addEventListener('contextmenu', e => e.preventDefault());
+        //map.getContainer().addEventListener('contextmenu', e => e.preventDefault());
+
+        window.chrome.webview.postMessage({ type: "MAP_READY" });
     </script>
 </body>
 </html>

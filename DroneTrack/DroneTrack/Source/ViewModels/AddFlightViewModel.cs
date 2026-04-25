@@ -69,9 +69,9 @@ namespace DroneTrack.Source.ViewModels
                 return;
             }
 
-            if (_durationMinutes <= 5)
+            if (_durationMinutes <= 0)
             {
-                MessageBox.Show("Czas trwania lotu musi być większy niż 5 minut.", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Czas trwania lotu musi być większy niż 0 minut.", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             if (_delayMinutes < 0)
@@ -103,7 +103,7 @@ namespace DroneTrack.Source.ViewModels
             db.FlightLogs.Add(newFlight);
             db.SaveChanges();
 
-            WeakReferenceMessenger.Default.Send(new AddMarkerMessage(SelectedDrone.Id, _lat, _lng));
+            WeakReferenceMessenger.Default.Send(new AddMarkerMessage(SelectedDrone.Id, _lat, _lng, _durationMinutes));
 
             window.DialogResult = true;
             window.Close();
