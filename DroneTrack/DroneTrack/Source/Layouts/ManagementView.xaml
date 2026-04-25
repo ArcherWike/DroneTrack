@@ -32,7 +32,8 @@
             <Border Grid.Column="0" Background="White" BorderBrush="#DDD" BorderThickness="0,0,1,0">
                 <StackPanel>
                     <TextBlock Text="Drones List" FontWeight="Bold" Margin="10"/>
-                    <ListBox ItemsSource="{Binding AllDrones}" />
+                    <ListBox ItemsSource="{Binding AllDrones}"
+                             DisplayMemberPath="ModelType"/>
                     <Button Content="Clear Filters" Margin="10"/>
                 </StackPanel>
             </Border>
