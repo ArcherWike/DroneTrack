@@ -35,12 +35,14 @@
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                 <RadioButton Content="MANAGEMENT" 
                              Style="{StaticResource MenuButtonStyle}"
+                             Foreground="White"
                              Command="{Binding NavigateCommand}" 
                              CommandParameter="Management"
                              IsChecked="True"/>
                 <RadioButton Content="USER MODE" 
                              Style="{StaticResource MenuButtonStyle}"
-                             Command="{Binding NavigateCommand}" 
+                             Foreground="White"
+                             Command="{Binding NavigateCommand}"
                              CommandParameter="User"
                              Margin="20,0"/>
 
@@ -48,6 +50,7 @@
                         Command="{Binding NavigateCommand}" 
                         CommandParameter="Settings"
                         Style="{StaticResource SettingsButtonStyle}"
+                        Foreground="White"
                         HorizontalAlignment="Right"/>
             </StackPanel>
         </Border>
