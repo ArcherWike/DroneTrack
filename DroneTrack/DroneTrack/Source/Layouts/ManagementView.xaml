@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DroneTrack.Source.Layouts"
+             xmlns:elements="clr-namespace:DroneTrack.Source.Elements"
              
              xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
              
@@ -47,6 +48,8 @@
             </Border>
         </Grid>
 
-        <!--<local:TimeRangeSlider Grid.Row="1" Margin="10"/>-->
+        <elements:TimeRangeSlider Grid.Row="1" Margin="5" x:Name="MissionTimeFilter" 
+                TimeFrom="{Binding SelectedStart, Mode=TwoWay}" 
+                TimeTo="{Binding SelectedEnd, Mode=TwoWay}"/>
     </Grid>
 </UserControl>
