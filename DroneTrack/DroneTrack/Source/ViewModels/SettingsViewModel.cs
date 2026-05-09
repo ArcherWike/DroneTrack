@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-using DroneTrack.Source.Models;
-using DroneTrack.Source.Data;
-
+using System.Windows.Media.Media3D;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using System.Collections.ObjectModel;
+using DroneTrack.Source.Data;
+using DroneTrack.Source.Models;
 
 namespace DroneTrack.Source.ViewModels
 {
@@ -49,8 +48,8 @@ namespace DroneTrack.Source.ViewModels
                 db.SaveChanges();
             }
 
-            _allDrones.Add(newDrone);
             _selectedDrone = newDrone;
+            _allDrones.Add(newDrone);
         }
 
         [RelayCommand]
@@ -63,7 +62,6 @@ namespace DroneTrack.Source.ViewModels
                 db.Drones.Update(_selectedDrone);
                 db.SaveChanges();
             }
-
             LoadDrones();
         }
 
@@ -74,12 +72,16 @@ namespace DroneTrack.Source.ViewModels
 
             using (var db = new DroneDatabaseContext())
             {
-                db.Drones.Remove(_selectedDrone);
-                db.SaveChanges();
-            }
+                var droneInDb = db.Drones.FirstOrDefault(f => f.Id == _selectedDrone.Id);
+                if (droneInDb != null)
+                {
+                    db.Drones.Remove(droneInDb);
+                    db.SaveChanges();
 
-            _allDrones.Remove(_selectedDrone);
-            _selectedDrone = null;
+                    _allDrones.Remove(_selectedDrone);
+                    _selectedDrone = null;
+                }
+            }
         }
     }
 }
