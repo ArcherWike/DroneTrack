@@ -9,6 +9,8 @@ namespace DroneTrack.Source.Models
 {
     public class FlightLog
     {
+        public string FullDisplayName => $"[{Id}] {FlightDateStart}";
+
         [Key]
         public int Id { get; set; }
         [Required]
