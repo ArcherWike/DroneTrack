@@ -9,133 +9,145 @@
 
 
     <Grid Background="#F5F5F5">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="250"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-
-        <Border Grid.Column="0" Background="White" BorderBrush="#DDD" BorderThickness="0,0,1,0">
-            <DockPanel Margin="15">
-                <TextBlock Text="FLOTA" 
-                           DockPanel.Dock="Top" 
-                           FontSize="18" 
-                           FontWeight="Bold" 
-                           Foreground="#2D3748" 
-                           Margin="0,0,0,15"/>
-
-                <Button Content="+ DODAJ NOWEGO DRONA" 
-                        Command="{Binding AddDroneCommand}" 
-                        DockPanel.Dock="Bottom" 
-                        Height="35" 
-                        Background="#3182CE" 
-                        Foreground="White" 
-                        FontWeight="Bold"
-                        Margin="0,10,0,0">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="5"/>
-                        </Style>
-                    </Button.Resources>
-                </Button>
-
-                <ListBox ItemsSource="{Binding AllDrones}" 
-                         SelectedItem="{Binding SelectedDrone}"
-                         DisplayMemberPath="ModelType"
-                         BorderThickness="0"
-                         FontSize="14"
-                         Cursor="Hand">
-                    <ListBox.ItemContainerStyle>
-                        <Style TargetType="ListBoxItem">
-                            <Setter Property="Padding" Value="10,8"/>
-                            <Setter Property="Margin" Value="0,2"/>
-                        </Style>
-                    </ListBox.ItemContainerStyle>
-                </ListBox>
-            </DockPanel>
-        </Border>
-
-        <StackPanel Grid.Column="1" Margin="40">
-            <StackPanel.Style>
-                <Style TargetType="StackPanel">
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding SelectedDrone}" Value="{x:Null}">
-                            <Setter Property="Visibility" Value="Collapsed"/>
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </StackPanel.Style>
-
-            <TextBlock Text="EDYCJA" 
-                       FontSize="20" 
-                       FontWeight="Bold" 
-                       Foreground="#2D3748" 
-                       Margin="0,0,0,25"/>
-
-            <TextBlock Text="Nazwa rejestracyjna / Model:" 
-                       Foreground="#718096" 
-                       Margin="0,0,0,5"/>
-
-            <TextBox Text="{Binding SelectedDrone.ModelType, UpdateSourceTrigger=PropertyChanged}" 
-                     FontSize="16" 
-                     Padding="8" 
-                     Background="White" 
-                     BorderBrush="#CBD5E0" 
-                     Margin="0,0,0,25"/>
-
+        <TabControl Margin="15">
+            
+        <TabItem Header="General database">
+            <!-- General settings content goes here -->
+        </TabItem>
+        <TabItem Header="Flota">
             <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
 
-                <Button Grid.Column="0" 
-                        Content="ZAPISZ ZMIANY" 
-                        Command="{Binding SaveChangesCommand}" 
-                        Background="#48BB78" 
-                        Foreground="White" 
-                        FontWeight="Bold" 
-                        Height="40" 
-                        Margin="0,0,10,0">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="5"/>
-                        </Style>
-                    </Button.Resources>
-                </Button>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="250"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
 
-                <Button Grid.Column="1" 
-                        Content="USUŃ DRONA" 
-                        Command="{Binding DeleteDroneCommand}" 
-                        Background="#F56565" 
-                        Foreground="White" 
-                        FontWeight="Bold" 
-                        Height="40" 
-                        Margin="10,0,0,0">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="5"/>
-                        </Style>
-                    </Button.Resources>
-                </Button>
-            </Grid>
-        </StackPanel>
+                    <Border Grid.Column="0" Background="White" BorderBrush="#DDD" BorderThickness="0,0,1,0">
+                        <DockPanel Margin="15">
+                            <TextBlock Text="FLOTA" 
+        DockPanel.Dock="Top" 
+        FontSize="18" 
+        FontWeight="Bold" 
+        Foreground="#2D3748" 
+        Margin="0,0,0,15"/>
 
-        <TextBlock Grid.Column="1" 
-                   Text="Wybierz drona z listy po lewej, aby edytować dane." 
-                   VerticalAlignment="Center" 
-                   HorizontalAlignment="Center" 
-                   Foreground="#A0AEC0" 
-                   FontSize="16">
-            <TextBlock.Style>
-                <Style TargetType="TextBlock">
-                    <Setter Property="Visibility" Value="Collapsed"/>
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding SelectedDrone}" Value="{x:Null}">
-                            <Setter Property="Visibility" Value="Visible"/>
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </TextBlock.Style>
-        </TextBlock>
+                            <Button Content="+ DODAJ NOWEGO DRONA" 
+     Command="{Binding AddDroneCommand}" 
+     DockPanel.Dock="Bottom" 
+     Height="35" 
+     Background="#3182CE" 
+     Foreground="White" 
+     FontWeight="Bold"
+     Margin="0,10,0,0">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="5"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+
+                            <ListBox ItemsSource="{Binding AllDrones}" 
+      SelectedItem="{Binding SelectedDrone}"
+      DisplayMemberPath="ModelType"
+      BorderThickness="0"
+      FontSize="14"
+      Cursor="Hand">
+                                <ListBox.ItemContainerStyle>
+                                    <Style TargetType="ListBoxItem">
+                                        <Setter Property="Padding" Value="10,8"/>
+                                        <Setter Property="Margin" Value="0,2"/>
+                                    </Style>
+                                </ListBox.ItemContainerStyle>
+                            </ListBox>
+                        </DockPanel>
+                    </Border>
+
+                    <StackPanel Grid.Column="1" Margin="40">
+                        <StackPanel.Style>
+                            <Style TargetType="StackPanel">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding SelectedDrone}" Value="{x:Null}">
+                                        <Setter Property="Visibility" Value="Collapsed"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </StackPanel.Style>
+
+                        <TextBlock Text="EDYCJA" 
+    FontSize="20" 
+    FontWeight="Bold" 
+    Foreground="#2D3748" 
+    Margin="0,0,0,25"/>
+
+                        <TextBlock Text="Nazwa rejestracyjna / Model:" 
+    Foreground="#718096" 
+    Margin="0,0,0,5"/>
+
+                        <TextBox Text="{Binding SelectedDrone.ModelType, UpdateSourceTrigger=PropertyChanged}" 
+  FontSize="16" 
+  Padding="8" 
+  Background="White" 
+  BorderBrush="#CBD5E0" 
+  Margin="0,0,0,25"/>
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Button Grid.Column="0" 
+     Content="ZAPISZ ZMIANY" 
+     Command="{Binding SaveChangesCommand}" 
+     Background="#48BB78" 
+     Foreground="White" 
+     FontWeight="Bold" 
+     Height="40" 
+     Margin="0,0,10,0">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="5"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+
+                            <Button Grid.Column="1" 
+     Content="USUŃ DRONA" 
+     Command="{Binding DeleteDroneCommand}" 
+     Background="#F56565" 
+     Foreground="White" 
+     FontWeight="Bold" 
+     Height="40" 
+     Margin="10,0,0,0">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="5"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                        </Grid>
+                    </StackPanel>
+
+                    <TextBlock Grid.Column="1" 
+Text="Wybierz drona z listy po lewej, aby edytować dane." 
+VerticalAlignment="Center" 
+HorizontalAlignment="Center" 
+Foreground="#A0AEC0" 
+FontSize="16">
+                        <TextBlock.Style>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding SelectedDrone}" Value="{x:Null}">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+
+                </Grid>
+        </TabItem>
+        </TabControl>
     </Grid>
 </UserControl>

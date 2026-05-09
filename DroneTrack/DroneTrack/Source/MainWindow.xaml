@@ -33,28 +33,23 @@
 
         <Border Background="#1A202C" Grid.Row="0" Padding="15,0">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <RadioButton Content="⚙" 
+                             Style="{StaticResource MenuButtonStyle}"
+                             FontSize="24" 
+                             Command="{Binding NavigateCommand}"
+                             CommandParameter="Settings"/>
                 <RadioButton Content="MANAGEMENT" 
                              Style="{StaticResource MenuButtonStyle}"
-                             Foreground="White"
                              Command="{Binding NavigateCommand}" 
                              CommandParameter="Management"
                              IsChecked="True"/>
                 <RadioButton Content="USER MODE" 
                              Style="{StaticResource MenuButtonStyle}"
-                             Foreground="White"
                              Command="{Binding NavigateCommand}"
                              CommandParameter="User"
                              Margin="20,0"/>
-
-                <Button Content="⚙" 
-                        Command="{Binding NavigateCommand}" 
-                        CommandParameter="Settings"
-                        Style="{StaticResource SettingsButtonStyle}"
-                        Foreground="White"
-                        HorizontalAlignment="Right"/>
             </StackPanel>
         </Border>
-
         <ContentControl Grid.Row="1" Content="{Binding CurrentView}" />
     </Grid>
 </Window>
