@@ -30,6 +30,11 @@ namespace DroneTrack.Source.Elements
         {
             InitializeComponent();
             InitializeWebView();
+
+            this.Unloaded += (s, e) =>
+            {
+                WeakReferenceMessenger.Default.UnregisterAll(this);
+            };
         }
 
         private async void InitializeWebView()
@@ -40,12 +45,27 @@ namespace DroneTrack.Source.Elements
 
             WeakReferenceMessenger.Default.Register<AddMarkerMessage>(this, (r, m) =>
             {
-                Dispatcher.Invoke(() =>
+                Dispatcher.BeginInvoke(new Action (async () =>
                 {
-                    var culture = System.Globalization.CultureInfo.InvariantCulture;
-                    string script = $"addMarker({m.DroneId}, {m.Lat.ToString(culture)}, {m.Lng.ToString(culture)}, {m.DurationMinutes.ToString(culture)});";
-                    MapView.CoreWebView2.ExecuteScriptAsync(script);
-                });
+                    if (!this.IsVisible || MapView == null || MapView.CoreWebView2 == null)
+                        return;
+
+                    try
+                    {
+                        if (MapView?.CoreWebView2 != null)
+                        {
+                            var culture = System.Globalization.CultureInfo.InvariantCulture;
+                            string script = $"addMarker({m.DroneId}, {m.Lat.ToString(culture)}, {m.Lng.ToString(culture)}, {m.DurationMinutes.ToString(culture)});";
+                            await MapView.CoreWebView2.ExecuteScriptAsync(script);
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        System.Diagnostics.Debug.WriteLine($"Błąd podczas wysyłania wiadomości do WebView2: {ex.Message}");
+                        return;
+                    }
+                }));
             });
 
 

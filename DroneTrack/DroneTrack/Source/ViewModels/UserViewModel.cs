@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Threading;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
@@ -46,7 +47,7 @@ namespace DroneTrack.Source.ViewModels
                 DataContext = addFlightVm
             };
 
-            win.ShowDialog();
+            win.Show();
         }
 
         private void LoadActiveFlights()
