@@ -104,8 +104,6 @@ namespace DroneTrack.Source.ViewModels
             db.SaveChanges();
 
             WeakReferenceMessenger.Default.Send(new AddMarkerMessage(SelectedDrone.Id, _lat, _lng, _durationMinutes));
-
-            window.DialogResult = true;
             window.Close();
         }
     }

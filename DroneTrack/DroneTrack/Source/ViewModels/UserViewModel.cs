@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Threading;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
@@ -18,6 +19,7 @@ namespace DroneTrack.Source.ViewModels
     {
         private readonly DatabaseService _databaseService;
 
+        private AddFlightWindow? flightWindow;
         public UserViewModel(DatabaseService databaseService)
         {
             _databaseService = databaseService;
@@ -40,14 +42,18 @@ namespace DroneTrack.Source.ViewModels
 
         private void OnMapClicked(double lat, double lng)
         {
+            if (flightWindow != null) return;
+
             var addFlightVm = new AddFlightViewModel(_databaseService, lat, lng);
-
-            var win = new AddFlightWindow
+  
+            flightWindow = new AddFlightWindow();
+            flightWindow.Closed += (s, e) =>
             {
-                DataContext = addFlightVm
+                flightWindow = null;
             };
+            flightWindow.DataContext = addFlightVm;
 
-            win.Show();
+            flightWindow.Show();
         }
 
         private void LoadActiveFlights()
