@@ -109,7 +109,7 @@ namespace DroneTrack.Source.ViewModels
         {
             SelectedStart = TimeSpan.Zero;
             SelectedEnd = TimeSpan.FromHours(24);
-            SelectedDate = DateTime.Today;
+            //SelectedDate = DateTime.Today;
         }
     }   
 }
