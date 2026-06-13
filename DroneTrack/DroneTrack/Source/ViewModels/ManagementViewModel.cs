@@ -6,16 +6,15 @@ using System.Net.Mail;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-
+using System.Windows.Media.Media3D;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
-using Microsoft.Web.WebView2.Core;
-
 using DroneTrack.Source.Data;
 using DroneTrack.Source.Layouts;
 using DroneTrack.Source.Messages;
 using DroneTrack.Source.Models;
+using Microsoft.Web.WebView2.Core;
 
 
 namespace DroneTrack.Source.ViewModels
@@ -23,9 +22,6 @@ namespace DroneTrack.Source.ViewModels
     partial class ManagementViewModel : ObservableObject
     {
         private readonly DatabaseService _databaseService;
-
-        [ObservableProperty]
-        private bool _isDetailVisible = false;
 
         [ObservableProperty]
         private ObservableCollection<FlightLog> _allFlights = new();
@@ -52,5 +48,16 @@ namespace DroneTrack.Source.ViewModels
                 }
             }
         }
-    }   
+
+        [ObservableProperty]
+        private bool _isDetailVisible = false;
+
+        [ObservableProperty]
+        public FlightLog _selectedFlight;
+
+        partial void OnSelectedFlightChanged(FlightLog value)
+        {
+            IsDetailVisible = value != null;
+        }
+    }
 }
