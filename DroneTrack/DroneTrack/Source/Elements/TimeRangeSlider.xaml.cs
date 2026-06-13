@@ -58,6 +58,22 @@ namespace DroneTrack.Source.Elements
             return MissionDatePicker.SelectedDate;
         }
 
+        public static readonly DependencyProperty SelectedDateProperty =
+        DependencyProperty.Register("SelectedDate", typeof(DateTime?), typeof(TimeRangeSlider),
+        new FrameworkPropertyMetadata(DateTime.Today, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
+
+        public DateTime? SelectedDate
+        {
+            get => (DateTime?)GetValue(SelectedDateProperty);
+            set => SetValue(SelectedDateProperty, value);
+        }
+
+        private void OnSelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            SelectedDate = MissionDatePicker.SelectedDate;
+            var newDate = SelectedDate;
+        }
+
         public (TimeSpan Start, TimeSpan End) GetTimeRange()
         {
             if (EndSlider.Value >= 1440)//24*minutes per hour
@@ -85,6 +101,9 @@ namespace DroneTrack.Source.Elements
 
             StartSlider.ValueChanged += OnStartSliderValueChanged;
             EndSlider.ValueChanged += OnEndSliderValueChanged;
+            MissionDatePicker.SelectedDateChanged += OnSelectedDateChanged;
+
+            MissionDatePicker.SelectedDate = DateTime.Today;
         }
 
         private void OnStartSliderValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -119,9 +138,8 @@ namespace DroneTrack.Source.Elements
 
             TimeFrom = range.Start;
             TimeTo = range.End;
-
-
-            System.Diagnostics.Debug.WriteLine(GetFormattedData());
+           
+            //System.Diagnostics.Debug.WriteLine(GetFormattedData());
         }
     }
 }

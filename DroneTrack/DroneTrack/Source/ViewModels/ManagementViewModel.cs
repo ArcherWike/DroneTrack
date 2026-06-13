@@ -49,6 +49,8 @@ namespace DroneTrack.Source.ViewModels
             }
         }
 
+
+        //Details panel visibility
         [ObservableProperty]
         private bool _isDetailVisible = false;
 
@@ -59,5 +61,55 @@ namespace DroneTrack.Source.ViewModels
         {
             IsDetailVisible = value != null;
         }
-    }
+
+        //Filter
+        [ObservableProperty]
+        private DateTime? _selectedDate = DateTime.Today;
+
+        partial void OnSelectedDateChanged(DateTime? value)
+        {
+            ApplyFilter();
+        }
+
+        [ObservableProperty]
+        private TimeSpan _selectedStart = TimeSpan.Zero;
+
+        partial void OnSelectedStartChanged(TimeSpan value)
+        {
+            ApplyFilter();
+        }
+
+        [ObservableProperty]
+        private TimeSpan _selectedEnd = TimeSpan.FromHours(24);
+
+        partial void OnSelectedEndChanged(TimeSpan value)
+        {
+            ApplyFilter();
+        }
+
+        private void ApplyFilter()
+        {
+            if (!SelectedDate.HasValue) return;
+
+            DateTime startFull = SelectedDate.Value.Add(SelectedStart);
+            DateTime endFull = SelectedDate.Value.Add(SelectedEnd);
+
+            var results = _databaseService.GetFlightsByRange(startFull, endFull);
+
+            // UI Update
+            AllFlights.Clear();
+            foreach (var flight in results)
+            {
+                AllFlights.Add(flight);
+            }
+        }
+
+        [RelayCommand]
+        private void ClearFilters()
+        {
+            SelectedStart = TimeSpan.Zero;
+            SelectedEnd = TimeSpan.FromHours(24);
+            SelectedDate = DateTime.Today;
+        }
+    }   
 }

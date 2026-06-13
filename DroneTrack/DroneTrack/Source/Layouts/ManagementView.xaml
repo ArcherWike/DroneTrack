@@ -34,7 +34,7 @@
                     </Grid.RowDefinitions>
 
                     <TextBlock Grid.Row="0" Text="Drones List" FontWeight="Bold" VerticalAlignment="Center"/>
-                    <Button Grid.Row="1" Content="Clear Filters" Margin="5"/>
+                    <Button Grid.Row="1" Content="Clear Filters" Margin="5" Command="{Binding ClearFiltersCommand}"/>
                     <ListBox Grid.Row="2" ItemsSource="{Binding AllFlights}"
                              SelectedItem="{Binding SelectedFlight}"
                              DisplayMemberPath="FullDisplayName"/>
@@ -66,6 +66,7 @@
 
         <elements:TimeRangeSlider Grid.Row="1" Margin="5" x:Name="MissionTimeFilter" 
                 TimeFrom="{Binding SelectedStart, Mode=TwoWay}" 
-                TimeTo="{Binding SelectedEnd, Mode=TwoWay}"/>
+                TimeTo="{Binding SelectedEnd, Mode=TwoWay}"
+                SelectedDate="{Binding SelectedDate, Mode=TwoWay}"/>
     </Grid>
 </UserControl>

@@ -53,11 +53,11 @@
             <Grid Height="40" Margin="5,10">
                 <Rectangle Height="5" Fill="#EEEEEE" RadiusX="2"/>
 
-                <Slider x:Name="StartSlider" Minimum="0" Maximum="1440" Value="480" 
+                <Slider x:Name="StartSlider" Minimum="0" Maximum="1425" Value="0" 
                     TickFrequency="15" IsSnapToTickEnabled="True"
                     Style="{StaticResource CustomSliderStyle}"/>
 
-                <Slider x:Name="EndSlider" Minimum="0" Maximum="1440" Value="960" 
+                <Slider x:Name="EndSlider" Minimum="15" Maximum="1440" Value="1440" 
                     TickFrequency="15" IsSnapToTickEnabled="True"
                     Style="{StaticResource CustomSliderStyle}"/>
             </Grid>
