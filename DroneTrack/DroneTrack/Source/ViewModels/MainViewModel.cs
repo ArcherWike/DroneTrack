@@ -20,6 +20,7 @@ namespace DroneTrack.Source.ViewModels
         // Obiekty widoków są tworzone raz i trzymane w pamięci
         private readonly ManagementViewModel _managementVM;
         private readonly SettingsViewModel _settingsVM;
+        private readonly UserViewModel _userVM;
 
         [ObservableProperty]
         private object _currentView;
@@ -29,6 +30,7 @@ namespace DroneTrack.Source.ViewModels
             _databaseService = new DatabaseService();
             _managementVM = new ManagementViewModel(_databaseService);
             _settingsVM = new SettingsViewModel(_databaseService);
+            _userVM = new UserViewModel(_databaseService);
             _currentView = _managementVM;
         }
 
@@ -38,7 +40,7 @@ namespace DroneTrack.Source.ViewModels
             CurrentView = destination switch
             {
                 "Management" => (object)_managementVM,
-                "User" => new UserViewModel(_databaseService),
+                "User" => _userVM,
                 "Settings" => _settingsVM,
                 _ => _managementVM
             };
