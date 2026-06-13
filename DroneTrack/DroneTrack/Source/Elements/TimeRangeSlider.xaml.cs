@@ -27,12 +27,14 @@ namespace DroneTrack.Source.Elements
 
     public partial class TimeRangeSlider : UserControl
     {
+        private bool _isUpdating;
+
         // Dependency Property for time binding
         public static readonly DependencyProperty TimeFromProperty =
             DependencyProperty.Register("TimeFrom",
                 typeof(TimeSpan), typeof(TimeRangeSlider),
                 new FrameworkPropertyMetadata(
-                    TimeSpan.Zero, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
+                    TimeSpan.Zero, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnTimeFromChanged));
 
         public TimeSpan TimeFrom
         {
@@ -40,34 +42,49 @@ namespace DroneTrack.Source.Elements
             set => SetValue(TimeFromProperty, value);
         }
 
+        private static void OnTimeFromChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var control = (TimeRangeSlider)d;
+            if (control._isUpdating) return;
+
+            control._isUpdating = true;
+            control.StartSlider.Value = ((TimeSpan)e.NewValue).TotalMinutes;
+            control._isUpdating = false;
+        }
+        
         // Property TimeTo
         public static readonly DependencyProperty TimeToProperty =
             DependencyProperty.Register("TimeTo", typeof(TimeSpan), typeof(TimeRangeSlider),
-                new FrameworkPropertyMetadata(TimeSpan.FromHours(1), FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
-
+                new FrameworkPropertyMetadata(TimeSpan.FromHours(1), FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnTimeToChanged));
 
         public TimeSpan TimeTo
         {
             get => (TimeSpan)GetValue(TimeToProperty);
             set => SetValue(TimeToProperty, value);
         }
-
-        public DateTime? GetSelectedDate()
+        private static void OnTimeToChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            //can be null if user didn't select any date
-            return MissionDatePicker.SelectedDate;
+            var control = (TimeRangeSlider)d;
+            if (control._isUpdating) return;
+
+            control._isUpdating = true;
+            control.EndSlider.Value =((TimeSpan)e.NewValue).TotalMinutes;
+            control._isUpdating = false;
         }
 
         public static readonly DependencyProperty SelectedDateProperty =
         DependencyProperty.Register("SelectedDate", typeof(DateTime?), typeof(TimeRangeSlider),
         new FrameworkPropertyMetadata(DateTime.Today, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
-
+        public DateTime? GetSelectedDate()
+        {
+            //can be null if user didn't select any date
+            return MissionDatePicker.SelectedDate;
+        }
         public DateTime? SelectedDate
         {
             get => (DateTime?)GetValue(SelectedDateProperty);
             set => SetValue(SelectedDateProperty, value);
         }
-
         private void OnSelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
             SelectedDate = MissionDatePicker.SelectedDate;
@@ -78,13 +95,13 @@ namespace DroneTrack.Source.Elements
         {
             if (EndSlider.Value >= 1440)//24*minutes per hour
             {
-                return (TimeSpan.FromMinutes(StartSlider.Value), TimeSpan.FromMinutes(1439));
+                return (TimeSpan.FromMinutes(StartSlider.Value), 
+                        TimeSpan.FromMinutes(1439));
             }
 
-            return (
-                TimeSpan.FromMinutes(StartSlider.Value),
-                TimeSpan.FromMinutes(EndSlider.Value)
-            );
+            return 
+                (TimeSpan.FromMinutes(StartSlider.Value),
+                TimeSpan.FromMinutes(EndSlider.Value));
         }
 
         public string GetFormattedData()
@@ -108,12 +125,16 @@ namespace DroneTrack.Source.Elements
 
         private void OnStartSliderValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            // Blocking lower slider
+            if (_isUpdating) return;
+
+            _isUpdating = true;
             if (StartSlider.Value > EndSlider.Value - MinGap)
             {
                 StartSlider.Value = EndSlider.Value - MinGap;
             }
+
             UpdateTimeLabels();
+            _isUpdating = false;
         }
 
         private void OnEndSliderValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
