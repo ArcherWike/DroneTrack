@@ -93,17 +93,16 @@ namespace DroneTrack.Source.ViewModels
                 DroneId = _selectedDrone.Id,
                 Latitude = _lat,
                 Longitude = _lng,
-                OperatorIdentity = int.Parse(_operatorId),
+                OperatorIdentity = (_operatorId),
                 FlightDateStart = DateTime.Now.AddMinutes(_delayMinutes),
                 FlightDateEnd = DateTime.Now.AddMinutes(_delayMinutes + _durationMinutes),
                 MaxAltitude = _maxAltitude,
                 Description = _description
             };
-
             db.FlightLogs.Add(newFlight);
             db.SaveChanges();
 
-            WeakReferenceMessenger.Default.Send(new AddMarkerMessage(SelectedDrone.Id, _lat, _lng, _durationMinutes));
+            WeakReferenceMessenger.Default.Send(new AddMarkerMessage(newFlight.Id, _lat, _lng, _durationMinutes * 60, _delayMinutes * 60));
             window.Close();
         }
     }

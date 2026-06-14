@@ -55,7 +55,7 @@ namespace DroneTrack.Source.Elements
                         if (MapView?.CoreWebView2 != null)
                         {
                             var culture = System.Globalization.CultureInfo.InvariantCulture;
-                            string script = $"addMarker({m.DroneId}, {m.Lat.ToString(culture)}, {m.Lng.ToString(culture)}, {m.DurationMinutes.ToString(culture)});";
+                            string script = $"addMarker({m.MissionId}, {m.Lat.ToString(culture)}, {m.Lng.ToString(culture)}, {m.DurationSeconds.ToString(culture)}, {m.DelaySeconds.ToString(culture)});";
                             await MapView.CoreWebView2.ExecuteScriptAsync(script);
                         }
 

@@ -14,7 +14,7 @@ namespace DroneTrack.Source.Models
         [Key]
         public int Id { get; set; }
         [Required]
-        public int OperatorIdentity { get; set; }
+        public required string OperatorIdentity { get; set; }
         [Required]
         public int DroneId { get; set; }
         [Required]

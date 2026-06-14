@@ -68,17 +68,21 @@ namespace DroneTrack.Source.ViewModels
 
                 foreach (var lot in activeFlights)
                 {
-                    var timeLeft = (int)(lot.FlightDateEnd - currentTime).TotalMinutes;
+                    var delay = (int)(lot.FlightDateStart - currentTime).TotalSeconds;
+                    var totalTime = (int)(lot.FlightDateEnd - currentTime).TotalSeconds;
 
-                    if (timeLeft > 0)
+                    if (delay < 0) delay = 0;
+
+                    if (totalTime > 0)
                     {
-                        System.Diagnostics.Debug.WriteLine("Lot dodany, pozostalo ", timeLeft);
+                        System.Diagnostics.Debug.WriteLine("Lot dodany, pozostalo ", totalTime);
 
                         WeakReferenceMessenger.Default.Send(new AddMarkerMessage(
-                            lot.DroneId,
+                            lot.Id,
                             lot.Latitude,
                             lot.Longitude,
-                            timeLeft));
+                            totalTime,
+                            delay));
                     }
                 }
             }

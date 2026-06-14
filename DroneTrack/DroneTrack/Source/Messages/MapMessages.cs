@@ -36,18 +36,20 @@ namespace DroneTrack.Source.Messages
 
     public class AddMarkerMessage
     {
-        public int DroneId { get; set; }
+        public int MissionId { get; set; }
         public double Lat { get; set; }
         public double Lng { get; set; }
 
-        public int DurationMinutes { get; set; }
+        public int DurationSeconds { get; set; }
+        public int DelaySeconds { get; set; }
 
-        public AddMarkerMessage(int droneId, double lat, double lng, int durationMinutes)
+        public AddMarkerMessage(int missionId, double lat, double lng, int durationSeconds, int delaySeconds)
         {
-            DroneId = droneId;
+            MissionId = missionId;
             Lat = lat;
             Lng = lng;
-            DurationMinutes = durationMinutes;
+            DurationSeconds = durationSeconds;
+            DelaySeconds = delaySeconds;
         }
     }
 

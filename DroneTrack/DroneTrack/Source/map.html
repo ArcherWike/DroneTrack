@@ -10,6 +10,9 @@
             margin: 0;
             background: transparent !important;
         }
+
+
+
     </style>
 </head>
 <body>
@@ -20,12 +23,12 @@
         function createDroneIconHtml(color) {
 
             const svg = `
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.021 39.957" width="40px" height="40px">
-                <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="12" cy="12" rx="8" ry="8" />
-                <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="28" cy="12" rx="8" ry="8" />
-                <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="12" cy="28" rx="8" ry="8" />
-                <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="28" cy="28" rx="8" ry="8" />
-                </svg>`;
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.021 39.957" width="40px" height="40px">
+                                            <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="12" cy="12" rx="8" ry="8" />
+                                            <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="28" cy="12" rx="8" ry="8" />
+                                            <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="12" cy="28" rx="8" ry="8" />
+                                            <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="28" cy="28" rx="8" ry="8" />
+                                            </svg>`;
 
             return svg.replace(/\s+/g, ' ').trim();
         }
@@ -37,51 +40,71 @@
         }).addTo(map);
 
 
-        function addMarker(id, lat, lng, durationMinutes) {
-            console.log("JS otrzymał polecenie dodania markera:", id, lat, lng);
-
-            let totalLeftSeconds = durationMinutes * 60;
+        function addMarker(id, lat, lng, durationSeconds, delay) {
+            let totalLeftSeconds = durationSeconds + delay;
             let secondsLeft = 0;
             let timerInterval = null;
+            let delayTimer = null;
+
+            let delayLeft = delay;
+            let flightLeft = durationSeconds;
+            let isActive = delay === 0;
+
 
             let marker = L.marker([lat, lng], {
-                //icon: droneIcon,      //TODO: drone icon don't work
                 databaseId: id
             }).addTo(map);
 
-            const backgroundTimer = setInterval(() => {
-                totalLeftSeconds--;
-                if (totalLeftSeconds <= 0) {
-                    clearInterval(backgroundTimer);
-                    stopDisplayTimer();
-                    map.removeLayer(marker);
+            const timer = setInterval(() => {
+
+                if (!isActive) {
+
+                    delayLeft--;
+
+                    if (delayLeft <= 0) {
+                        isActive = true;
+                    }
+
+                } else {
+
+                    flightLeft--;
+
+                    if (flightLeft <= 0) {
+                        clearInterval(timer);
+                        stopDisplayTimer();
+                        map.removeLayer(marker);
+                    }
                 }
+
             }, 1000);
 
             function getPopupText() {
-                let mins = Math.floor(totalLeftSeconds / 60);
-                let secs = totalLeftSeconds % 60;
+
+                let seconds = isActive ? flightLeft : delayLeft;
+
+                let mins = Math.floor(seconds / 60);
+                let secs = seconds % 60;
+
                 let timeStr = `${mins}:${secs < 10 ? '0' : ''}${secs}`;
-                return `<b>Dron ID:</b> ${id}<br/><b>Czas:</b> ${timeStr}`;
+
+                return isActive
+                    ? `<b>ID Misji:</b> ${id}<br/><b>Pozostało lotu:</b> ${timeStr}`
+                    : `<b>ID Misji:</b> ${id}<br/><b>Do wylotu:</b> ${timeStr}`;
             }
 
-            function updatePopup()
-            {
-                if (timerInterval)
-                {
+            function updatePopup() {
+                if (timerInterval) {
                     marker.setPopupContent(getPopupText());
                     console.log(`Update dymka dla drona ${id}`);
                 }
             }
 
-            function startDisplayTimer()
-            {
+            function startDisplayTimer() {
                 updatePopup();
                 timerInterval = setInterval(updatePopup, 1000);
             }
 
-            function stopDisplayTimer()
-            {
+            function stopDisplayTimer() {
                 if (timerInterval) {
                     clearInterval(timerInterval);
                     timerInterval = null;
@@ -98,7 +121,6 @@
 
             marker.bindPopup(getPopupText()).openPopup();
         }
-
 
         function highlightMarkers(activeIds) {
             console.log("Otrzymano ID do podświetlenia:", activeIds);

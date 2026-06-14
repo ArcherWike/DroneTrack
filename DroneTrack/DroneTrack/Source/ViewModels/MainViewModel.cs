@@ -17,7 +17,6 @@ namespace DroneTrack.Source.ViewModels
     {
         private readonly DatabaseService _databaseService = new DatabaseService();
 
-        // Obiekty widoków są tworzone raz i trzymane w pamięci
         private readonly ManagementViewModel _managementVM;
         private readonly SettingsViewModel _settingsVM;
         private readonly UserViewModel _userVM;
