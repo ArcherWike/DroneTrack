@@ -154,11 +154,7 @@
         let filterCircle;
 
         map.on('mousedown', function (e) {
-            return;
-
             if (e.originalEvent.button === 2) {
-
-
                 map.dragging.disable();
 
                 if (filterCircle) map.removeLayer(filterCircle);
@@ -192,7 +188,7 @@
         });
 
 
-        //map.getContainer().addEventListener('contextmenu', e => e.preventDefault());
+        map.getContainer().addEventListener('contextmenu', e => e.preventDefault());
 
         window.chrome.webview.postMessage({ type: "MAP_READY" });
     </script>

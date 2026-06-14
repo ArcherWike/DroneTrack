@@ -53,5 +53,20 @@ namespace DroneTrack.Source.Messages
         }
     }
 
+    public class MapSpatialFilterMessage
+    {
+        public double CenterLat { get; set; }
+        public double CenterLng { get; set; }
+        public double RadiusInMeters { get; set; }
+
+        public MapSpatialFilterMessage(double centerLat, double centerLng, double radiusInMeters)
+        {
+            CenterLat = centerLat;
+            CenterLng = centerLng;
+            RadiusInMeters = radiusInMeters;
+        }
+    }
+
+
     public class MapReadyMessage { }
 }

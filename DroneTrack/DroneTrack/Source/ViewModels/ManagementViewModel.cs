@@ -31,8 +31,17 @@ namespace DroneTrack.Source.ViewModels
         public ManagementViewModel(DatabaseService databaseService)
         {
             _databaseService = databaseService;
-
+            
+            RegisterForMessages();
             LoadFlights();
+        }
+
+        void RegisterForMessages()
+        {
+            WeakReferenceMessenger.Default.Register<MapSpatialFilterMessage>(this, (r, m) =>
+            {
+                ApplySpatialFilter(m.CenterLat, m.CenterLng, m.RadiusInMeters);
+            });
         }
 
         public void LoadFlights()
@@ -103,6 +112,12 @@ namespace DroneTrack.Source.ViewModels
                 AllFlights.Add(flight);
             }
         }
+
+        private void ApplySpatialFilter(double centerLat, double centerLng, double radiusInMeters)
+        {
+            var results = _databaseService.GetFlightsBySpatialFilter(centerLat, centerLng, radiusInMeters);
+        }
+
 
         [RelayCommand]
         private void ClearFilters()

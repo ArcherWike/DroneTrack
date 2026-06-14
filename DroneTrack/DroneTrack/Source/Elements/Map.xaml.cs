@@ -91,6 +91,11 @@ namespace DroneTrack.Source.Elements
                 {
                     AddNewMarker(message);
                 }
+
+                if (message?.type == "SPATIAL_FILTER")
+                {
+                    SendSpatialFilterMessage(message);
+                }
             }
             catch (Exception ex)
             {
@@ -106,6 +111,15 @@ namespace DroneTrack.Source.Elements
             WeakReferenceMessenger.Default.Send(new MapClickedMessage(lat, lng));
 
             System.Diagnostics.Debug.WriteLine($"Mapa wysłała wiadomość: {lat}, {lng}");
+        }
+
+        private void SendSpatialFilterMessage(MapMessage message)
+        {
+            double centerLat = message.data.lat;
+            double centerLng = message.data.lng;
+            double radius = message.data.radius;
+
+            WeakReferenceMessenger.Default.Send(new MapSpatialFilterMessage(centerLat, centerLng, radius));
         }
     }
 }
