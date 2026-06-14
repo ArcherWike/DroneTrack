@@ -37,6 +37,7 @@
         }).addTo(map);
 
         function addMarker(id, lat, lng, durationSeconds, delay) {
+            let timerInterval = null;
             let delayLeft = delay;
             let flightLeft = durationSeconds;
             let isActive = delay === 0;
@@ -154,6 +155,7 @@
         let filterCircle;
 
         map.on('mousedown', function (e) {
+            return;
             if (e.originalEvent.button === 2) {
                 map.dragging.disable();
 
