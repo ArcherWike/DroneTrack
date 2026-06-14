@@ -11,7 +11,18 @@
             background: transparent !important;
         }
 
+        .drone-marker {
+            font-size: 40px;
+            text-align: center;
+        }
+        .drone-marker.waiting {
+            color: cornflowerblue;
+        }
 
+        .drone-marker.active {
+             color: green;
+        }
+            
 
     </style>
 </head>
@@ -23,12 +34,12 @@
         function createDroneIconHtml(color) {
 
             const svg = `
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.021 39.957" width="40px" height="40px">
-                                            <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="12" cy="12" rx="8" ry="8" />
-                                            <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="28" cy="12" rx="8" ry="8" />
-                                            <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="12" cy="28" rx="8" ry="8" />
-                                            <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="28" cy="28" rx="8" ry="8" />
-                                            </svg>`;
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.021 39.957" width="40px" height="40px">
+                                                    <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="12" cy="12" rx="8" ry="8" />
+                                                    <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="28" cy="12" rx="8" ry="8" />
+                                                    <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="12" cy="28" rx="8" ry="8" />
+                                                    <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="28" cy="28" rx="8" ry="8" />
+                                                    </svg>`;
 
             return svg.replace(/\s+/g, ' ').trim();
         }
@@ -51,9 +62,18 @@
             let isActive = delay === 0;
 
 
+            let droneClass = isActive ? 'drone-marker active' : 'drone-marker waiting';
+            const droneIcon = L.divIcon({
+                className: droneClass,
+                html: '✈',
+            });
+
+
             let marker = L.marker([lat, lng], {
-                databaseId: id
+                databaseId: id,
+                icon: droneIcon,
             }).addTo(map);
+
 
             const timer = setInterval(() => {
 
@@ -63,6 +83,12 @@
 
                     if (delayLeft <= 0) {
                         isActive = true;
+                        const el = marker.getElement();
+
+                        if (el) {
+                            el.classList.remove('waiting');
+                            el.classList.add('active');
+                        }
                     }
 
                 } else {
