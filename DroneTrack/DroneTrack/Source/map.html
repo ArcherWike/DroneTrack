@@ -36,6 +36,14 @@
             maxZoom: 20
         }).addTo(map);
 
+        function clearAllMarkers() {
+            map.eachLayer((layer) => {
+                if (layer && layer.options && layer.options.icon) {
+                    map.removeLayer(layer);
+                }
+            });
+        };
+
         function addMarker(id, lat, lng, durationSeconds, delay) {
             let timerInterval = null;
             let delayLeft = delay;

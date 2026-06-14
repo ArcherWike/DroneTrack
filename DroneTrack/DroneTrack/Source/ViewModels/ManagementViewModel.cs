@@ -1,4 +1,8 @@
-﻿using System;
+﻿using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Messaging;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -7,6 +11,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Media.Media3D;
+using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
@@ -19,7 +24,7 @@ using Microsoft.Web.WebView2.Core;
 
 namespace DroneTrack.Source.ViewModels
 {
-    partial class ManagementViewModel : ObservableObject
+    partial class ManagementViewModel : ModuleViewModel
     {
         private readonly DatabaseService _databaseService;
 
@@ -31,20 +36,10 @@ namespace DroneTrack.Source.ViewModels
         public ManagementViewModel(DatabaseService databaseService)
         {
             _databaseService = databaseService;
-            
-            RegisterForMessages();
-            LoadFlights();
+            LoadFlightsData();
         }
 
-        void RegisterForMessages()
-        {
-            WeakReferenceMessenger.Default.Register<MapSpatialFilterMessage>(this, (r, m) =>
-            {
-                ApplySpatialFilter(m.CenterLat, m.CenterLng, m.RadiusInMeters);
-            });
-        }
-
-        public void LoadFlights()
+        public void LoadFlightsData()
         {
             using (var db = new DroneDatabaseContext())
             {
@@ -126,5 +121,20 @@ namespace DroneTrack.Source.ViewModels
             SelectedEnd = TimeSpan.FromHours(24);
             //SelectedDate = DateTime.Today;
         }
-    }   
+
+        protected override void RegisterForMessages()
+        {
+            base.RegisterForMessages();
+
+            WeakReferenceMessenger.Default.Register<MapSpatialFilterMessage>(this, (r, m) =>
+            {
+                ApplySpatialFilter(m.CenterLat, m.CenterLng, m.RadiusInMeters);
+            });
+
+            WeakReferenceMessenger.Default.Register<MapReadyMessage>(this, (r, m) =>
+            {
+
+            });
+        }
+    }
 }

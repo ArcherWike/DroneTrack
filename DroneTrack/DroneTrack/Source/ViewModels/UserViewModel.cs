@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Messaging;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -8,6 +10,7 @@ using System.Windows;
 using System.Windows.Threading;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Messaging;
 using DroneTrack.Source.Data;
 using DroneTrack.Source.Layouts;
@@ -15,7 +18,7 @@ using DroneTrack.Source.Messages;
 
 namespace DroneTrack.Source.ViewModels
 {
-    public partial class UserViewModel : ObservableObject
+    public partial class UserViewModel : ModuleViewModel
     {
         private readonly DatabaseService _databaseService;
 
@@ -24,28 +27,15 @@ namespace DroneTrack.Source.ViewModels
         {
             _databaseService = databaseService;
 
-            RegisterForMessages();
         }
 
-        void RegisterForMessages()
-        {
-            WeakReferenceMessenger.Default.Register<MapClickedMessage>(this, (r, m) =>
-            {
-                OnMapClicked(m.Lat, m.Lng);
-            });
-
-            WeakReferenceMessenger.Default.Register<MapReadyMessage>(this, (r, m) =>
-            {
-                LoadActiveFlights();
-            });
-        }
 
         private void OnMapClicked(double lat, double lng)
         {
             if (flightWindow != null) return;
 
             var addFlightVm = new AddFlightViewModel(_databaseService, lat, lng);
-  
+
             flightWindow = new AddFlightWindow();
             flightWindow.Closed += (s, e) =>
             {
@@ -86,6 +76,20 @@ namespace DroneTrack.Source.ViewModels
                     }
                 }
             }
+        }
+        protected override void RegisterForMessages()
+        {
+            base.RegisterForMessages();
+
+            WeakReferenceMessenger.Default.Register<MapClickedMessage>(this, (r, m) =>
+            {
+                OnMapClicked(m.Lat, m.Lng);
+            });
+
+            WeakReferenceMessenger.Default.Register<MapReadyMessage>(this, (r, m) =>
+            {
+                LoadActiveFlights();
+            });
         }
     }
 }

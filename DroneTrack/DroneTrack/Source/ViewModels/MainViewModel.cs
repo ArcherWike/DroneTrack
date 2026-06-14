@@ -36,13 +36,32 @@ namespace DroneTrack.Source.ViewModels
         [RelayCommand]
         private void Navigate(string destination)
         {
-            CurrentView = destination switch
+            if (destination == "Management")
             {
-                "Management" => (object)_managementVM,
-                "User" => _userVM,
-                "Settings" => _settingsVM,
-                _ => _managementVM
-            };
+                if (CurrentView == _managementVM) return;
+
+                _userVM.CleanUp();
+                CurrentView = _managementVM;
+                _managementVM.Activate();
+            }
+            else if (destination == "User")
+            {
+                if (CurrentView == _userVM) return;
+
+                _managementVM.CleanUp();
+                CurrentView = _userVM;
+                _userVM.Activate();
+            }
+            else if (destination == "Settings")
+            {
+                if (CurrentView == _settingsVM) return;
+                CurrentView = _settingsVM;
+            }
+            else
+            {
+                _userVM.CleanUp();
+                destination = "Management";
+            }
         }
     }
 }

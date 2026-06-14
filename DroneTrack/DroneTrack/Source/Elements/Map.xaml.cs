@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -85,6 +86,9 @@ namespace DroneTrack.Source.Elements
                 if (message?.type == "MAP_READY")
                 {
                     WeakReferenceMessenger.Default.Send(new MapReadyMessage());
+
+                    string script = $"clearAllMarkers();";
+                    MapView.CoreWebView2.ExecuteScriptAsync(script);
                 }
 
                 if (message?.type == "NEW_MARKER")
