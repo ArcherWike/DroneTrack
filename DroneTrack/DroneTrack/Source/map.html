@@ -21,8 +21,7 @@
 
         .drone-marker.active {
              color: green;
-        }
-            
+        }    
 
     </style>
 </head>
@@ -31,36 +30,16 @@
     <script>
         var map = L.map('map').setView([52.23, 21.01], 6); // Środek Polski
 
-        function createDroneIconHtml(color) {
-
-            const svg = `
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.021 39.957" width="40px" height="40px">
-                                                    <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="12" cy="12" rx="8" ry="8" />
-                                                    <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="28" cy="12" rx="8" ry="8" />
-                                                    <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="12" cy="28" rx="8" ry="8" />
-                                                    <ellipse style="stroke: ${color}; fill: none; stroke-width: 3px;" cx="28" cy="28" rx="8" ry="8" />
-                                                    </svg>`;
-
-            return svg.replace(/\s+/g, ' ').trim();
-        }
-
         L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
             subdomains: 'abcd',
             maxZoom: 20
         }).addTo(map);
 
-
         function addMarker(id, lat, lng, durationSeconds, delay) {
-            let totalLeftSeconds = durationSeconds + delay;
-            let secondsLeft = 0;
-            let timerInterval = null;
-            let delayTimer = null;
-
             let delayLeft = delay;
             let flightLeft = durationSeconds;
             let isActive = delay === 0;
-
 
             let droneClass = isActive ? 'drone-marker active' : 'drone-marker waiting';
             const droneIcon = L.divIcon({
@@ -68,12 +47,10 @@
                 html: '✈',
             });
 
-
             let marker = L.marker([lat, lng], {
                 databaseId: id,
                 icon: droneIcon,
             }).addTo(map);
-
 
             const timer = setInterval(() => {
 
@@ -105,9 +82,7 @@
             }, 1000);
 
             function getPopupText() {
-
                 let seconds = isActive ? flightLeft : delayLeft;
-
                 let mins = Math.floor(seconds / 60);
                 let secs = seconds % 60;
 
@@ -186,8 +161,6 @@
 
                 map.dragging.disable();
 
-
-
                 if (filterCircle) map.removeLayer(filterCircle);
                 filterCircle = L.circle(e.latlng, { radius: 0, color: 'red' }).addTo(map);
 
@@ -217,11 +190,6 @@
                 window.chrome.webview.postMessage({ type: "SPATIAL_FILTER", data: data });
             }
         });
-
-
-
-
-
 
 
         //map.getContainer().addEventListener('contextmenu', e => e.preventDefault());
