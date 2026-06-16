@@ -53,6 +53,20 @@ namespace DroneTrack.Source.Messages
         }
     }
 
+    public class AddFilteredMarkerMessage
+    {
+        public int MissionId { get; set; }
+        public double Lat { get; set; }
+        public double Lng { get; set; }
+
+        public AddFilteredMarkerMessage(int missionId, double lat, double lng)
+        {
+            MissionId = missionId;
+            Lat = lat;
+            Lng = lng;
+        }
+    }
+
     public class MapSpatialFilterMessage
     {
         public double CenterLat { get; set; }
@@ -69,4 +83,16 @@ namespace DroneTrack.Source.Messages
 
 
     public class MapReadyMessage { }
+
+    public class ClearMapMarkersMessage { }
+
+    public class UpdateFilteredMarkersOnMapMessage
+    {
+        public List<int> MarkersId;
+
+        public UpdateFilteredMarkersOnMapMessage(List<int> markersId)
+        {
+            MarkersId = markersId;
+        }
+    }
 }

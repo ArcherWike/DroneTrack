@@ -36,6 +36,8 @@
             maxZoom: 20
         }).addTo(map);
 
+        var drones = new Map();
+
         function clearAllMarkers() {
             map.eachLayer((layer) => {
                 if (layer && layer.options && layer.options.icon) {
@@ -43,6 +45,34 @@
                 }
             });
         };
+
+        function filterDrones(ids) {
+            console.log(ids);
+            const visibles = new Set(ids);
+
+            for (const [id, marker] of drones) {
+                if (!visibles.has(id)) {
+                    map.removeLayer(marker);
+                    drones.delete(id);
+                }
+            }
+        }
+
+        function addFilteredMarker(id, lat, lng) {
+
+            if (drones.has(id)) return;
+
+            const droneIcon = L.divIcon({
+                className: 'drone-marker active',
+                html: '✈',
+            });
+
+            let marker = L.marker([lat, lng], {
+                icon: droneIcon,
+            }).addTo(map);
+
+            drones.set(id, marker);
+        }
 
         function addMarker(id, lat, lng, durationSeconds, delay) {
             let timerInterval = null;

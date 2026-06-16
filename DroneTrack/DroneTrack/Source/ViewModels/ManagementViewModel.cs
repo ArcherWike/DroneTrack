@@ -2,24 +2,9 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Net.Mail;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
-using System.Windows.Media.Media3D;
-using System.Collections.ObjectModel;
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using CommunityToolkit.Mvvm.Messaging;
 using DroneTrack.Source.Data;
-using DroneTrack.Source.Layouts;
 using DroneTrack.Source.Messages;
 using DroneTrack.Source.Models;
-using Microsoft.Web.WebView2.Core;
 
 
 namespace DroneTrack.Source.ViewModels
@@ -51,6 +36,60 @@ namespace DroneTrack.Source.ViewModels
                     _allFlights.Add(d);
                 }
             }
+        }
+
+        private void AddFlightsToMap()
+        {
+            using (var db = new DroneDatabaseContext())
+            {
+                var databaseDrones = db.FlightLogs.ToList();
+
+                foreach (var d in databaseDrones)
+                {
+                    WeakReferenceMessenger.Default.Send(new AddFilteredMarkerMessage(d.Id, d.Latitude, d.Longitude));
+                }
+            }
+        }
+
+        private void OnFlightsDataChanged()
+        {
+            var databaseDrones = AllFlights.ToList();
+
+            List<int> markerIds = new List<int>();
+            foreach (var d in databaseDrones)
+            {
+                markerIds.Add(d.Id);
+                WeakReferenceMessenger.Default.Send(new AddFilteredMarkerMessage(d.Id, d.Latitude, d.Longitude));
+            }
+
+            WeakReferenceMessenger.Default.Send(new UpdateFilteredMarkersOnMapMessage(markerIds));
+        }
+
+        private CancellationTokenSource? _filterDebounceToken;
+
+        private void DebounceFilters()
+        {
+            _filterDebounceToken?.Cancel();
+            _filterDebounceToken?.Dispose();
+
+            _filterDebounceToken = new CancellationTokenSource();
+            var token = _filterDebounceToken.Token;
+
+            _ = Task.Run(async () =>
+            {
+                try
+                {
+                    await Task.Delay(500, token);
+
+                    if (!token.IsCancellationRequested)
+                    {
+                        OnFlightsDataChanged();
+                    }
+                }
+                catch (TaskCanceledException)
+                {
+                }
+            });
         }
 
 
@@ -106,6 +145,8 @@ namespace DroneTrack.Source.ViewModels
             {
                 AllFlights.Add(flight);
             }
+
+            DebounceFilters();
         }
 
         private void ApplySpatialFilter(double centerLat, double centerLng, double radiusInMeters)
@@ -133,7 +174,7 @@ namespace DroneTrack.Source.ViewModels
 
             WeakReferenceMessenger.Default.Register<MapReadyMessage>(this, (r, m) =>
             {
-
+                AddFlightsToMap();
             });
         }
     }

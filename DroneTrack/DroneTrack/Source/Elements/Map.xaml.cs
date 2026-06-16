@@ -69,6 +69,80 @@ namespace DroneTrack.Source.Elements
                 }));
             });
 
+            WeakReferenceMessenger.Default.Register<AddFilteredMarkerMessage>(this, (r, m) =>
+            {
+                Dispatcher.BeginInvoke(new Action(async () =>
+                {
+                    if (!this.IsVisible || MapView == null || MapView.CoreWebView2 == null)
+                        return;
+
+                    try
+                    {
+                        if (MapView?.CoreWebView2 != null)
+                        {
+                            var culture = System.Globalization.CultureInfo.InvariantCulture;
+                            string script = $"addFilteredMarker({m.MissionId}, {m.Lat.ToString(culture)}, {m.Lng.ToString(culture)});";
+                            await MapView.CoreWebView2.ExecuteScriptAsync(script);
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        System.Diagnostics.Debug.WriteLine($"Błąd podczas wysyłania wiadomości do WebView2: {ex.Message}");
+                        return;
+                    }
+                }));
+            });
+
+            WeakReferenceMessenger.Default.Register<UpdateFilteredMarkersOnMapMessage>(this, (r, m) =>
+            {
+                Dispatcher.BeginInvoke(new Action(async () =>
+                {
+                    if (!this.IsVisible || MapView == null || MapView.CoreWebView2 == null)
+                        return;
+
+                    try
+                    {
+                        if (MapView?.CoreWebView2 != null)
+                        {
+                            var culture = System.Globalization.CultureInfo.InvariantCulture;
+                            string json = JsonSerializer.Serialize(m.MarkersId);
+                            string script = $"filterDrones({json});";
+                            await MapView.CoreWebView2.ExecuteScriptAsync(script);
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        System.Diagnostics.Debug.WriteLine($"Błąd podczas wysyłania wiadomości do WebView2: {ex.Message}");
+                        return;
+                    }
+                }));
+            });
+
+            WeakReferenceMessenger.Default.Register<ClearMapMarkersMessage>(this, (r, m) =>
+            {
+                Dispatcher.BeginInvoke(new Action(async () =>
+                {
+                    if (!this.IsVisible || MapView == null || MapView.CoreWebView2 == null)
+                        return;
+
+                    try
+                    {
+                        if (MapView?.CoreWebView2 != null)
+                        {
+                            ClearMap();
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        System.Diagnostics.Debug.WriteLine($"Błąd podczas wysyłania wiadomości do WebView2: {ex.Message}");
+                        return;
+                    }
+                }));
+            });
+
 
             string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
             string htmlPath = System.IO.Path.Combine(baseDirectory, "Source", "map.html");
@@ -86,9 +160,7 @@ namespace DroneTrack.Source.Elements
                 if (message?.type == "MAP_READY")
                 {
                     WeakReferenceMessenger.Default.Send(new MapReadyMessage());
-
-                    string script = $"clearAllMarkers();";
-                    MapView.CoreWebView2.ExecuteScriptAsync(script);
+                    ClearMap();
                 }
 
                 if (message?.type == "NEW_MARKER")
@@ -105,6 +177,14 @@ namespace DroneTrack.Source.Elements
             {
                 System.Diagnostics.Debug.WriteLine($"Błąd Mapy: {ex.Message}");
             }
+        }
+
+
+
+        private void ClearMap()
+        {
+            string script = $"clearAllMarkers();";
+            MapView.CoreWebView2.ExecuteScriptAsync(script);
         }
 
         private void AddNewMarker(MapMessage message)
