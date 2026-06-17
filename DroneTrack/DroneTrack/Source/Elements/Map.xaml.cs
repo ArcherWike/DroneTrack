@@ -189,16 +189,16 @@ namespace DroneTrack.Source.Elements
                     return;
                 }
 
+                if (message?.type == "MAP_READY")
+                {
+                    ClearMap();
+                    WeakReferenceMessenger.Default.Send(new MapReadyMessage());
+                }
+
                 if (message.data.ValueKind == JsonValueKind.Undefined || message.data.ValueKind == JsonValueKind.Null)
                 {
                     System.Diagnostics.Debug.WriteLine("Otrzymano nieprawidłową wiadomość z mapy.");
                     return;
-                }
-
-                if (message?.type == "MAP_READY")
-                {
-                    WeakReferenceMessenger.Default.Send(new MapReadyMessage());
-                    ClearMap();
                 }
 
                 if (message?.type == "NEW_MARKER")
