@@ -30,6 +30,7 @@ namespace DroneTrack.Source.ViewModels
             _managementVM = new ManagementViewModel(_databaseService);
             _settingsVM = new SettingsViewModel(_databaseService);
             _userVM = new UserViewModel(_databaseService);
+            _managementVM.Activate();
             _currentView = _managementVM;
         }
 
@@ -61,6 +62,7 @@ namespace DroneTrack.Source.ViewModels
             {
                 _userVM.CleanUp();
                 destination = "Management";
+                _managementVM.Activate();
             }
         }
     }
