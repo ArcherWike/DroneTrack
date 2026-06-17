@@ -37,6 +37,7 @@
         }).addTo(map);
 
         var drones = new Map();
+        var prevClickedId = null;
 
         function clearAllMarkers() {
             map.eachLayer((layer) => {
@@ -58,20 +59,59 @@
             }
         }
 
+        function changeDroneStatus(marker) {
+            const el = marker.getElement();
+            if (el) {
+                if (el.classList.contains('waiting')) {
+                    el.classList.remove('waiting');
+                    el.classList.add('active');
+                } else if (el.classList.contains('active')) {
+                    el.classList.remove('active');
+                    el.classList.add('waiting');
+                }
+            }
+        }
+
+        function selectDrone(id) {
+            if (prevClickedId) {
+                const prevMarker = drones.get(prevClickedId);
+                if (prevMarker) {
+                    changeDroneStatus(prevMarker);
+                }
+            }
+
+            changeDroneStatus(drones.get(id));
+            prevClickedId = id;
+        }
+
         function addFilteredMarker(id, lat, lng) {
 
             if (drones.has(id)) return;
 
-            const droneIcon = L.divIcon({
-                className: 'drone-marker active',
-                html: '✈',
-            });
+            let marker = L.marker([lat, lng],
+                {
+                    icon: createDroneIcon(false),
+                }).addTo(map);
 
-            let marker = L.marker([lat, lng], {
-                icon: droneIcon,
-            }).addTo(map);
+            marker.on('click', () => onDroneClicked(id));
 
             drones.set(id, marker);
+        }
+
+
+        function onDroneClicked(id) {
+            window.chrome.webview.postMessage({ type: "DRONE_CLICKED", data: { DroneId: id } });
+
+            selectDrone(id);
+        }
+
+        function createDroneIcon(active) {
+            let cssClass = active ? 'drone-marker active' : 'drone-marker waiting';
+
+            return L.divIcon({
+                className: cssClass,
+                html: '✈',
+            });
         }
 
         function addMarker(id, lat, lng, durationSeconds, delay) {
@@ -80,15 +120,9 @@
             let flightLeft = durationSeconds;
             let isActive = delay === 0;
 
-            let droneClass = isActive ? 'drone-marker active' : 'drone-marker waiting';
-            const droneIcon = L.divIcon({
-                className: droneClass,
-                html: '✈',
-            });
-
             let marker = L.marker([lat, lng], {
                 databaseId: id,
-                icon: droneIcon,
+                icon: createDroneIcon(isActive),
             }).addTo(map);
 
             const timer = setInterval(() => {
@@ -179,12 +213,9 @@
             var lat = e.latlng.lat;
             var lng = e.latlng.lng;
 
-
             var data = {
-                lat: lat,
-                lng: lng,
-                radius: 0.0,
-                action: "map_click"
+                Lat: lat,
+                Lng: lng,
             };
             window.chrome.webview.postMessage({ type: "NEW_MARKER", data: data });
         });
@@ -219,9 +250,9 @@
                 map.off('mousemove', onMouseMove);
 
                 let data = {
-                    lat: filterCircle.getLatLng().lat,
-                    lng: filterCircle.getLatLng().lng,
-                    radius: filterCircle.getRadius()
+                    CenterLat: filterCircle.getLatLng().lat,
+                    CenterLng: filterCircle.getLatLng().lng,
+                    RadiusInMeters: filterCircle.getRadius()
                 };
                 window.chrome.webview.postMessage({ type: "SPATIAL_FILTER", data: data });
             }

@@ -97,4 +97,13 @@ namespace DroneTrack.Source.Messages
             DroneId = droneId;
         }
     }
+
+    public class  UIDroneSelectedMessage
+    {
+        public int DroneId { get; set; }
+        public UIDroneSelectedMessage(int droneId)
+        {
+            DroneId = droneId;
+        }
+    }
 }

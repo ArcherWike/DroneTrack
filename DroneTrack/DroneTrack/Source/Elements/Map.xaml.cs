@@ -120,6 +120,32 @@ namespace DroneTrack.Source.Elements
                 }));
             });
 
+            WeakReferenceMessenger.Default.Register<UIDroneSelectedMessage>(this, (r, m) =>
+            {
+                Dispatcher.BeginInvoke(new Action(async () =>
+                {
+                    if (!this.IsVisible || MapView == null || MapView.CoreWebView2 == null)
+                        return;
+
+                    try
+                    {
+                        if (MapView?.CoreWebView2 != null)
+                        {
+                            var culture = System.Globalization.CultureInfo.InvariantCulture;
+                            string json = JsonSerializer.Serialize(m.DroneId);
+                            string script = $"selectDrone({json});";
+                            await MapView.CoreWebView2.ExecuteScriptAsync(script);
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        System.Diagnostics.Debug.WriteLine($"Błąd podczas wysyłania wiadomości do WebView2: {ex.Message}");
+                        return;
+                    }
+                }));
+            });
+
             WeakReferenceMessenger.Default.Register<ClearMapMarkersMessage>(this, (r, m) =>
             {
                 Dispatcher.BeginInvoke(new Action(async () =>

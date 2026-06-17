@@ -102,6 +102,11 @@ namespace DroneTrack.Source.ViewModels
 
         partial void OnSelectedFlightChanged(FlightLog value)
         {
+            if (SelectedFlight != null)
+            {
+                WeakReferenceMessenger.Default.Send(new UIDroneSelectedMessage(SelectedFlight.Id));
+            }
+            
             IsDetailVisible = value != null;
         }
 
@@ -154,6 +159,18 @@ namespace DroneTrack.Source.ViewModels
             var results = _databaseService.GetFlightsBySpatialFilter(centerLat, centerLng, radiusInMeters);
         }
 
+        private void SelectClickedDrone(int id)
+        {
+            if (AllFlights == null) return;
+            if (AllFlights.Count == 0) return; 
+
+            FlightLog selected = AllFlights.FirstOrDefault(drone => drone.Id == id);
+            if (selected != null)
+            {
+                SelectedFlight = selected;
+            }
+        }
+
 
         [RelayCommand]
         private void ClearFilters()
@@ -175,6 +192,11 @@ namespace DroneTrack.Source.ViewModels
             WeakReferenceMessenger.Default.Register<MapReadyMessage>(this, (r, m) =>
             {
                 AddFlightsToMap();
+            });
+
+            WeakReferenceMessenger.Default.Register<DroneClickedMessage>(this, (r, m) =>
+            {
+                SelectClickedDrone(m.DroneId);
             });
         }
     }
