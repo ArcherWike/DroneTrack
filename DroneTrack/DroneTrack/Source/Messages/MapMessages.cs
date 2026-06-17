@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
 
 namespace DroneTrack.Source.Messages
 {
@@ -10,17 +11,10 @@ namespace DroneTrack.Source.Messages
     public class MapMessage
     {
         public string type { get; set; }
-        public MapData data { get; set; }
+        public JsonElement data { get; set; }
     }
-
-    public class MapData
-    {
-        public double lat { get; set; }
-        public double lng { get; set; }
-        public double radius { get; set; }
-        public string action { get; set; }
-    }
-    //---------- User Interaction Messages ----------
+    
+    //---------- Communication Messages ----------
 
     public class MapClickedMessage
     {
@@ -42,7 +36,6 @@ namespace DroneTrack.Source.Messages
 
         public int DurationSeconds { get; set; }
         public int DelaySeconds { get; set; }
-
         public AddMarkerMessage(int missionId, double lat, double lng, int durationSeconds, int delaySeconds)
         {
             MissionId = missionId;
@@ -93,6 +86,15 @@ namespace DroneTrack.Source.Messages
         public UpdateFilteredMarkersOnMapMessage(List<int> markersId)
         {
             MarkersId = markersId;
+        }
+    }
+
+    public class DroneClickedMessage
+    {
+        public int DroneId { get; set; }
+        public DroneClickedMessage(int droneId)
+        {
+            DroneId = droneId;
         }
     }
 }

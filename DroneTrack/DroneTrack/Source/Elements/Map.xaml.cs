@@ -157,6 +157,18 @@ namespace DroneTrack.Source.Elements
                 string json = e.WebMessageAsJson;
                 var message = JsonSerializer.Deserialize<MapMessage>(json);
 
+                if (message is null)
+                {
+                    System.Diagnostics.Debug.WriteLine("Otrzymano nieprawidłową wiadomość z mapy.");
+                    return;
+                }
+
+                if (message.data.ValueKind == JsonValueKind.Undefined || message.data.ValueKind == JsonValueKind.Null)
+                {
+                    System.Diagnostics.Debug.WriteLine("Otrzymano nieprawidłową wiadomość z mapy.");
+                    return;
+                }
+
                 if (message?.type == "MAP_READY")
                 {
                     WeakReferenceMessenger.Default.Send(new MapReadyMessage());
@@ -165,12 +177,17 @@ namespace DroneTrack.Source.Elements
 
                 if (message?.type == "NEW_MARKER")
                 {
-                    AddNewMarker(message);
+                    AddNewMarker(message.data);
                 }
 
                 if (message?.type == "SPATIAL_FILTER")
                 {
-                    SendSpatialFilterMessage(message);
+                    SendSpatialFilterMessage(message.data);
+                }
+
+                if (message?.type == "DRONE_CLICKED")
+                {
+                    OnDroneClicked(message.data);
                 }
             }
             catch (Exception ex)
@@ -179,31 +196,39 @@ namespace DroneTrack.Source.Elements
             }
         }
 
-
-
         private void ClearMap()
         {
             string script = $"clearAllMarkers();";
             MapView.CoreWebView2.ExecuteScriptAsync(script);
         }
 
-        private void AddNewMarker(MapMessage message)
+        private void OnDroneClicked(JsonElement data)
         {
-            double lat = message.data.lat;
-            double lng = message.data.lng;
-
-            WeakReferenceMessenger.Default.Send(new MapClickedMessage(lat, lng));
-
-            System.Diagnostics.Debug.WriteLine($"Mapa wysłała wiadomość: {lat}, {lng}");
+            var droneClickedMessage = data.Deserialize<DroneClickedMessage>();
+            if (droneClickedMessage is not null)
+            {
+                WeakReferenceMessenger.Default.Send(new DroneClickedMessage(droneClickedMessage.DroneId));
+            }
         }
 
-        private void SendSpatialFilterMessage(MapMessage message)
+        private void AddNewMarker(JsonElement data)
         {
-            double centerLat = message.data.lat;
-            double centerLng = message.data.lng;
-            double radius = message.data.radius;
+            MapClickedMessage mapData = data.Deserialize<MapClickedMessage>();
+            if (mapData is not null)
+            {
+                WeakReferenceMessenger.Default.Send(new MapClickedMessage(mapData.Lat, mapData.Lng));
+            }
 
-            WeakReferenceMessenger.Default.Send(new MapSpatialFilterMessage(centerLat, centerLng, radius));
+            // System.Diagnostics.Debug.WriteLine($"Mapa wysłała wiadomość: {mapData.Lat}, {mapData.Lng}");
+        }
+
+        private void SendSpatialFilterMessage(JsonElement data)
+        {
+            MapSpatialFilterMessage spatialFilterMessage = data.Deserialize<MapSpatialFilterMessage>();
+            if (spatialFilterMessage is not null)
+            {
+                WeakReferenceMessenger.Default.Send(new MapSpatialFilterMessage(spatialFilterMessage.CenterLat, spatialFilterMessage.CenterLng, spatialFilterMessage.RadiusInMeters));
+            }
         }
     }
 }
