@@ -55,6 +55,8 @@ namespace DroneTrack.Source.ViewModels
             }
             else if (destination == "Settings")
             {
+                _managementVM.CleanUp();
+                _userVM.CleanUp();
                 if (CurrentView == _settingsVM) return;
                 CurrentView = _settingsVM;
             }
