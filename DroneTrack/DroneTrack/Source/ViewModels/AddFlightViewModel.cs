@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 using System.Windows;
-using System.Windows.Media.Media3D;
-
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-
 using DroneTrack.Source.Data;
 using DroneTrack.Source.Messages;
 using DroneTrack.Source.Models;
@@ -17,19 +9,22 @@ using CommunityToolkit.Mvvm.Messaging;
 
 namespace DroneTrack.Source.ViewModels
 {
+    //Form for flight details
+    //After successful verification, the data is added to the database
+
     public partial class AddFlightViewModel : ObservableObject
     {
-        private readonly DatabaseService _databaseService;
+        private readonly DatabaseService databaseService;
 
         [ObservableProperty]
         private ObservableCollection<Drone> _availableDrones;
-
         [ObservableProperty]
         private Drone _selectedDrone;
 
-        // Dane przekazane z mapy
+        // Map data
         [ObservableProperty] private double _lat;
         [ObservableProperty] private double _lng;
+        // Form data
         [ObservableProperty] private string _operatorId;
         [ObservableProperty] private string _currentTime = DateTime.Now.ToString("HH:mm:ss");
         [ObservableProperty] private int _delayMinutes = 0;
@@ -37,13 +32,11 @@ namespace DroneTrack.Source.ViewModels
         [ObservableProperty] private int _maxAltitude = 120;
         [ObservableProperty] private string _description = "";
 
-
-
         public AddFlightViewModel(DatabaseService dbService, double lat, double lng)
         {
-            _databaseService = dbService;
-            _lat = lat;
-            _lng = lng;
+            databaseService = dbService;
+            Lat = lat;
+            Lng = lng;
 
             LoadDrones();
         }
@@ -57,30 +50,30 @@ namespace DroneTrack.Source.ViewModels
         [RelayCommand]
         private void SaveFlight(Window window)
         {
-            if (_selectedDrone == null)
+            if (SelectedDrone == null)
             {
                 MessageBox.Show("Statek powietrzny nie został wybrany!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(_operatorId))
+            if (string.IsNullOrWhiteSpace(OperatorId))
             {
                 MessageBox.Show("Błędny identyfikator operatora!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
-            if (_durationMinutes <= 0)
+            if (DurationMinutes <= 0)
             {
                 MessageBox.Show("Czas trwania lotu musi być większy niż 0 minut.", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-            if (_delayMinutes < 0)
+            if (DelayMinutes < 0)
             {
                 MessageBox.Show("Minimalne opóźnienie startu to 0 minut.", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
-            if (_maxAltitude <= 0 || _maxAltitude > 500)
+            if (MaxAltitude <= 0 || MaxAltitude > 500)
             {
                 MessageBox.Show("Maksymalna wysokość musi być większa niż 0 metrów i mniejsza niż 500 metrów.", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
@@ -90,19 +83,19 @@ namespace DroneTrack.Source.ViewModels
 
             var newFlight = new FlightLog
             {
-                DroneId = _selectedDrone.Id,
-                Latitude = _lat,
-                Longitude = _lng,
-                OperatorIdentity = (_operatorId),
-                FlightDateStart = DateTime.Now.AddMinutes(_delayMinutes),
-                FlightDateEnd = DateTime.Now.AddMinutes(_delayMinutes + _durationMinutes),
-                MaxAltitude = _maxAltitude,
-                Description = _description
+                DroneId = SelectedDrone.Id,
+                Latitude = Lat,
+                Longitude = Lng,
+                OperatorIdentity = OperatorId,
+                FlightDateStart = DateTime.Now.AddMinutes(DelayMinutes),
+                FlightDateEnd = DateTime.Now.AddMinutes(DelayMinutes + DurationMinutes),
+                MaxAltitude = MaxAltitude,
+                Description = Description
             };
-            db.FlightLogs.Add(newFlight);
-            db.SaveChanges();
 
-            WeakReferenceMessenger.Default.Send(new AddMarkerMessage(newFlight.Id, _lat, _lng, _durationMinutes * 60, _delayMinutes * 60));
+            databaseService.AddNewFlight(newFlight);
+
+            WeakReferenceMessenger.Default.Send(new AddMarkerMessage(newFlight.Id, Lat, Lng, DurationMinutes * 60, DelayMinutes * 60));
             window.Close();
         }
     }

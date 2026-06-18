@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Media.Media3D;
+﻿using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DroneTrack.Source.Data;
@@ -14,10 +8,10 @@ namespace DroneTrack.Source.ViewModels
 {
     public partial class SettingsViewModel : ObservableObject
     {
-        private readonly DatabaseService _databaseService;
-        public SettingsViewModel(DatabaseService databaseService)
+        private readonly DatabaseService databaseService;
+        public SettingsViewModel(DatabaseService _databaseService)
         {
-            _databaseService = databaseService;
+            databaseService = _databaseService;
             LoadDrones();
             _selectedDrone = null;
         }

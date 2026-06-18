@@ -1,20 +1,8 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Messaging;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Threading;
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Messaging;
+﻿using CommunityToolkit.Mvvm.Messaging;
 using DroneTrack.Source.Data;
 using DroneTrack.Source.Layouts;
 using DroneTrack.Source.Messages;
+using DroneTrack.Source.Models;
 
 namespace DroneTrack.Source.ViewModels
 {
@@ -28,8 +16,6 @@ namespace DroneTrack.Source.ViewModels
             _databaseService = databaseService;
 
         }
-
-
         private void OnMapClicked(double lat, double lng)
         {
             if (flightWindow != null) return;
@@ -48,32 +34,28 @@ namespace DroneTrack.Source.ViewModels
 
         private void LoadActiveFlights()
         {
-            using (var db = new DroneDatabaseContext())
+            DateTime currentTime = DateTime.Now;
+
+            List<FlightLog> activeFlights = _databaseService.GetActiveFlights();
+
+            foreach (var lot in activeFlights)
             {
-                var currentTime = DateTime.Now;
+                var delay = (int)(lot.FlightDateStart - currentTime).TotalSeconds;
+                var totalTime = (int)(lot.FlightDateEnd - currentTime).TotalSeconds;
 
-                var activeFlights = db.FlightLogs
-                    .Where(f => f.FlightDateEnd > currentTime)
-                    .ToList();
+                if (delay < 0) delay = 0;
 
-                foreach (var lot in activeFlights)
+                if (totalTime > 0)
                 {
-                    var delay = (int)(lot.FlightDateStart - currentTime).TotalSeconds;
-                    var totalTime = (int)(lot.FlightDateEnd - currentTime).TotalSeconds;
-
-                    if (delay < 0) delay = 0;
-
-                    if (totalTime > 0)
-                    {
-                        System.Diagnostics.Debug.WriteLine("Lot dodany, pozostalo ", totalTime);
-
-                        WeakReferenceMessenger.Default.Send(new AddMarkerMessage(
-                            lot.Id,
-                            lot.Latitude,
-                            lot.Longitude,
-                            totalTime,
-                            delay));
-                    }
+#if DEBUG
+                    System.Diagnostics.Debug.WriteLine("Lot dodany, pozostalo ", totalTime);
+#endif
+                    WeakReferenceMessenger.Default.Send(new AddMarkerMessage(
+                        lot.Id,
+                        lot.Latitude,
+                        lot.Longitude,
+                        totalTime,
+                        delay));
                 }
             }
         }

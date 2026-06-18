@@ -164,11 +164,15 @@ namespace DroneTrack.Source.Elements
                         }
 
                     }
+
                     catch (Exception ex)
                     {
+#if DEBUG
                         System.Diagnostics.Debug.WriteLine($"Błąd podczas wysyłania wiadomości do WebView2: {ex.Message}");
+#endif
                         return;
                     }
+
                 }));
             });
 
@@ -236,7 +240,9 @@ namespace DroneTrack.Source.Elements
 
                 if (message is null)
                 {
+#if DEBUG
                     System.Diagnostics.Debug.WriteLine("Otrzymano nieprawidłową wiadomość z mapy.");
+#endif
                     return;
                 }
 
@@ -254,7 +260,9 @@ namespace DroneTrack.Source.Elements
                 }
                 if (message.data.ValueKind == JsonValueKind.Undefined || message.data.ValueKind == JsonValueKind.Null)
                 {
+#if DEBUG
                     System.Diagnostics.Debug.WriteLine("Otrzymano nieprawidłową wiadomość z mapy.");
+#endif
                     return;
                 }
 

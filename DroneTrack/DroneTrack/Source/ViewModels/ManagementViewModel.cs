@@ -11,16 +11,16 @@ namespace DroneTrack.Source.ViewModels
 {
     partial class ManagementViewModel : ModuleViewModel
     {
-        private readonly DatabaseService _databaseService;
+        private readonly DatabaseService databaseService;
 
         [ObservableProperty]
         private ObservableCollection<FlightLog> _allFlights = new();
 
         public Action<string>? ExecuteJavaScript { get; set; }
 
-        public ManagementViewModel(DatabaseService databaseService)
+        public ManagementViewModel(DatabaseService _databaseService)
         {
-            _databaseService = databaseService;
+            databaseService = _databaseService;
         }
 
         public void LoadFlightsData()
@@ -49,15 +49,15 @@ namespace DroneTrack.Source.ViewModels
             WeakReferenceMessenger.Default.Send(new UpdateFilteredMarkersOnMapMessage(markerIds));
         }
 
-        private CancellationTokenSource? _filterDebounceToken;
+        private CancellationTokenSource? filterDebounceToken;
 
         private void DebounceFilters()
         {
-            _filterDebounceToken?.Cancel();
-            _filterDebounceToken?.Dispose();
+            filterDebounceToken?.Cancel();
+            filterDebounceToken?.Dispose();
 
-            _filterDebounceToken = new CancellationTokenSource();
-            var token = _filterDebounceToken.Token;
+            filterDebounceToken = new CancellationTokenSource();
+            var token = filterDebounceToken.Token;
 
             _ = Task.Run(async () =>
             {
@@ -126,7 +126,7 @@ namespace DroneTrack.Source.ViewModels
             DateTime startFull = SelectedDate.Value.Add(SelectedStart);
             DateTime endFull = SelectedDate.Value.Add(SelectedEnd);
 
-            return _databaseService.GetFlightsByRange(startFull, endFull);
+            return databaseService.GetFlightsByRange(startFull, endFull);
         }
 
         private void ApplyDateFilter()
@@ -152,7 +152,7 @@ namespace DroneTrack.Source.ViewModels
             DateTime startFull = SelectedDate.Value.Add(SelectedStart);
             DateTime endFull = SelectedDate.Value.Add(SelectedEnd);
 
-            List<FlightLog> results = _databaseService.GetFlightsByFilters(startFull, endFull, centerLat, centerLng, radiusInMeters);
+            List<FlightLog> results = databaseService.GetFlightsByFilters(startFull, endFull, centerLat, centerLng, radiusInMeters);
 
             AllFlights.Clear();
             foreach (var flight in results)

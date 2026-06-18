@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Media.Media3D;
-using DroneTrack.Source.Models;
-using Microsoft.Data.Sqlite;
+﻿using DroneTrack.Source.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace DroneTrack.Source.Data
 {
@@ -18,6 +10,27 @@ namespace DroneTrack.Source.Data
         public DatabaseService()
         {
             database.Database.EnsureCreated();
+        }
+
+        public void AddNewFlight(FlightLog flight)
+        {
+            using (var db = new DroneDatabaseContext())
+            {
+                db.FlightLogs.Add(flight);
+                db.SaveChanges();
+            }
+        }
+
+        public List<FlightLog> GetActiveFlights()
+        {
+            using (var db = new DroneDatabaseContext())
+            {
+                var currentTime = DateTime.Now;
+
+                return db.FlightLogs
+                    .Where(flight => flight.FlightDateEnd > currentTime)
+                    .ToList();
+            }
         }
 
         public List<FlightLog> GetFlightsByFilters(DateTime start, DateTime end, double centerLat, double centerLng, double radiusInMeters)
@@ -31,8 +44,7 @@ namespace DroneTrack.Source.Data
         {
             using (var db = new DroneDatabaseContext())
             {
-                var allFlights = db.FlightLogs.ToList();
-                return allFlights.Where(f => f.FlightDateStart >= start && f.FlightDateEnd <= end).ToList();
+                return db.FlightLogs.AsNoTracking().Where(f => f.FlightDateStart >= start && f.FlightDateEnd <= end).ToList();
             }                
         }
 
@@ -40,8 +52,7 @@ namespace DroneTrack.Source.Data
         {
             using (var db = new DroneDatabaseContext())
             {
-                var allFlights = db.FlightLogs.ToList();
-                return allFlights.Where(f => IsWithinRadius(f.Latitude, f.Longitude, centerLat, centerLng, radiusInMeters)).ToList();
+                return db.FlightLogs.AsNoTracking().Where(f => IsWithinRadius(f.Latitude, f.Longitude, centerLat, centerLng, radiusInMeters)).ToList();
             }
         }
         private bool IsWithinRadius(double lat1, double lng1, double lat2, double lng2, double radiusInMeters)
