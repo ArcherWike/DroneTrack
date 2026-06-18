@@ -146,6 +146,57 @@ namespace DroneTrack.Source.Elements
                 }));
             });
 
+
+            WeakReferenceMessenger.Default.Register<ClearMapSpatialFilterMessage>(this, (r, m) =>
+            {
+                Dispatcher.BeginInvoke(new Action(async () =>
+                {
+                    if (!this.IsVisible || MapView == null || MapView.CoreWebView2 == null)
+                        return;
+
+                    try
+                    {
+                        if (MapView?.CoreWebView2 != null)
+                        {
+                            var culture = System.Globalization.CultureInfo.InvariantCulture;
+                            string script = $"clearSpatialFilter();";
+                            await MapView.CoreWebView2.ExecuteScriptAsync(script);
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        System.Diagnostics.Debug.WriteLine($"Błąd podczas wysyłania wiadomości do WebView2: {ex.Message}");
+                        return;
+                    }
+                }));
+            });
+
+            WeakReferenceMessenger.Default.Register<ManagementModeChangedMessage>(this, (r, m) =>
+            {
+                Dispatcher.BeginInvoke(new Action(async () =>
+                {
+                    if (!this.IsVisible || MapView == null || MapView.CoreWebView2 == null)
+                        return;
+
+                    try
+                    {
+                        if (MapView?.CoreWebView2 != null)
+                        {
+                            var culture = System.Globalization.CultureInfo.InvariantCulture;
+                            string script = $"setSpatialFilterMode({m.IsEnabled.ToString().ToLower()});";
+                            await MapView.CoreWebView2.ExecuteScriptAsync(script);
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        System.Diagnostics.Debug.WriteLine($"Błąd podczas wysyłania wiadomości do WebView2: {ex.Message}");
+                        return;
+                    }
+                }));
+            });
+
             WeakReferenceMessenger.Default.Register<ClearMapMarkersMessage>(this, (r, m) =>
             {
                 Dispatcher.BeginInvoke(new Action(async () =>
@@ -193,8 +244,14 @@ namespace DroneTrack.Source.Elements
                 {
                     ClearMap();
                     WeakReferenceMessenger.Default.Send(new MapReadyMessage());
+                    return;
                 }
 
+                if (message?.type == "REMOVE_SPATIAL_FILTER")
+                {
+                    WeakReferenceMessenger.Default.Send(new MapRemoveSpatialFilterMessage());
+                    return;
+                }
                 if (message.data.ValueKind == JsonValueKind.Undefined || message.data.ValueKind == JsonValueKind.Null)
                 {
                     System.Diagnostics.Debug.WriteLine("Otrzymano nieprawidłową wiadomość z mapy.");
@@ -205,13 +262,11 @@ namespace DroneTrack.Source.Elements
                 {
                     AddNewMarker(message.data);
                 }
-
-                if (message?.type == "SPATIAL_FILTER")
+                else if (message?.type == "ADD_SPATIAL_FILTER")
                 {
                     SendSpatialFilterMessage(message.data);
                 }
-
-                if (message?.type == "DRONE_CLICKED")
+                else if (message?.type == "DRONE_CLICKED")
                 {
                     OnDroneClicked(message.data);
                 }
@@ -250,10 +305,10 @@ namespace DroneTrack.Source.Elements
 
         private void SendSpatialFilterMessage(JsonElement data)
         {
-            MapSpatialFilterMessage spatialFilterMessage = data.Deserialize<MapSpatialFilterMessage>();
+            MapAddSpatialFilterMessage spatialFilterMessage = data.Deserialize<MapAddSpatialFilterMessage>();
             if (spatialFilterMessage is not null)
             {
-                WeakReferenceMessenger.Default.Send(new MapSpatialFilterMessage(spatialFilterMessage.CenterLat, spatialFilterMessage.CenterLng, spatialFilterMessage.RadiusInMeters));
+                WeakReferenceMessenger.Default.Send(new MapAddSpatialFilterMessage(spatialFilterMessage.CenterLat, spatialFilterMessage.CenterLng, spatialFilterMessage.RadiusInMeters));
             }
         }
     }

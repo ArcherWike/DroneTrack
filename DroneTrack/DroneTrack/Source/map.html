@@ -72,6 +72,21 @@
             }
         }
 
+        function setSpatialFilterMode(enabled) {
+            console.log("mode ", enabled);
+
+            if (enabled) {
+                map.on('mousedown', onMouseDown);
+            } else {
+                map.off('mousedown', onMouseDown);
+                if (filterCircle) {
+                    map.removeLayer(filterCircle);
+                    filterCircle = null;
+                }
+            }
+
+        }
+
         function selectDrone(id) {
             if (prevClickedId) {
                 const prevMarker = drones.get(prevClickedId);
@@ -223,8 +238,7 @@
 
         let filterCircle;
 
-        map.on('mousedown', function (e) {
-            return;
+        function onMouseDown(e) {
             if (e.originalEvent.button === 2) {
                 map.dragging.disable();
 
@@ -232,8 +246,9 @@
                 filterCircle = L.circle(e.latlng, { radius: 0, color: 'red' }).addTo(map);
 
                 map.on('mousemove', onMouseMove);
+                map.on('mouseup', onMouseUp);
             }
-        });
+        }
 
         function onMouseMove(e) {
             if (filterCircle) {
@@ -242,22 +257,38 @@
             }
         }
 
-        map.on('mouseup', function (e) {
+        function onMouseUp(e) {
             if (e.originalEvent.button === 2) {
 
                 map.dragging.enable();
 
                 map.off('mousemove', onMouseMove);
 
-                let data = {
-                    CenterLat: filterCircle.getLatLng().lat,
-                    CenterLng: filterCircle.getLatLng().lng,
-                    RadiusInMeters: filterCircle.getRadius()
-                };
-                window.chrome.webview.postMessage({ type: "SPATIAL_FILTER", data: data });
-            }
-        });
+                if (filterCircle.getRadius() > 8000) {
+                    let data = {
+                        CenterLat: filterCircle.getLatLng().lat,
+                        CenterLng: filterCircle.getLatLng().lng,
+                        RadiusInMeters: filterCircle.getRadius()
+                    };
 
+                    window.chrome.webview.postMessage({ type: "ADD_SPATIAL_FILTER", data: data });
+                }
+                else {
+                    window.chrome.webview.postMessage({ type: "REMOVE_SPATIAL_FILTER" });
+                    map.removeLayer(filterCircle);
+                    filterCircle = null;
+                }
+
+                map.off('mouseup', onMouseUp);
+            }
+        };
+
+        function clearSpatialFilter() {
+            if (filterCircle) {
+                map.removeLayer(filterCircle);
+                filterCircle = null;
+            }
+        }
 
         map.getContainer().addEventListener('contextmenu', e => e.preventDefault());
 

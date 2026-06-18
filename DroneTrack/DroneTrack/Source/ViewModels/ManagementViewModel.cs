@@ -21,33 +21,17 @@ namespace DroneTrack.Source.ViewModels
         public ManagementViewModel(DatabaseService databaseService)
         {
             _databaseService = databaseService;
-            LoadFlightsData();
         }
 
         public void LoadFlightsData()
         {
-            using (var db = new DroneDatabaseContext())
+            List<FlightLog> databaseDrones = GetDronesByTimeFilter();
+
+            _allFlights.Clear();
+            foreach (var d in databaseDrones)
             {
-                var databaseDrones = db.FlightLogs.ToList();
-
-                _allFlights.Clear();
-                foreach (var d in databaseDrones)
-                {
-                    _allFlights.Add(d);
-                }
-            }
-        }
-
-        private void AddFlightsToMap()
-        {
-            using (var db = new DroneDatabaseContext())
-            {
-                var databaseDrones = db.FlightLogs.ToList();
-
-                foreach (var d in databaseDrones)
-                {
-                    WeakReferenceMessenger.Default.Send(new AddFilteredMarkerMessage(d.Id, d.Latitude, d.Longitude));
-                }
+                _allFlights.Add(d);
+                WeakReferenceMessenger.Default.Send(new AddFilteredMarkerMessage(d.Id, d.Latitude, d.Longitude));
             }
         }
 
@@ -116,7 +100,7 @@ namespace DroneTrack.Source.ViewModels
 
         partial void OnSelectedDateChanged(DateTime? value)
         {
-            ApplyFilter();
+            ApplyDateFilter();
         }
 
         [ObservableProperty]
@@ -124,7 +108,7 @@ namespace DroneTrack.Source.ViewModels
 
         partial void OnSelectedStartChanged(TimeSpan value)
         {
-            ApplyFilter();
+            ApplyDateFilter();
         }
 
         [ObservableProperty]
@@ -132,17 +116,24 @@ namespace DroneTrack.Source.ViewModels
 
         partial void OnSelectedEndChanged(TimeSpan value)
         {
-            ApplyFilter();
+            ApplyDateFilter();
         }
 
-        private void ApplyFilter()
+        List<FlightLog> GetDronesByTimeFilter()
         {
-            if (!SelectedDate.HasValue) return;
+            if (!SelectedDate.HasValue) return new List<FlightLog>();
 
             DateTime startFull = SelectedDate.Value.Add(SelectedStart);
             DateTime endFull = SelectedDate.Value.Add(SelectedEnd);
 
-            var results = _databaseService.GetFlightsByRange(startFull, endFull);
+            return _databaseService.GetFlightsByRange(startFull, endFull);
+        }
+
+        private void ApplyDateFilter()
+        {
+            if (!SelectedDate.HasValue) return;
+
+            var results = GetDronesByTimeFilter();
 
             // UI Update
             AllFlights.Clear();
@@ -156,7 +147,19 @@ namespace DroneTrack.Source.ViewModels
 
         private void ApplySpatialFilter(double centerLat, double centerLng, double radiusInMeters)
         {
-            var results = _databaseService.GetFlightsBySpatialFilter(centerLat, centerLng, radiusInMeters);
+            if (!SelectedDate.HasValue) return;
+
+            DateTime startFull = SelectedDate.Value.Add(SelectedStart);
+            DateTime endFull = SelectedDate.Value.Add(SelectedEnd);
+
+            List<FlightLog> results = _databaseService.GetFlightsByFilters(startFull, endFull, centerLat, centerLng, radiusInMeters);
+
+            AllFlights.Clear();
+            foreach (var flight in results)
+            {
+                AllFlights.Add(flight);
+            }
+            OnFlightsDataChanged();
         }
 
         private void SelectClickedDrone(int id)
@@ -177,27 +180,42 @@ namespace DroneTrack.Source.ViewModels
         {
             SelectedStart = TimeSpan.Zero;
             SelectedEnd = TimeSpan.FromHours(24);
-            //SelectedDate = DateTime.Today;
+
+            WeakReferenceMessenger.Default.Send(new ClearMapSpatialFilterMessage());
+            ApplyDateFilter();
         }
 
         protected override void RegisterForMessages()
         {
             base.RegisterForMessages();
 
-            WeakReferenceMessenger.Default.Register<MapSpatialFilterMessage>(this, (r, m) =>
+            WeakReferenceMessenger.Default.Register<MapAddSpatialFilterMessage>(this, (r, m) =>
             {
                 ApplySpatialFilter(m.CenterLat, m.CenterLng, m.RadiusInMeters);
             });
 
+            WeakReferenceMessenger.Default.Register<MapRemoveSpatialFilterMessage>(this, (r, m) =>
+            {
+                ApplyDateFilter();
+            });
+
             WeakReferenceMessenger.Default.Register<MapReadyMessage>(this, (r, m) =>
             {
-                AddFlightsToMap();
+                LoadFlightsData();
+                WeakReferenceMessenger.Default.Send(new ManagementModeChangedMessage(true));
             });
 
             WeakReferenceMessenger.Default.Register<DroneClickedMessage>(this, (r, m) =>
             {
                 SelectClickedDrone(m.DroneId);
             });
+        }
+
+        virtual public void CleanUp()
+        {
+            base.CleanUp();
+
+            WeakReferenceMessenger.Default.Send(new ManagementModeChangedMessage(false));
         }
     }
 }

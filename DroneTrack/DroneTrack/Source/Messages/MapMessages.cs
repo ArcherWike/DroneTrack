@@ -60,13 +60,13 @@ namespace DroneTrack.Source.Messages
         }
     }
 
-    public class MapSpatialFilterMessage
+    public class MapAddSpatialFilterMessage
     {
         public double CenterLat { get; set; }
         public double CenterLng { get; set; }
         public double RadiusInMeters { get; set; }
 
-        public MapSpatialFilterMessage(double centerLat, double centerLng, double radiusInMeters)
+        public MapAddSpatialFilterMessage(double centerLat, double centerLng, double radiusInMeters)
         {
             CenterLat = centerLat;
             CenterLng = centerLng;
@@ -74,10 +74,16 @@ namespace DroneTrack.Source.Messages
         }
     }
 
+    public class MapRemoveSpatialFilterMessage {}
+
 
     public class MapReadyMessage { }
 
     public class ClearMapMarkersMessage { }
+
+    public class ClearMapSpatialFilterMessage{
+        
+    }
 
     public class UpdateFilteredMarkersOnMapMessage
     {
@@ -98,12 +104,22 @@ namespace DroneTrack.Source.Messages
         }
     }
 
-    public class  UIDroneSelectedMessage
+    public class UIDroneSelectedMessage
     {
         public int DroneId { get; set; }
         public UIDroneSelectedMessage(int droneId)
         {
             DroneId = droneId;
+        }
+    }
+
+    public class ManagementModeChangedMessage
+    {
+        public bool IsEnabled { get; set; }
+
+        public ManagementModeChangedMessage(bool isEnabled)
+        {
+            IsEnabled = isEnabled;
         }
     }
 }

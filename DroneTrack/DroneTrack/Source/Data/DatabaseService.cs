@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -17,6 +18,13 @@ namespace DroneTrack.Source.Data
         public DatabaseService()
         {
             database.Database.EnsureCreated();
+        }
+
+        public List<FlightLog> GetFlightsByFilters(DateTime start, DateTime end, double centerLat, double centerLng, double radiusInMeters)
+        {
+            var filteredByTime = GetFlightsByRange(start, end);
+
+            return filteredByTime.Where(f => IsWithinRadius(f.Latitude, f.Longitude, centerLat, centerLng, radiusInMeters)).ToList();
         }
 
         public List<FlightLog> GetFlightsByRange(DateTime start, DateTime end)
