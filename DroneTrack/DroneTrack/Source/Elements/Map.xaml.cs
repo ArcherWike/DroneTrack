@@ -16,15 +16,16 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CommunityToolkit.Mvvm.Messaging;
 using DroneTrack.Source.Messages;
+using DroneTrack.Source.Models;
 using DroneTrack.Source.ViewModels;
 using Microsoft.Web.WebView2.Core;
 
 
 namespace DroneTrack.Source.Elements
 {
-    /// <summary>
-    /// klasa hostująca komponent WebView2, zarządza dwukierunkową komunikacją między logiką C# a mapą JavaScript
-    /// </summary>
+    /// klasa hostująca komponent WebView2, 
+    /// zarządza dwukierunkową komunikacją między logiką C# a mapą JavaScript
+
     public partial class Map : UserControl
     {
         public Map()
@@ -44,191 +45,105 @@ namespace DroneTrack.Source.Elements
 
             MapView.CoreWebView2.WebMessageReceived += WebMessageReceived;
 
-            WeakReferenceMessenger.Default.Register<AddMarkerMessage>(this, (r, m) =>
-            {
-                Dispatcher.BeginInvoke(new Action (async () =>
-                {
-                    if (!this.IsVisible || MapView == null || MapView.CoreWebView2 == null)
-                        return;
+            WeakReferenceMessenger.Default.Register<AddMarkerMessage>(
+                this, AddMarkerToMap);
 
-                    try
-                    {
-                        if (MapView?.CoreWebView2 != null)
-                        {
-                            var culture = System.Globalization.CultureInfo.InvariantCulture;
-                            string script = $"addMarker({m.MissionId}, {m.Lat.ToString(culture)}, {m.Lng.ToString(culture)}, {m.DurationSeconds.ToString(culture)}, {m.DelaySeconds.ToString(culture)});";
-                            await MapView.CoreWebView2.ExecuteScriptAsync(script);
-                        }
+            WeakReferenceMessenger.Default.Register<UpdateFilteredMarkersOnMapMessage>(
+                this, UpdateFilteredMarkersOnMap);
 
-                    }
-                    catch (Exception ex)
-                    {
-                        System.Diagnostics.Debug.WriteLine($"Błąd podczas wysyłania wiadomości do WebView2: {ex.Message}");
-                        return;
-                    }
-                }));
-            });
+            WeakReferenceMessenger.Default.Register<AddFilteredMarkerMessage>(
+                this, AddFilteredMarkerToMap);
 
-            WeakReferenceMessenger.Default.Register<AddFilteredMarkerMessage>(this, (r, m) =>
-            {
-                Dispatcher.BeginInvoke(new Action(async () =>
-                {
-                    if (!this.IsVisible || MapView == null || MapView.CoreWebView2 == null)
-                        return;
+            WeakReferenceMessenger.Default.Register<UIDroneSelectedMessage>(
+                this, DroneSelectedOnMap);
 
-                    try
-                    {
-                        if (MapView?.CoreWebView2 != null)
-                        {
-                            var culture = System.Globalization.CultureInfo.InvariantCulture;
-                            string script = $"addFilteredMarker({m.MissionId}, {m.Lat.ToString(culture)}, {m.Lng.ToString(culture)});";
-                            await MapView.CoreWebView2.ExecuteScriptAsync(script);
-                        }
+            WeakReferenceMessenger.Default.Register<ManagementModeChangedMessage>(
+                this, ChangeViewModeOnMap);
 
-                    }
-                    catch (Exception ex)
-                    {
-                        System.Diagnostics.Debug.WriteLine($"Błąd podczas wysyłania wiadomości do WebView2: {ex.Message}");
-                        return;
-                    }
-                }));
-            });
+            WeakReferenceMessenger.Default.Register<ClearMapSpatialFilterMessage>(
+                this, ClearSpatialFilterOnMap);
 
-            WeakReferenceMessenger.Default.Register<UpdateFilteredMarkersOnMapMessage>(this, (r, m) =>
-            {
-                Dispatcher.BeginInvoke(new Action(async () =>
-                {
-                    if (!this.IsVisible || MapView == null || MapView.CoreWebView2 == null)
-                        return;
-
-                    try
-                    {
-                        if (MapView?.CoreWebView2 != null)
-                        {
-                            var culture = System.Globalization.CultureInfo.InvariantCulture;
-                            string json = JsonSerializer.Serialize(m.MarkersId);
-                            string script = $"filterDrones({json});";
-                            await MapView.CoreWebView2.ExecuteScriptAsync(script);
-                        }
-
-                    }
-                    catch (Exception ex)
-                    {
-                        System.Diagnostics.Debug.WriteLine($"Błąd podczas wysyłania wiadomości do WebView2: {ex.Message}");
-                        return;
-                    }
-                }));
-            });
-
-            WeakReferenceMessenger.Default.Register<UIDroneSelectedMessage>(this, (r, m) =>
-            {
-                Dispatcher.BeginInvoke(new Action(async () =>
-                {
-                    if (!this.IsVisible || MapView == null || MapView.CoreWebView2 == null)
-                        return;
-
-                    try
-                    {
-                        if (MapView?.CoreWebView2 != null)
-                        {
-                            var culture = System.Globalization.CultureInfo.InvariantCulture;
-                            string json = JsonSerializer.Serialize(m.DroneId);
-                            string script = $"selectDrone({json});";
-                            await MapView.CoreWebView2.ExecuteScriptAsync(script);
-                        }
-
-                    }
-                    catch (Exception ex)
-                    {
-                        System.Diagnostics.Debug.WriteLine($"Błąd podczas wysyłania wiadomości do WebView2: {ex.Message}");
-                        return;
-                    }
-                }));
-            });
-
-
-            WeakReferenceMessenger.Default.Register<ClearMapSpatialFilterMessage>(this, (r, m) =>
-            {
-                Dispatcher.BeginInvoke(new Action(async () =>
-                {
-                    if (!this.IsVisible || MapView == null || MapView.CoreWebView2 == null)
-                        return;
-
-                    try
-                    {
-                        if (MapView?.CoreWebView2 != null)
-                        {
-                            var culture = System.Globalization.CultureInfo.InvariantCulture;
-                            string script = $"clearSpatialFilter();";
-                            await MapView.CoreWebView2.ExecuteScriptAsync(script);
-                        }
-
-                    }
-
-                    catch (Exception ex)
-                    {
-#if DEBUG
-                        System.Diagnostics.Debug.WriteLine($"Błąd podczas wysyłania wiadomości do WebView2: {ex.Message}");
-#endif
-                        return;
-                    }
-
-                }));
-            });
-
-            WeakReferenceMessenger.Default.Register<ManagementModeChangedMessage>(this, (r, m) =>
-            {
-                Dispatcher.BeginInvoke(new Action(async () =>
-                {
-                    if (!this.IsVisible || MapView == null || MapView.CoreWebView2 == null)
-                        return;
-
-                    try
-                    {
-                        if (MapView?.CoreWebView2 != null)
-                        {
-                            var culture = System.Globalization.CultureInfo.InvariantCulture;
-                            string script = $"setSpatialFilterMode({m.IsEnabled.ToString().ToLower()});";
-                            await MapView.CoreWebView2.ExecuteScriptAsync(script);
-                        }
-
-                    }
-                    catch (Exception ex)
-                    {
-                        System.Diagnostics.Debug.WriteLine($"Błąd podczas wysyłania wiadomości do WebView2: {ex.Message}");
-                        return;
-                    }
-                }));
-            });
-
-            WeakReferenceMessenger.Default.Register<ClearMapMarkersMessage>(this, (r, m) =>
-            {
-                Dispatcher.BeginInvoke(new Action(async () =>
-                {
-                    if (!this.IsVisible || MapView == null || MapView.CoreWebView2 == null)
-                        return;
-
-                    try
-                    {
-                        if (MapView?.CoreWebView2 != null)
-                        {
-                            ClearMap();
-                        }
-
-                    }
-                    catch (Exception ex)
-                    {
-                        System.Diagnostics.Debug.WriteLine($"Błąd podczas wysyłania wiadomości do WebView2: {ex.Message}");
-                        return;
-                    }
-                }));
-            });
+            WeakReferenceMessenger.Default.Register<ClearMapMarkersMessage>(
+                this, ClearMarkersOnMap);
 
 
             string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
             string htmlPath = System.IO.Path.Combine(baseDirectory, "Source", "map.html");
 
             MapView.CoreWebView2.Navigate(new Uri(htmlPath).AbsoluteUri);
+        }
+
+        private void ClearMarkersOnMap(object recipient, ClearMapMarkersMessage message)
+        {
+            string script = $"clearAllMarkers();";
+            RunScript(script);
+        }
+
+        private void AddFilteredMarkerToMap(object recipient, AddFilteredMarkerMessage message)
+        {
+            string json = JsonSerializer.Serialize(message.list);
+            string escaped = json.Replace("\\", "\\\\").Replace("\"", "\\\"");
+            string script = $"addFilteredMarkers({json});";
+            RunScript(script);
+        }
+
+        private void UpdateFilteredMarkersOnMap(object recipient, UpdateFilteredMarkersOnMapMessage message)
+        {
+            var culture = System.Globalization.CultureInfo.InvariantCulture;
+            string json = JsonSerializer.Serialize(message.MarkersId);
+            string script = $"filterDrones({json});";
+            RunScript(script);
+        }
+
+        private void ChangeViewModeOnMap(object recipient, ManagementModeChangedMessage message)
+        {
+            var culture = System.Globalization.CultureInfo.InvariantCulture;
+            string script = $"setSpatialFilterMode({message.IsEnabled.ToString().ToLower()});";
+            RunScript(script);
+        }
+
+        private void ClearSpatialFilterOnMap(object recipient, ClearMapSpatialFilterMessage message)
+        {
+            string script = $"clearSpatialFilter();";
+            RunScript(script);
+        }
+
+        private void DroneSelectedOnMap(object recipient, UIDroneSelectedMessage message)
+        {
+            var culture = System.Globalization.CultureInfo.InvariantCulture;
+            string json = JsonSerializer.Serialize(message.DroneId);
+            string script = $"selectDrone({json});";
+            RunScript(script);
+        }
+
+        private void AddMarkerToMap(object recipient, AddMarkerMessage message)
+        {
+            var culture = System.Globalization.CultureInfo.InvariantCulture;
+            string script = $"addMarker({message.MissionId}, {message.Lat.ToString(culture)}, {message.Lng.ToString(culture)}, {message.DurationSeconds.ToString(culture)}, {message.DelaySeconds.ToString(culture)});";
+
+            RunScript(script);
+        }
+
+        private async void RunScript(string script)
+        {
+            try
+            {
+                await MapView.Dispatcher.InvokeAsync(async () =>
+                {
+                    await MapView.CoreWebView2.ExecuteScriptAsync(script);
+                });
+            }
+            catch (Exception exception)
+            {
+                SendMessageError(exception);
+            }
+        } 
+
+        private void SendMessageError(Exception exception)
+        {
+#if DEBUG
+            System.Diagnostics.Debug.WriteLine($"Błąd podczas wysyłania wiadomości do WebView2: {exception.Message}");
+#endif
         }
 
         private void WebMessageReceived(object sender, CoreWebView2WebMessageReceivedEventArgs e)
@@ -281,7 +196,9 @@ namespace DroneTrack.Source.Elements
             }
             catch (Exception ex)
             {
+#if DEBUG
                 System.Diagnostics.Debug.WriteLine($"Błąd Mapy: {ex.Message}");
+#endif
             }
         }
 
