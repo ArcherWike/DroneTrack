@@ -41,17 +41,26 @@ namespace DroneTrack.Source.Messages
         }
     }
 
-    public class AddFilteredMarkerMessage
+    public class MarkerData
     {
         public int MissionId { get; set; }
         public double Lat { get; set; }
         public double Lng { get; set; }
 
-        public AddFilteredMarkerMessage(int missionId, double lat, double lng)
+        public MarkerData(int missionId, double lat, double lng)
         {
             MissionId = missionId;
             Lat = lat;
             Lng = lng;
+        }
+    }
+    public class AddFilteredMarkerMessage
+    {
+        public List<MarkerData> list { get; set; }
+
+        public AddFilteredMarkerMessage(List<MarkerData> data)
+        {
+            list = data;
         }
     }
 

@@ -99,18 +99,29 @@
             prevClickedId = id;
         }
 
-        function addFilteredMarker(id, lat, lng) {
+        function addFilteredMarkers(inDrones) {
+            console.log(inDrones);
 
-            if (drones.has(id)) return;
+            inDrones.forEach(drone =>
+            {
+                
+                console.log(drone.MissionId, drone.Lat, drone.Lng);
 
-            let marker = L.marker([lat, lng],
+                if (!drones.has(drone.MissionId))
                 {
-                    icon: createDroneIcon(false),
-                }).addTo(map);
+                    let marker = L.marker([drone.Lat, drone.Lng],
+                        {
+                            icon: createDroneIcon(false),
+                        }).addTo(map);
 
-            marker.on('click', () => onDroneClicked(id));
+                    marker.on('click', () => onDroneClicked(drone.MissionId));
 
-            drones.set(id, marker);
+                    drones.set(drone.MissionId, marker);
+                }
+
+                
+            });
+            
         }
 
 

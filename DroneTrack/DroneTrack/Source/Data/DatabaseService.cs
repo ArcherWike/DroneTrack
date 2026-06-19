@@ -44,7 +44,7 @@ namespace DroneTrack.Source.Data
         {
             using (var db = new DroneDatabaseContext())
             {
-                return db.FlightLogs.AsNoTracking().Where(f => f.FlightDateStart >= start && f.FlightDateEnd <= end).ToList();
+                return db.FlightLogs.Where(f => f.FlightDateStart >= start && f.FlightDateEnd <= end).ToList();
             }                
         }
 
@@ -52,12 +52,14 @@ namespace DroneTrack.Source.Data
         {
             using (var db = new DroneDatabaseContext())
             {
-                return db.FlightLogs.AsNoTracking().Where(f => IsWithinRadius(f.Latitude, f.Longitude, centerLat, centerLng, radiusInMeters)).ToList();
+                return db.FlightLogs.Where(f => IsWithinRadius(f.Latitude, f.Longitude, centerLat, centerLng, radiusInMeters)).ToList();
             }
         }
         private bool IsWithinRadius(double lat1, double lng1, double lat2, double lng2, double radiusInMeters)
         {
             double R = 6371000; // Radius of the Earth in meters
+
+            //Haversine formula to find distance between two points on a sphere
             double dLat = (lat2 - lat1) * (Math.PI / 180);
             double dLng = (lng2 - lng1) * (Math.PI / 180);
             double a = Math.Sin(dLat / 2) * Math.Sin(dLat / 2) +

@@ -26,26 +26,29 @@ namespace DroneTrack.Source.ViewModels
         public void LoadFlightsData()
         {
             List<FlightLog> databaseDrones = GetDronesByTimeFilter();
-
+            List<MarkerData> markerDatas = new List<MarkerData>();
             _allFlights.Clear();
             foreach (var d in databaseDrones)
             {
                 _allFlights.Add(d);
-                WeakReferenceMessenger.Default.Send(new AddFilteredMarkerMessage(d.Id, d.Latitude, d.Longitude));
+                markerDatas.Add(new MarkerData(d.Id, d.Latitude, d.Longitude));
             }
+            WeakReferenceMessenger.Default.Send(new AddFilteredMarkerMessage(markerDatas));
         }
 
         private void OnFlightsDataChanged()
         {
             var databaseDrones = AllFlights.ToList();
 
+            List<MarkerData> markerDatas = new List<MarkerData>();
             List<int> markerIds = new List<int>();
             foreach (var d in databaseDrones)
             {
                 markerIds.Add(d.Id);
-                WeakReferenceMessenger.Default.Send(new AddFilteredMarkerMessage(d.Id, d.Latitude, d.Longitude));
-            }
+                markerDatas.Add(new MarkerData(d.Id, d.Latitude, d.Longitude));
 
+            }
+            WeakReferenceMessenger.Default.Send(new AddFilteredMarkerMessage(markerDatas));
             WeakReferenceMessenger.Default.Send(new UpdateFilteredMarkersOnMapMessage(markerIds));
         }
 
@@ -63,7 +66,7 @@ namespace DroneTrack.Source.ViewModels
             {
                 try
                 {
-                    await Task.Delay(500, token);
+                    await Task.Delay(100, token);
 
                     if (!token.IsCancellationRequested)
                     {
@@ -134,7 +137,7 @@ namespace DroneTrack.Source.ViewModels
             if (!SelectedDate.HasValue) return;
 
             var results = GetDronesByTimeFilter();
-
+            WeakReferenceMessenger.Default.Send(new ClearMapSpatialFilterMessage());
             // UI Update
             AllFlights.Clear();
             foreach (var flight in results)
@@ -181,7 +184,6 @@ namespace DroneTrack.Source.ViewModels
             SelectedStart = TimeSpan.Zero;
             SelectedEnd = TimeSpan.FromHours(24);
 
-            WeakReferenceMessenger.Default.Send(new ClearMapSpatialFilterMessage());
             ApplyDateFilter();
         }
 
@@ -210,7 +212,6 @@ namespace DroneTrack.Source.ViewModels
                 SelectClickedDrone(m.DroneId);
             });
         }
-
         virtual public void CleanUp()
         {
             base.CleanUp();
