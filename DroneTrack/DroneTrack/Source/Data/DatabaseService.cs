@@ -12,6 +12,13 @@ namespace DroneTrack.Source.Data
             database.Database.EnsureCreated();
         }
 
+        public Drone GetDroneById(int id)
+        {
+            using (var db = new DroneDatabaseContext())
+            {
+                return db.Drones.FirstOrDefault(d => d.Id == id);
+            }
+        }
         public void AddNewFlight(FlightLog flight)
         {
             using (var db = new DroneDatabaseContext())

@@ -49,10 +49,13 @@
                     Visibility="{Binding IsDetailVisible, Converter={StaticResource BoolToVis}}">
                 <StackPanel Margin="15">
                     <TextBlock Text="Flight Details" FontWeight="Bold" FontSize="16"/>
-
+                    
                     <StackPanel Margin="15" DataContext="{Binding SelectedFlight}">
                         <TextBlock Text="{Binding Id, StringFormat='ID lotu: {0}'}" FontSize="14" Margin="0,5"/>
                         <TextBlock Text="{Binding OperatorIdentity, StringFormat='Operator: {0}'}" FontSize="14" Margin="0,5"/>
+                        <TextBlock Text="{Binding DataContext.SelectedFlightDrone.ModelType, StringFormat='Model drona: {0}',
+                          RelativeSource={RelativeSource AncestorType=UserControl}}" FontSize="14" Margin="0,5"/>
+                        
                         <TextBlock Text="Czas misji" FontSize="14" Margin="0,5"/>
                         <TextBlock Text="{Binding FlightDateStart, StringFormat='Od : {0}'}" FontSize="14" Margin="0,5"/>
                         <TextBlock Text="{Binding FlightDateEnd, StringFormat='Do: {0}'}" FontSize="14" Margin="0,5"/>

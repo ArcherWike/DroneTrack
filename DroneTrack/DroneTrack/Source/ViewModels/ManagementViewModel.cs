@@ -14,7 +14,7 @@ namespace DroneTrack.Source.ViewModels
         private readonly DatabaseService databaseService;
 
         [ObservableProperty]
-        private ObservableCollection<FlightLog> _allFlights = new();
+        private ObservableCollection<FlightLog> allFlights = new();
 
         public Action<string>? ExecuteJavaScript { get; set; }
 
@@ -27,10 +27,10 @@ namespace DroneTrack.Source.ViewModels
         {
             List<FlightLog> databaseDrones = GetDronesByTimeFilter();
             List<MarkerData> markerDatas = new List<MarkerData>();
-            _allFlights.Clear();
+            AllFlights.Clear();
             foreach (var d in databaseDrones)
             {
-                _allFlights.Add(d);
+                AllFlights.Add(d);
                 markerDatas.Add(new MarkerData(d.Id, d.Latitude, d.Longitude));
             }
             WeakReferenceMessenger.Default.Send(new AddFilteredMarkerMessage(markerDatas));
@@ -82,13 +82,16 @@ namespace DroneTrack.Source.ViewModels
 
         //Details panel visibility
         [ObservableProperty]
-        private bool _isDetailVisible = false;
+        private bool isDetailVisible = false;
 
         [ObservableProperty]
-        public FlightLog _selectedFlight;
+        private FlightLog selectedFlight;
+        [ObservableProperty]
+        private Drone selectedFlightDrone;
 
         partial void OnSelectedFlightChanged(FlightLog value)
         {
+            SelectedFlightDrone = databaseService.GetDroneById(value.DroneId);
             if (SelectedFlight != null)
             {
                 WeakReferenceMessenger.Default.Send(new UIDroneSelectedMessage(SelectedFlight.Id));
