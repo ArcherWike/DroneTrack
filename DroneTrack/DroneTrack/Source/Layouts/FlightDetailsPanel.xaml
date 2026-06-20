@@ -1,0 +1,225 @@
+﻿<UserControl
+    x:Class="DroneTrack.Source.Layouts.FlightDetailsPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:DroneTrack.Source.Layouts"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <UserControl.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Margin" Value="0,5" />
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="0,5" />
+        </Style>
+
+        <Style x:Key="DateEndTextBoxStyle" TargetType="TextBox">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsEndDateValid}" Value="False">
+                    <Setter Property="Background" Value="#80FF0000" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="DateStartTextBoxStyle" TargetType="TextBox">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsStartDateValid}" Value="False">
+                    <Setter Property="Background" Value="#80FF0000" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="LatitudeTextBoxStyle" TargetType="TextBox">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsLatitudeValid}" Value="False">
+                    <Setter Property="Background" Value="#80FF0000" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="LongitudeTextBoxStyle" TargetType="TextBox">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsLongitudeValid}" Value="False">
+                    <Setter Property="Background" Value="#80FF0000" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="MaxAltitudeTextBoxStyle" TargetType="TextBox">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsMaxAltitudeValid}" Value="False">
+                    <Setter Property="Background" Value="#80FF0000" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+
+
+    <StackPanel Margin="15">
+        <TextBlock FontWeight="Bold" Text="Flight Details" />
+
+        <Button
+            Margin="0,10"
+            Background="Gray"
+            Command="{Binding ToggleEditModeCommand}"
+            Content="Edit"
+            Foreground="White" />
+
+        <Button
+            Margin="0,10"
+            Background="DeepSkyBlue"
+            Command="{Binding SaveCommand}"
+            Content="Save"
+            Foreground="White" />
+
+        <Button
+            Margin="0,10"
+            Background="IndianRed"
+            Command="{Binding DeleteCommand}"
+            Content="Delete"
+            Foreground="White" />
+
+        <TextBlock FontWeight="Bold" Text="{Binding SelectedFlight.Id, StringFormat='ID lotu : {0}'}" />
+
+        <Grid Margin="15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="120" />
+            </Grid.RowDefinitions>
+
+            <!--  Operator  -->
+            <TextBlock
+                Grid.Row="0"
+                Grid.Column="0"
+                Margin="0,5"
+                VerticalAlignment="Center"
+                Text="Operator:" />
+
+            <TextBox
+                Grid.Row="0"
+                Grid.Column="1"
+                Margin="0,5"
+                IsEnabled="{Binding IsEditMode}"
+                Text="{Binding SelectedFlight.OperatorIdentity, Mode=TwoWay}" />
+
+            <!--  Dron  -->
+            <TextBlock
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="0,5"
+                VerticalAlignment="Center"
+                Text="Dron:" />
+
+            <ComboBox
+                Grid.Row="1"
+                Grid.Column="1"
+                Margin="0,5"
+                DisplayMemberPath="ModelType"
+                IsEnabled="{Binding IsEditMode}"
+                ItemsSource="{Binding AvailableDrones}"
+                SelectedItem="{Binding FlightDrone, Mode=TwoWay}" />
+
+            <!--  Czas misji  -->
+            <TextBlock
+                Grid.Row="2"
+                Grid.Column="0"
+                Margin="0,5"
+                VerticalAlignment="Center"
+                Text="Start misji:" />
+
+            <TextBox
+                Grid.Row="2"
+                Grid.Column="1"
+                Margin="0,5"
+                IsEnabled="{Binding IsEditMode}"
+                Style="{StaticResource DateStartTextBoxStyle}"
+                Text="{Binding FlightDateStartText, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+
+            <TextBlock
+                Grid.Row="3"
+                Grid.Column="0"
+                Margin="0,5"
+                VerticalAlignment="Center"
+                Text="End misji:" />
+            <TextBox
+                Grid.Row="3"
+                Grid.Column="1"
+                Margin="0,5"
+                IsEnabled="{Binding IsEditMode}"
+                Style="{StaticResource DateEndTextBoxStyle}"
+                Text="{Binding FlightDateEndText, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+
+            <TextBlock
+                Grid.Row="4"
+                Grid.Column="0"
+                Margin="0,5"
+                VerticalAlignment="Center"
+                Text="Szerokość:" />
+
+            <TextBox
+                Grid.Row="4"
+                Grid.Column="1"
+                Margin="0,5"
+                IsEnabled="{Binding IsEditMode}"
+                Style="{StaticResource LatitudeTextBoxStyle}"
+                Text="{Binding LatitudeText, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+
+            <TextBlock
+                Grid.Row="5"
+                Grid.Column="0"
+                Margin="0,5"
+                VerticalAlignment="Center"
+                Text="Długość:" />
+            <TextBox
+                Grid.Row="5"
+                Grid.Column="1"
+                Margin="0,5"
+                IsEnabled="{Binding IsEditMode}"
+                Style="{StaticResource LongitudeTextBoxStyle}"
+                Text="{Binding LongitudeText, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+
+            <TextBlock
+                Grid.Row="6"
+                Grid.Column="0"
+                Margin="0,5"
+                VerticalAlignment="Center"
+                Text="Max wys:" />
+            <TextBox
+                Grid.Row="6"
+                Grid.Column="1"
+                Margin="0,5"
+                IsEnabled="{Binding IsEditMode}"
+                Style="{StaticResource MaxAltitudeTextBoxStyle}"
+                Text="{Binding MaxAltitudeText, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+
+            <TextBlock
+                Grid.Row="7"
+                Grid.Column="0"
+                Margin="0,5"
+                VerticalAlignment="Center"
+                Text="Opis:" />
+            <TextBox
+                Grid.Row="7"
+                Grid.Column="1"
+                Margin="0,5"
+                IsEnabled="{Binding IsEditMode}"
+                Text="{Binding SelectedFlight.Description, Mode=TwoWay}" TextWrapping="Wrap" />
+        </Grid>
+    </StackPanel>
+
+</UserControl>

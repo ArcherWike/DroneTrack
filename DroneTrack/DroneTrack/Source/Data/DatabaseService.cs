@@ -36,8 +36,25 @@ namespace DroneTrack.Source.Data
                 {
                     existingFlight.OperatorIdentity = flight.OperatorIdentity;
                     existingFlight.DroneId = flight.DroneId;
+                    existingFlight.FlightDateStart = flight.FlightDateStart;
+                    existingFlight.FlightDateEnd = flight.FlightDateEnd;
+                    existingFlight.Latitude = flight.Latitude;
+                    existingFlight.Longitude = flight.Longitude;
                     existingFlight.MaxAltitude = flight.MaxAltitude;
                     existingFlight.Description = flight.Description;
+                    db.SaveChanges();
+                }
+            }
+        }
+
+        public void DeleteFlightLog(int id)
+        {
+            using (var db = new DroneDatabaseContext())
+            {
+                var flight = db.FlightLogs.FirstOrDefault(f => f.Id == id);
+                if (flight != null)
+                {
+                    db.FlightLogs.Remove(flight);
                     db.SaveChanges();
                 }
             }

@@ -81,25 +81,7 @@ namespace DroneTrack.Source.ViewModels
                 }
             });
         }
-
-
-        //Details panel visibility
-        [ObservableProperty]
-        private bool isDetailVisible = false;
-
-        [ObservableProperty]
-        private FlightLog selectedFlight;
-
-        partial void OnSelectedFlightChanged(FlightLog value)
-        {
-            if (SelectedFlight != null)
-            {
-                FlightDetailsViewModel.SetDroneById(value.DroneId);
-                WeakReferenceMessenger.Default.Send(new UIDroneSelectedMessage(SelectedFlight.Id));
-            }
-
-            IsDetailVisible = value != null;
-        }
+       
 
         //Filter
         [ObservableProperty]
@@ -177,7 +159,7 @@ namespace DroneTrack.Source.ViewModels
             FlightLog selected = AllFlights.FirstOrDefault(drone => drone.Id == id);
             if (selected != null)
             {
-                SelectedFlight = selected;
+                FlightDetailsViewModel.SelectedFlight = selected;
             }
         }
 
@@ -191,11 +173,6 @@ namespace DroneTrack.Source.ViewModels
             ApplyDateFilter();
         }
 
-        [RelayCommand]
-        private void Save()
-        {
-            databaseService.UpdateFlightLog(SelectedFlight);
-        }
 
 
         protected override void RegisterForMessages()
@@ -221,6 +198,11 @@ namespace DroneTrack.Source.ViewModels
             WeakReferenceMessenger.Default.Register<DroneClickedMessage>(this, (r, m) =>
             {
                 SelectClickedDrone(m.DroneId);
+            });
+
+            WeakReferenceMessenger.Default.Register<OnRecordUpdatedMessage>(this, (r, m) =>
+            {
+                ApplyDateFilter();
             });
         }
         virtual public void CleanUp()

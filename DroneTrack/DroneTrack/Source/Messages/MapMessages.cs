@@ -90,6 +90,10 @@ namespace DroneTrack.Source.Messages
 
     }
 
+    public class OnRecordUpdatedMessage
+    {
+    }
+
     public class UpdateFilteredMarkersOnMapMessage
     {
         public List<int> MarkersId;
