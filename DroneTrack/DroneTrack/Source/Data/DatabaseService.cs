@@ -1,5 +1,4 @@
 ﻿using DroneTrack.Source.Models;
-using Microsoft.EntityFrameworkCore;
 
 namespace DroneTrack.Source.Data
 {
@@ -19,6 +18,31 @@ namespace DroneTrack.Source.Data
                 return db.Drones.FirstOrDefault(d => d.Id == id);
             }
         }
+
+        public List<Drone> GetAllDrones()
+        {
+            using (var db = new DroneDatabaseContext())
+            {
+                return db.Drones.ToList();
+            }
+        }
+
+        public void UpdateFlightLog(FlightLog flight)
+        {
+            using (var db = new DroneDatabaseContext())
+            {
+                var existingFlight = db.FlightLogs.FirstOrDefault(f => f.Id == flight.Id);
+                if (existingFlight != null)
+                {
+                    existingFlight.OperatorIdentity = flight.OperatorIdentity;
+                    existingFlight.DroneId = flight.DroneId;
+                    existingFlight.MaxAltitude = flight.MaxAltitude;
+                    existingFlight.Description = flight.Description;
+                    db.SaveChanges();
+                }
+            }
+        }
+
         public void AddNewFlight(FlightLog flight)
         {
             using (var db = new DroneDatabaseContext())
@@ -52,7 +76,7 @@ namespace DroneTrack.Source.Data
             using (var db = new DroneDatabaseContext())
             {
                 return db.FlightLogs.Where(f => f.FlightDateStart >= start && f.FlightDateEnd <= end).ToList();
-            }                
+            }
         }
 
         public List<FlightLog> GetFlightsBySpatialFilter(double centerLat, double centerLng, double radiusInMeters)

@@ -12,6 +12,8 @@ namespace DroneTrack.Source.ViewModels
     partial class ManagementViewModel : ModuleViewModel
     {
         private readonly DatabaseService databaseService;
+        [ObservableProperty]
+        private FlightDetailsViewModel flightDetailsViewModel;
 
         [ObservableProperty]
         private ObservableCollection<FlightLog> allFlights = new();
@@ -21,6 +23,7 @@ namespace DroneTrack.Source.ViewModels
         public ManagementViewModel(DatabaseService _databaseService)
         {
             databaseService = _databaseService;
+            flightDetailsViewModel = new FlightDetailsViewModel(databaseService);
         }
 
         public void LoadFlightsData()
@@ -86,17 +89,15 @@ namespace DroneTrack.Source.ViewModels
 
         [ObservableProperty]
         private FlightLog selectedFlight;
-        [ObservableProperty]
-        private Drone selectedFlightDrone;
 
         partial void OnSelectedFlightChanged(FlightLog value)
         {
-            SelectedFlightDrone = databaseService.GetDroneById(value.DroneId);
             if (SelectedFlight != null)
             {
+                FlightDetailsViewModel.SetDroneById(value.DroneId);
                 WeakReferenceMessenger.Default.Send(new UIDroneSelectedMessage(SelectedFlight.Id));
             }
-            
+
             IsDetailVisible = value != null;
         }
 
@@ -171,7 +172,7 @@ namespace DroneTrack.Source.ViewModels
         private void SelectClickedDrone(int id)
         {
             if (AllFlights == null) return;
-            if (AllFlights.Count == 0) return; 
+            if (AllFlights.Count == 0) return;
 
             FlightLog selected = AllFlights.FirstOrDefault(drone => drone.Id == id);
             if (selected != null)
@@ -189,6 +190,13 @@ namespace DroneTrack.Source.ViewModels
 
             ApplyDateFilter();
         }
+
+        [RelayCommand]
+        private void Save()
+        {
+            databaseService.UpdateFlightLog(SelectedFlight);
+        }
+
 
         protected override void RegisterForMessages()
         {

@@ -8,7 +8,7 @@ namespace DroneTrack.Source.Messages
         public string type { get; set; }
         public JsonElement data { get; set; }
     }
-    
+
     //---------- Communication Messages ----------
 
     public class MapClickedMessage
@@ -78,15 +78,16 @@ namespace DroneTrack.Source.Messages
         }
     }
 
-    public class MapRemoveSpatialFilterMessage {}
+    public class MapRemoveSpatialFilterMessage { }
 
 
     public class MapReadyMessage { }
 
     public class ClearMapMarkersMessage { }
 
-    public class ClearMapSpatialFilterMessage{
-        
+    public class ClearMapSpatialFilterMessage
+    {
+
     }
 
     public class UpdateFilteredMarkersOnMapMessage

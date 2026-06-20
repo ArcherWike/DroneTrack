@@ -2,10 +2,10 @@
 using System.Windows;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Messaging;
 using DroneTrack.Source.Data;
 using DroneTrack.Source.Messages;
 using DroneTrack.Source.Models;
-using CommunityToolkit.Mvvm.Messaging;
 
 namespace DroneTrack.Source.ViewModels
 {

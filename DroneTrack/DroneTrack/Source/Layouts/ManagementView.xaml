@@ -10,6 +10,10 @@
 
     <UserControl.Resources>
         <BooleanToVisibilityConverter x:Key="BoolToVis" />
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="0,5"/>
+        </Style>
     </UserControl.Resources>
 
     <Grid Margin="15">
@@ -48,20 +52,83 @@
             <Border Grid.Column="2" Width="300" Background="White" 
                     Visibility="{Binding IsDetailVisible, Converter={StaticResource BoolToVis}}">
                 <StackPanel Margin="15">
-                    <TextBlock Text="Flight Details" FontWeight="Bold" FontSize="16"/>
-                    
+                    <TextBlock Text="Flight Details" FontWeight="Bold"/>
+
+                    <Button Content="Edit"
+                    Command="{Binding FlightDetailsViewModel.ToggleEditModeCommand}"
+                    Background="Gray" 
+                    Foreground="White" 
+                    Margin="0,10"/>
+
+                    <Button Content="Save"
+                    Command="{Binding SaveCommand}"
+                    Background="DeepSkyBlue" 
+                    Foreground="White" 
+                    Margin="0,10"/>
+
+                    <TextBlock Text="{Binding SelectedFlight.Id, StringFormat='ID lotu : {0}'}" Margin="15,5"/>
+
+                    <Grid Margin="15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="80"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <!-- Operator -->
+                        <TextBlock Grid.Row="0"
+               Grid.Column="0"
+               Text="Operator:"
+               VerticalAlignment="Center"
+               Margin="0,5"/>
+
+                        <TextBox Grid.Row="0"
+             Grid.Column="1"
+             Text="{Binding SelectedFlight.OperatorIdentity, Mode=TwoWay}"
+             IsEnabled="{Binding FlightDetailsViewModel.IsEditMode}"
+             Margin="0,5"/>
+
+                        <!-- Dron -->
+                        <TextBlock Grid.Row="1"
+               Grid.Column="0"
+               Text="Dron:"
+               VerticalAlignment="Center"
+               Margin="0,5"/>
+
+                        <ComboBox Grid.Row="1"
+              Grid.Column="1"
+              ItemsSource="{Binding FlightDetailsViewModel.AvailableDrones}"
+              SelectedItem="{Binding FlightDetailsViewModel.FlightDrone, Mode=TwoWay}"
+              DisplayMemberPath="ModelType"
+              IsEnabled="{Binding FlightDetailsViewModel.IsEditMode}"
+              Margin="0,5"/>
+
+                        <!-- Czas misji -->
+                        <TextBlock Grid.Row="2"
+               Grid.Column="0"
+               Text="Czas misji:"
+               VerticalAlignment="Center"
+                                   Margin="0,5"/>
+
+                        <TextBox Grid.Row="2"
+                     Grid.Column="1"
+                     Text="{Binding SelectedFlight.FlightDateStart}"
+                     IsEnabled="{Binding FlightDetailsViewModel.IsEditMode}"
+                                 Margin="0,5"/>
+                    </Grid>
+
                     <StackPanel Margin="15" DataContext="{Binding SelectedFlight}">
-                        <TextBlock Text="{Binding Id, StringFormat='ID lotu: {0}'}" FontSize="14" Margin="0,5"/>
-                        <TextBlock Text="{Binding OperatorIdentity, StringFormat='Operator: {0}'}" FontSize="14" Margin="0,5"/>
-                        <TextBlock Text="{Binding DataContext.SelectedFlightDrone.ModelType, StringFormat='Model drona: {0}',
-                          RelativeSource={RelativeSource AncestorType=UserControl}}" FontSize="14" Margin="0,5"/>
-                        
-                        <TextBlock Text="Czas misji" FontSize="14" Margin="0,5"/>
-                        <TextBlock Text="{Binding FlightDateStart, StringFormat='Od : {0}'}" FontSize="14" Margin="0,5"/>
-                        <TextBlock Text="{Binding FlightDateEnd, StringFormat='Do: {0}'}" FontSize="14" Margin="0,5"/>
-                        <TextBlock Text="{Binding Latitude, StringFormat='Szerokość: {0} (Lat)'}" FontSize="14" Margin="0,5"/>
-                        <TextBlock Text="{Binding Longitude, StringFormat='Długość: {0} (Lng)'}" FontSize="14" Margin="0,5"/>
-                        <TextBlock Text="{Binding MaxAltitude, StringFormat='Max wysokosc: {0}'}" FontSize="14" Margin="0,5"/>
+                            <TextBlock Text="Czas misji"/>
+                            <TextBlock Text="{Binding FlightDateStart, StringFormat='Od : {0}'}"/>
+                            <TextBlock Text="{Binding FlightDateEnd, StringFormat='Do: {0}'}"/>
+                            <TextBlock Text="{Binding Latitude, StringFormat='Szerokość: {0} (Lat)'}"/>
+                            <TextBlock Text="{Binding Longitude, StringFormat='Długość: {0} (Lng)'}"/>
+                            <TextBlock Text="{Binding MaxAltitude, StringFormat='Max wysokosc: {0}'}"/>
                     </StackPanel>
                 </StackPanel>
             </Border>

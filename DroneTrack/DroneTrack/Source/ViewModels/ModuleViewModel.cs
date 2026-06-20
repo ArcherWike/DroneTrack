@@ -11,7 +11,7 @@ namespace DroneTrack.Source.ViewModels
             RegisterForMessages();
         }
 
-        protected virtual void RegisterForMessages(){ }
+        protected virtual void RegisterForMessages() { }
 
         public void CleanUp()
         {
