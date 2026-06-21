@@ -1,8 +1,10 @@
 ﻿using System.Collections.ObjectModel;
+using System.Windows;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DroneTrack.Source.Data;
 using DroneTrack.Source.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace DroneTrack.Source.ViewModels
 {
@@ -75,6 +77,37 @@ namespace DroneTrack.Source.ViewModels
                     _allDrones.Remove(_selectedDrone);
                     _selectedDrone = null;
                 }
+            }
+        }
+
+        //----------------< Database >-------------
+
+        [RelayCommand]
+        private async Task ClearDatabaseAsync()
+        {
+            var result = MessageBox.Show(
+            "Czy na pewno chcesz usunąć WSZYSTKIE dane? Tej operacji nie można cofnąć!",
+            "Krytyczne ostrzeżenie",
+            MessageBoxButton.YesNo,
+            MessageBoxImage.Warning);
+
+            if (result != MessageBoxResult.Yes)
+            {
+                return;
+            }
+
+            try
+            {
+                using (var db = new DroneDatabaseContext())
+                {
+                    await db.FlightLogs.ExecuteDeleteAsync();
+                }
+
+                    MessageBox.Show("Wszystkie dane zostały pomyślnie usunięte.", "Sukces", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Wystąpił błąd podczas usuwania danych: {ex.Message}", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

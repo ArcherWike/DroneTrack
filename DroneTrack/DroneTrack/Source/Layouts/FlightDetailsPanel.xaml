@@ -67,23 +67,41 @@
             Background="Gray"
             Command="{Binding ToggleEditModeCommand}"
             Content="Edit"
-            Foreground="White" />
+            Foreground="White">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5" />
+                </Style>
+            </Button.Resources>
+        </Button>
 
         <Button
             Margin="0,10"
             Background="DeepSkyBlue"
             Command="{Binding SaveCommand}"
             Content="Save"
-            Foreground="White" />
+            Foreground="White">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5" />
+                </Style>
+            </Button.Resources>
+        </Button>
 
         <Button
             Margin="0,10"
             Background="IndianRed"
             Command="{Binding DeleteCommand}"
             Content="Delete"
-            Foreground="White" />
+            Foreground="White">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5" />
+                </Style>
+            </Button.Resources>
+        </Button>
 
-        <TextBlock FontWeight="Bold" Text="{Binding SelectedFlight.Id, StringFormat='ID lotu : {0}'}" />
+        <TextBlock FontWeight="Bold" Margin="15" Text="{Binding SelectedFlight.Id, StringFormat='ID lotu : {0}'}" />
 
         <Grid Margin="15">
             <Grid.ColumnDefinitions>
@@ -218,7 +236,8 @@
                 Grid.Column="1"
                 Margin="0,5"
                 IsEnabled="{Binding IsEditMode}"
-                Text="{Binding SelectedFlight.Description, Mode=TwoWay}" TextWrapping="Wrap" />
+                Text="{Binding SelectedFlight.Description, Mode=TwoWay}"
+                TextWrapping="Wrap" />
         </Grid>
     </StackPanel>
 

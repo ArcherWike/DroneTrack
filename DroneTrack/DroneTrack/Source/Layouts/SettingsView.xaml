@@ -1,61 +1,108 @@
-﻿<UserControl x:Class="DroneTrack.Source.Layouts.SettingsView"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:DroneTrack.Source.Layouts"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+﻿<UserControl
+    x:Class="DroneTrack.Source.Layouts.SettingsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:DroneTrack.Source.Layouts"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
 
 
     <Grid Background="#F5F5F5">
         <TabControl Margin="15">
-            
-        <TabItem Header="General database">
-            <!-- General settings content goes here -->
-        </TabItem>
-        <TabItem Header="Flota">
-            <Grid>
+
+            <TabItem Header="General database">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="250" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Border
+                        Grid.Row="0"
+                        Margin="10"
+                        Padding="15"
+                        BorderBrush="#FFE53935"
+                        BorderThickness="1"
+                        CornerRadius="4">
+                        <StackPanel>
+                            <TextBlock
+                                Margin="0,0,0,10"
+                                FontSize="16"
+                                FontWeight="Bold"
+                                Foreground="#FFE53935"
+                                Text="Zarządzanie bazą danych" />
+
+                            <TextBlock
+                                Margin="0,0,0,15"
+                                Foreground="Gray"
+                                Text="Poniższa akcja usunie trwale wszystkie zapisane wpisy z bazy danych. Tej operacji nie można cofnąć!"
+                                TextWrapping="Wrap" />
+
+                            <Button
+                                Padding="15,8"
+                                HorizontalAlignment="Left"
+                                Background="#FFE53935"
+                                Command="{Binding ClearDatabaseCommand}"
+                                Content="Usuń wszystkie dane"
+                                Cursor="Hand"
+                                Foreground="White" />
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Flota">
+                <Grid>
 
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="250"/>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="250" />
+                        <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
-                    <Border Grid.Column="0" Background="White" BorderBrush="#DDD" BorderThickness="0,0,1,0">
+                    <Border
+                        Grid.Column="0"
+                        Background="White"
+                        BorderBrush="#DDD"
+                        BorderThickness="0,0,1,0">
                         <DockPanel Margin="15">
-                            <TextBlock Text="FLOTA" 
-        DockPanel.Dock="Top" 
-        FontSize="18" 
-        FontWeight="Bold" 
-        Foreground="#2D3748" 
-        Margin="0,0,0,15"/>
+                            <TextBlock
+                                Margin="0,0,0,15"
+                                DockPanel.Dock="Top"
+                                FontSize="18"
+                                FontWeight="Bold"
+                                Foreground="#2D3748"
+                                Text="FLOTA" />
 
-                            <Button Content="+ DODAJ NOWEGO DRONA" 
-     Command="{Binding AddDroneCommand}" 
-     DockPanel.Dock="Bottom" 
-     Height="35" 
-     Background="#3182CE" 
-     Foreground="White" 
-     FontWeight="Bold"
-     Margin="0,10,0,0">
+                            <Button
+                                Height="35"
+                                Margin="0,10,0,0"
+                                Background="#3182CE"
+                                Command="{Binding AddDroneCommand}"
+                                Content="+ DODAJ NOWEGO DRONA"
+                                DockPanel.Dock="Bottom"
+                                FontWeight="Bold"
+                                Foreground="White">
                                 <Button.Resources>
                                     <Style TargetType="Border">
-                                        <Setter Property="CornerRadius" Value="5"/>
+                                        <Setter Property="CornerRadius" Value="5" />
                                     </Style>
                                 </Button.Resources>
                             </Button>
 
-                            <ListBox ItemsSource="{Binding AllDrones}" 
-      SelectedItem="{Binding SelectedDrone}"
-      DisplayMemberPath="ModelType"
-      BorderThickness="0"
-      FontSize="14"
-      Cursor="Hand">
+                            <ListBox
+                                BorderThickness="0"
+                                Cursor="Hand"
+                                DisplayMemberPath="ModelType"
+                                FontSize="14"
+                                ItemsSource="{Binding AllDrones}"
+                                SelectedItem="{Binding SelectedDrone}">
                                 <ListBox.ItemContainerStyle>
                                     <Style TargetType="ListBoxItem">
-                                        <Setter Property="Padding" Value="10,8"/>
-                                        <Setter Property="Margin" Value="0,2"/>
+                                        <Setter Property="Padding" Value="10,8" />
+                                        <Setter Property="Margin" Value="0,2" />
                                     </Style>
                                 </ListBox.ItemContainerStyle>
                             </ListBox>
@@ -67,79 +114,85 @@
                             <Style TargetType="StackPanel">
                                 <Style.Triggers>
                                     <DataTrigger Binding="{Binding SelectedDrone}" Value="{x:Null}">
-                                        <Setter Property="Visibility" Value="Collapsed"/>
+                                        <Setter Property="Visibility" Value="Collapsed" />
                                     </DataTrigger>
                                 </Style.Triggers>
                             </Style>
                         </StackPanel.Style>
 
-                        <TextBlock Text="EDYCJA" 
-    FontSize="20" 
-    FontWeight="Bold" 
-    Foreground="#2D3748" 
-    Margin="0,0,0,25"/>
+                        <TextBlock
+                            Margin="0,0,0,25"
+                            FontSize="20"
+                            FontWeight="Bold"
+                            Foreground="#2D3748"
+                            Text="EDYCJA" />
 
-                        <TextBlock Text="Nazwa rejestracyjna / Model:" 
-    Foreground="#718096" 
-    Margin="0,0,0,5"/>
+                        <TextBlock
+                            Margin="0,0,0,5"
+                            Foreground="#718096"
+                            Text="Nazwa rejestracyjna / Model:" />
 
-                        <TextBox Text="{Binding SelectedDrone.ModelType, UpdateSourceTrigger=PropertyChanged}" 
-  FontSize="16" 
-  Padding="8" 
-  Background="White" 
-  BorderBrush="#CBD5E0" 
-  Margin="0,0,0,25"/>
+                        <TextBox
+                            Margin="0,0,0,25"
+                            Padding="8"
+                            Background="White"
+                            BorderBrush="#CBD5E0"
+                            FontSize="16"
+                            Text="{Binding SelectedDrone.ModelType, UpdateSourceTrigger=PropertyChanged}" />
 
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
 
-                            <Button Grid.Column="0" 
-     Content="ZAPISZ ZMIANY" 
-     Command="{Binding SaveChangesCommand}" 
-     Background="#48BB78" 
-     Foreground="White" 
-     FontWeight="Bold" 
-     Height="40" 
-     Margin="0,0,10,0">
+                            <Button
+                                Grid.Column="0"
+                                Height="40"
+                                Margin="0,0,10,0"
+                                Background="ForestGreen"
+                                Command="{Binding SaveChangesCommand}"
+                                Content="ZAPISZ ZMIANY"
+                                FontWeight="Bold"
+                                Foreground="White">
                                 <Button.Resources>
                                     <Style TargetType="Border">
-                                        <Setter Property="CornerRadius" Value="5"/>
+                                        <Setter Property="CornerRadius" Value="5" />
                                     </Style>
                                 </Button.Resources>
                             </Button>
 
-                            <Button Grid.Column="1" 
-     Content="USUŃ DRONA" 
-     Command="{Binding DeleteDroneCommand}" 
-     Background="#F56565" 
-     Foreground="White" 
-     FontWeight="Bold" 
-     Height="40" 
-     Margin="10,0,0,0">
+                            <Button
+                                Grid.Column="1"
+                                Height="40"
+                                Margin="10,0,0,0"
+                                Background="IndianRed"
+                                Command="{Binding DeleteDroneCommand}"
+                                Content="USUŃ DRONA"
+                                FontWeight="Bold"
+                                Foreground="White">
                                 <Button.Resources>
                                     <Style TargetType="Border">
-                                        <Setter Property="CornerRadius" Value="5"/>
+                                        <Setter Property="CornerRadius" Value="5" />
                                     </Style>
                                 </Button.Resources>
                             </Button>
                         </Grid>
                     </StackPanel>
 
-                    <TextBlock Grid.Column="1" 
-Text="Wybierz drona z listy po lewej, aby edytować dane." 
-VerticalAlignment="Center" 
-HorizontalAlignment="Center" 
-Foreground="#A0AEC0" 
-FontSize="16">
+                    <TextBlock
+                        Grid.Column="1"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="16"
+                        Foreground="#A0AEC0"
+                        Text="Wybierz drona z listy po lewej, aby edytować dane.">
                         <TextBlock.Style>
                             <Style TargetType="TextBlock">
-                                <Setter Property="Visibility" Value="Collapsed"/>
+                                <Setter Property="Visibility" Value="Collapsed" />
                                 <Style.Triggers>
                                     <DataTrigger Binding="{Binding SelectedDrone}" Value="{x:Null}">
-                                        <Setter Property="Visibility" Value="Visible"/>
+                                        <Setter Property="Visibility" Value="Visible" />
                                     </DataTrigger>
                                 </Style.Triggers>
                             </Style>
@@ -147,7 +200,7 @@ FontSize="16">
                     </TextBlock>
 
                 </Grid>
-        </TabItem>
+            </TabItem>
         </TabControl>
     </Grid>
 </UserControl>
