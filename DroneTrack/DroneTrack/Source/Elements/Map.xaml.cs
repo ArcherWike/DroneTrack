@@ -1,4 +1,6 @@
-﻿using System.Text.Json;
+﻿using System.IO;
+using System.Reflection;
+using System.Text.Json;
 using System.Windows.Controls;
 using CommunityToolkit.Mvvm.Messaging;
 using DroneTrack.Source.Messages;
@@ -51,10 +53,25 @@ namespace DroneTrack.Source.Elements
                 this, ClearMarkersOnMap);
 
 
-            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            string htmlPath = System.IO.Path.Combine(baseDirectory, "Source", "map.html");
+            await MapView.EnsureCoreWebView2Async();
 
-            MapView.CoreWebView2.Navigate(new Uri(htmlPath).AbsoluteUri);
+            var assembly = Assembly.GetExecutingAssembly();
+            string rootNamespace = assembly.GetName().Name;
+            string resourceName = $"{rootNamespace}.Source.map.html";
+
+            using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+            {
+                if (stream == null)
+                {
+                    throw new FileNotFoundException($"Nie znaleziono zasobu. Szukano: {resourceName}");
+                }
+
+                using (StreamReader reader = new StreamReader(stream))
+                {
+                    string htmlContent = reader.ReadToEnd();
+                    MapView.CoreWebView2.NavigateToString(htmlContent);
+                }
+            }
         }
 
         private void ClearMarkersOnMap(object recipient, ClearMapMarkersMessage message)
@@ -66,14 +83,12 @@ namespace DroneTrack.Source.Elements
         private void AddFilteredMarkerToMap(object recipient, AddFilteredMarkerMessage message)
         {
             string json = JsonSerializer.Serialize(message.list);
-            string escaped = json.Replace("\\", "\\\\").Replace("\"", "\\\"");
             string script = $"addFilteredMarkers({json});";
             RunScript(script);
         }
 
         private void UpdateFilteredMarkersOnMap(object recipient, UpdateFilteredMarkersOnMapMessage message)
         {
-            var culture = System.Globalization.CultureInfo.InvariantCulture;
             string json = JsonSerializer.Serialize(message.MarkersId);
             string script = $"filterDrones({json});";
             RunScript(script);
@@ -81,7 +96,6 @@ namespace DroneTrack.Source.Elements
 
         private void ChangeViewModeOnMap(object recipient, ManagementModeChangedMessage message)
         {
-            var culture = System.Globalization.CultureInfo.InvariantCulture;
             string script = $"setSpatialFilterMode({message.IsEnabled.ToString().ToLower()});";
             RunScript(script);
         }
@@ -94,7 +108,6 @@ namespace DroneTrack.Source.Elements
 
         private void DroneSelectedOnMap(object recipient, UIDroneSelectedMessage message)
         {
-            var culture = System.Globalization.CultureInfo.InvariantCulture;
             string json = JsonSerializer.Serialize(message.DroneId);
             string script = $"selectDrone({json});";
             RunScript(script);
@@ -123,7 +136,7 @@ namespace DroneTrack.Source.Elements
             }
         } 
 
-        private void SendMessageError(Exception exception)
+        static private void SendMessageError(Exception exception)
         {
 #if DEBUG
             System.Diagnostics.Debug.WriteLine($"Błąd podczas wysyłania wiadomości do WebView2: {exception.Message}");
@@ -192,7 +205,7 @@ namespace DroneTrack.Source.Elements
             MapView.CoreWebView2.ExecuteScriptAsync(script);
         }
 
-        private void OnDroneClicked(JsonElement data)
+        static private void OnDroneClicked(JsonElement data)
         {
             var droneClickedMessage = data.Deserialize<DroneClickedMessage>();
             if (droneClickedMessage is not null)
@@ -201,7 +214,7 @@ namespace DroneTrack.Source.Elements
             }
         }
 
-        private void AddNewMarker(JsonElement data)
+        static private void AddNewMarker(JsonElement data)
         {
             MapClickedMessage mapData = data.Deserialize<MapClickedMessage>();
             if (mapData is not null)
