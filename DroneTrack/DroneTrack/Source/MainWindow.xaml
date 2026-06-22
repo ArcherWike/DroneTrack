@@ -1,16 +1,16 @@
-﻿<Window x:Class="DroneTrack.Source.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DroneTrack"
-        mc:Ignorable="d"
-        
-        xmlns:vms="clr-namespace:DroneTrack.Source.ViewModels"
-        
-        xmlns:views="clr-namespace:DroneTrack.Source.Layouts"
-        
-        Title="Drone Management System" Height="450" Width="800">
+﻿<Window
+    x:Class="DroneTrack.Source.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:DroneTrack"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="clr-namespace:DroneTrack.Source.Layouts"
+    xmlns:vms="clr-namespace:DroneTrack.Source.ViewModels"
+    Title="Drone Management System"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
 
     <Window.Resources>
         <DataTemplate DataType="{x:Type vms:ManagementViewModel}">
@@ -23,34 +23,40 @@
             <views:SettingsView />
         </DataTemplate>
         <DataTemplate DataType="{x:Type vms:FlightDetailsViewModel}">
-            <views:FlightDetailsPanel/>
+            <views:FlightDetailsPanel />
         </DataTemplate>
     </Window.Resources>
 
 
     <Grid Background="#F4F7F9">
         <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="60" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <Border Background="#1A202C" Grid.Row="0" Padding="15,0">
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                <RadioButton Content="⚙" 
-                             Style="{StaticResource MenuButtonStyle}"
-                             FontSize="24" 
-                             Command="{Binding NavigateCommand}"
-                             CommandParameter="Settings"/>
-                <RadioButton Content="MANAGEMENT" 
-                             Style="{StaticResource MenuButtonStyle}"
-                             Command="{Binding NavigateCommand}" 
-                             CommandParameter="Management"
-                             IsChecked="True"/>
-                <RadioButton Content="USER MODE" 
-                             Style="{StaticResource MenuButtonStyle}"
-                             Command="{Binding NavigateCommand}"
-                             CommandParameter="User"
-                             Margin="20,0"/>
+        <Border
+            Grid.Row="0"
+            Padding="15,0"
+            Background="#1A202C">
+            <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                <RadioButton
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="Settings"
+                    Content="⚙"
+                    FontSize="24"
+                    Style="{StaticResource MenuButtonStyle}" />
+                <RadioButton
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="Management"
+                    Content="MANAGEMENT"
+                    IsChecked="True"
+                    Style="{StaticResource MenuButtonStyle}" />
+                <RadioButton
+                    Margin="20,0"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="User"
+                    Content="USER MODE"
+                    Style="{StaticResource MenuButtonStyle}" />
             </StackPanel>
         </Border>
         <ContentControl Grid.Row="1" Content="{Binding CurrentView}" />

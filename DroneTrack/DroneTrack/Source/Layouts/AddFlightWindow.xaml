@@ -1,65 +1,90 @@
-﻿<Window x:Class="DroneTrack.Source.Layouts.AddFlightWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DroneTrack.Source.Layouts"
-        mc:Ignorable="d"
-        Title="Dodaj nowy lot" Height="525" Width="400">
+﻿<Window
+    x:Class="DroneTrack.Source.Layouts.AddFlightWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:DroneTrack.Source.Layouts"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Dodaj nowy lot"
+    Width="400"
+    Height="525"
+    mc:Ignorable="d">
     <StackPanel Margin="20">
-        <TextBlock Text="DANE LOKALIZACJI" FontWeight="Bold" Margin="0,0,0,10" Foreground="Gray"/>
+        <TextBlock
+            Margin="0,0,0,10"
+            FontWeight="Bold"
+            Foreground="Gray"
+            Text="DANE LOKALIZACJI" />
 
         <UniformGrid Columns="2">
-            <TextBlock Text="Szerokość (Lat):"/>
-            <TextBlock Text="{Binding Lat}" FontWeight="SemiBold"/>
-            <TextBlock Text="Długość (Lng):"/>
-            <TextBlock Text="{Binding Lng}" FontWeight="SemiBold"/>
-            <TextBlock Text="Czas zgłoszenia:"/>
-            <TextBlock Text="{Binding CurrentTime}" Foreground="Blue"/>
+            <TextBlock Text="Szerokość (Lat):" />
+            <TextBlock FontWeight="SemiBold" Text="{Binding Lat}" />
+            <TextBlock Text="Długość (Lng):" />
+            <TextBlock FontWeight="SemiBold" Text="{Binding Lng}" />
+            <TextBlock Text="Czas zgłoszenia:" />
+            <TextBlock Foreground="Blue" Text="{Binding CurrentTime}" />
         </UniformGrid>
 
-        <Separator Margin="0,15"/>
+        <Separator Margin="0,15" />
 
-        <TextBlock Text="ID Operatora:" Margin="0,5,0,0"/>
-        <TextBox Text="{Binding OperatorId, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,10"/>
+        <TextBlock Margin="0,5,0,0" Text="ID Operatora:" />
+        <TextBox Margin="0,0,0,10" Text="{Binding OperatorId, UpdateSourceTrigger=PropertyChanged}" />
 
-        <TextBlock Text="Dron:" Margin="0,5,0,0"/>
-        <ComboBox ItemsSource="{Binding AvailableDrones}" 
-                  SelectedItem="{Binding SelectedDrone}"
-                  DisplayMemberPath="ModelType" />
+        <TextBlock Margin="0,5,0,0" Text="Dron:" />
+        <ComboBox
+            DisplayMemberPath="ModelType"
+            ItemsSource="{Binding AvailableDrones}"
+            SelectedItem="{Binding SelectedDrone}" />
 
         <Grid Margin="0,15,0,0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <StackPanel Grid.Row="0" Grid.Column="0" Margin="0,0,5,10">
-                <TextBlock Text="Opóźnienie (min):"/>
-                <TextBox Text="{Binding DelayMinutes}"/>
+            <StackPanel
+                Grid.Row="0"
+                Grid.Column="0"
+                Margin="0,0,5,10">
+                <TextBlock Text="Opóźnienie (min):" />
+                <TextBox Text="{Binding DelayMinutes}" />
             </StackPanel>
 
-            <StackPanel Grid.Row="0" Grid.Column="1" Margin="5,0,0,10">
-                <TextBlock Text="Czas lotu (min):"/>
-                <TextBox Text="{Binding DurationMinutes}"/>
+            <StackPanel
+                Grid.Row="0"
+                Grid.Column="1"
+                Margin="5,0,0,10">
+                <TextBlock Text="Czas lotu (min):" />
+                <TextBox Text="{Binding DurationMinutes}" />
             </StackPanel>
 
-            <StackPanel Grid.Row="1" Grid.Column="0" Margin="0,0,5,0">
-                <TextBlock Text="Max Wysokość (m):"/>
-                <TextBox Text="{Binding MaxAltitude}"/>
+            <StackPanel
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="0,0,5,0">
+                <TextBlock Text="Max Wysokość (m):" />
+                <TextBox Text="{Binding MaxAltitude}" />
             </StackPanel>
         </Grid>
 
-        <TextBlock Text="Opis dodatkowy:" Margin="0,10,0,0"/>
-        <TextBox Text="{Binding Description}" Height="60" TextWrapping="Wrap" AcceptsReturn="True"/>
+        <TextBlock Margin="0,10,0,0" Text="Opis dodatkowy:" />
+        <TextBox
+            Height="60"
+            AcceptsReturn="True"
+            Text="{Binding Description}"
+            TextWrapping="Wrap" />
 
-        <Button Content="Zatwierdź lot" 
-                Command="{Binding SaveFlightCommand}"
-                CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"
-                Margin="0,20,0,0" Height="35" Background="LightGreen" FontWeight="Bold"/>
+        <Button
+            Height="35"
+            Margin="0,20,0,0"
+            Background="LightGreen"
+            Command="{Binding SaveFlightCommand}"
+            CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"
+            Content="Zatwierdź lot"
+            FontWeight="Bold" />
     </StackPanel>
 </Window>

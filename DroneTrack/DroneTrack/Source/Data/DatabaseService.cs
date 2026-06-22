@@ -105,7 +105,7 @@ namespace DroneTrack.Source.Data
         }
         private bool IsWithinRadius(double lat1, double lng1, double lat2, double lng2, double radiusInMeters)
         {
-            double R = 6371000; // Radius of the Earth in meters
+            const double R = 6371000; // Radius of the Earth in meters
 
             //Haversine formula to find distance between two points on a sphere
             double dLat = (lat2 - lat1) * (Math.PI / 180);

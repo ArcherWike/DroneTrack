@@ -1,59 +1,81 @@
-﻿<UserControl x:Class="DroneTrack.Source.Layouts.ManagementView"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:DroneTrack.Source.Layouts"
-             xmlns:elements="clr-namespace:DroneTrack.Source.Elements"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+﻿<UserControl
+    x:Class="DroneTrack.Source.Layouts.ManagementView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:elements="clr-namespace:DroneTrack.Source.Elements"
+    xmlns:local="clr-namespace:DroneTrack.Source.Layouts"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
     <UserControl.Resources>
         <BooleanToVisibilityConverter x:Key="BoolToVis" />
     </UserControl.Resources>
 
-        <Grid Margin="15">
+    <Grid Margin="15">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="250"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="250" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
 
-            <Border Grid.Column="0" Background="White" BorderBrush="#DDD" BorderThickness="0,0,1,0">
+            <Border
+                Grid.Column="0"
+                Background="White"
+                BorderBrush="#DDD"
+                BorderThickness="0,0,1,0">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="15"/>
-                        <RowDefinition Height="35"/>
-                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="15" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
 
-                    <TextBlock Grid.Row="0" Text="Drones List" FontWeight="Bold" VerticalAlignment="Center"/>
-                    <Button Grid.Row="1" Content="Clear Filters" Margin="5" Command="{Binding ClearFiltersCommand}"/>
-                    <ListBox Grid.Row="2" ItemsSource="{Binding AllFlights}"
-                             SelectedItem="{Binding SelectedFlight, Mode=TwoWay}"
-                             DisplayMemberPath="FullDisplayName"/>
+                    <TextBlock
+                        Grid.Row="0"
+                        VerticalAlignment="Center"
+                        FontWeight="Bold"
+                        Text="Drones List" />
+                    <Button
+                        Grid.Row="1"
+                        Margin="5"
+                        Command="{Binding ClearFiltersCommand}"
+                        Content="Clear Filters" />
+                    <ListBox
+                        Grid.Row="2"
+                        DisplayMemberPath="FullDisplayName"
+                        ItemsSource="{Binding AllFlights}"
+                        SelectedItem="{Binding SelectedFlight, Mode=TwoWay}" />
                 </Grid>
             </Border>
 
             <Border Grid.Column="1">
-                <elements:Map></elements:Map>
+                <elements:Map />
             </Border>
 
-            <Border Grid.Column="2" Width="300" Background="White"
+            <Border
+                Grid.Column="2"
+                Width="300"
+                Background="White"
                 Visibility="{Binding FlightDetailsViewModel.IsDetailVisible, Converter={StaticResource BoolToVis}}">
-                <ContentControl Grid.Row="1" Content="{Binding FlightDetailsViewModel}"/>
+                <ContentControl Grid.Row="1" Content="{Binding FlightDetailsViewModel}" />
             </Border>
         </Grid>
-        
 
-        <elements:TimeRangeSlider Grid.Row="1" Margin="5" x:Name="MissionTimeFilter" 
-                TimeFrom="{Binding SelectedStart, Mode=TwoWay}" 
-                TimeTo="{Binding SelectedEnd, Mode=TwoWay}"
-                SelectedDate="{Binding SelectedDate, Mode=TwoWay}"/>
+
+        <elements:TimeRangeSlider
+            x:Name="MissionTimeFilter"
+            Grid.Row="1"
+            Margin="5"
+            SelectedDate="{Binding SelectedDate, Mode=TwoWay}"
+            TimeFrom="{Binding SelectedStart, Mode=TwoWay}"
+            TimeTo="{Binding SelectedEnd, Mode=TwoWay}" />
     </Grid>
 </UserControl>

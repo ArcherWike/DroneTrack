@@ -101,7 +101,10 @@
             </Button.Resources>
         </Button>
 
-        <TextBlock FontWeight="Bold" Margin="15" Text="{Binding SelectedFlight.Id, StringFormat='ID lotu : {0}'}" />
+        <TextBlock
+            Margin="15"
+            FontWeight="Bold"
+            Text="{Binding SelectedFlight.Id, StringFormat='ID lotu : {0}'}" />
 
         <Grid Margin="15">
             <Grid.ColumnDefinitions>
