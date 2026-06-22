@@ -49,6 +49,15 @@
                                 Content="Usuń wszystkie dane"
                                 Cursor="Hand"
                                 Foreground="White" />
+
+                            <Button
+                                Padding="15,8" Margin="0,20"
+                                HorizontalAlignment="Left"
+                                Background="Gray"
+                                Command="{Binding UpdateDatabaseCommand}"
+                                Content="Dodaj dane z pliku"
+                                Cursor="Hand"
+                                Foreground="White" />
                         </StackPanel>
                     </Border>
                 </Grid>

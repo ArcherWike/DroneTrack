@@ -1,10 +1,14 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
+using System.Text.Json;
 using System.Windows;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DroneTrack.Source.Data;
 using DroneTrack.Source.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Win32;
+using System.IO;
 
 namespace DroneTrack.Source.ViewModels
 {
@@ -108,6 +112,51 @@ namespace DroneTrack.Source.ViewModels
             catch (Exception ex)
             {
                 MessageBox.Show($"Wystąpił błąd podczas usuwania danych: {ex.Message}", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        [RelayCommand]
+        private void UpdateDatabase()
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Pliki JSON (*.json)|*.json|Wszystkie pliki (*.*)|*.*",
+                Title = "Wybierz plik JSON z rekordami"
+            };
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                try
+                {
+                    string jsonString = File.ReadAllText(openFileDialog.FileName);
+
+                    List<FlightLog> record = JsonSerializer.Deserialize<List<FlightLog>>(jsonString, new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    });
+
+                    if (record == null || record.Count == 0)
+                    {
+                        MessageBox.Show("Plik JSON jest pusty lub ma niepoprawny format.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Warning);
+                        return;
+                    }
+
+                    using (var db = new DroneDatabaseContext())
+                    {
+                        db.FlightLogs.AddRange(record);
+                        db.SaveChanges();
+                    }
+
+                    MessageBox.Show($"Sukces! Pomyślnie dodano {record.Count} rekordów do bazy danych.", "Import zakończony", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                catch (JsonException)
+                {
+                    MessageBox.Show("Błąd: Wybrany plik ma nieprawidłową strukturę JSON. Upewnij się, że pasuje do modelu bazy.", "Błąd formatu", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Wystąpił nieoczekiwany błąd podczas importu: {ex.Message}", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
         }
     }

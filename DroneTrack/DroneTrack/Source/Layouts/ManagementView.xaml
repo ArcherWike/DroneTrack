@@ -52,7 +52,7 @@
                         Grid.Row="2"
                         DisplayMemberPath="FullDisplayName"
                         ItemsSource="{Binding AllFlights}"
-                        SelectedItem="{Binding SelectedFlight, Mode=TwoWay}" />
+                        SelectedItem="{Binding FlightDetailsViewModel.SelectedFlight, Mode=TwoWay}" />
                 </Grid>
             </Border>
 
