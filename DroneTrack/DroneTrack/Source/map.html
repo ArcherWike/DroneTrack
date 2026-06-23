@@ -51,7 +51,7 @@
         };
 
         function filterDrones(ids) {
-            console.log(ids);
+            //console.log(ids);
             const visibles = new Set(ids);
 
             for (const [id, marker] of drones) {
@@ -76,7 +76,7 @@
         }
 
         function setSpatialFilterMode(enabled) {
-            console.log("mode ", enabled);
+            //console.log("mode ", enabled);
 
             if (enabled) {
                 map.on('mousedown', onMouseDown);
@@ -103,13 +103,10 @@
         }
 
         function addFilteredMarkers(inDrones) {
-            console.log(inDrones);
+            //console.log(inDrones);
 
             inDrones.forEach(drone =>
             {
-                
-                console.log(drone.MissionId, drone.Lat, drone.Lng);
-
                 if (!drones.has(drone.MissionId))
                 {
                     let marker = L.marker([drone.Lat, drone.Lng],
@@ -198,7 +195,7 @@
             function updatePopup() {
                 if (timerInterval) {
                     marker.setPopupContent(getPopupText());
-                    console.log(`Update dymka dla drona ${id}`);
+                    //console.log(`Update dymka dla drona ${id}`);
                 }
             }
 
@@ -226,8 +223,6 @@
         }
 
         function highlightMarkers(activeIds) {
-            console.log("Otrzymano ID do podświetlenia:", activeIds);
-
             map.eachLayer(function (layer) {
                 if (layer instanceof L.Marker && layer.options.databaseId) {
                     const isSelected = activeIds.includes(Number(layer.options.databaseId));

@@ -9,15 +9,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Source\map.html" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.0" />
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3965-prerelease" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Source\map.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <EmbeddedResource Include="Source\map.html">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
