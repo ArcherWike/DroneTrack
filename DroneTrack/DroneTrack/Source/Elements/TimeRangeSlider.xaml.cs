@@ -16,14 +16,13 @@ using System.Windows.Shapes;
 namespace DroneTrack.Source.Elements
 {
     /// <summary>
-    /// Interaktywny suwak czasu umożliwiający filtrowanie danych 
-    /// w zadanym przedziale godzinowym
+    /// An interactive time slider that allows data to be filtered within a specified time range
     /// </summary>
     /// 
-    /// Funkcjonalność obejmuje:
-    /// - Dwupunktowy wybór przedziału czasowego.
-    /// - Powiadamianie o zmianach zakresu (INotifyPropertyChanged).
-    /// - Synchronizację z bazą danych poprzez ViewModel w celu filtrowania logów lotów.
+    /// Features include:
+    /// - Two-point selection of a time range.
+    /// - Notification of range changes (INotifyPropertyChanged).
+    /// - Synchronisation with the database via ViewModel to filter flight logs.
 
     public partial class TimeRangeSlider : UserControl
     {

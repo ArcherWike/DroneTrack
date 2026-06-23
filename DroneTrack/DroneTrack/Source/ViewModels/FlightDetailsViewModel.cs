@@ -79,19 +79,19 @@ namespace DroneTrack.Source.ViewModels
 
             if (string.IsNullOrEmpty(SelectedFlight.OperatorIdentity))
             {
-                MessageBox.Show("Błędny Identyfikator operatora!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Invalid operator ID!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
             if (SelectedFlight.FlightDateStart > SelectedFlight.FlightDateEnd)
             {
-                MessageBox.Show("Nieprawidłowa data rozpoczęcia lotu!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Invalid flight start date!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
             if (FlightDrone != null && !AvailableDrones.Contains(FlightDrone))
             {
-                MessageBox.Show("Statek powietrzny nie został wybrany!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Invalid operator ID!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             databaseService.UpdateFlightLog(SelectedFlight);
@@ -102,7 +102,7 @@ namespace DroneTrack.Source.ViewModels
         private void Delete()
         {
             if (SelectedFlight == null) return;
-            var result = MessageBox.Show("Czy na pewno chcesz usunąć ten lot?", "Potwierdzenie", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            var result = MessageBox.Show("Are you sure you want to delete this flight?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Warning);
             if (result == MessageBoxResult.Yes)
             {
                 databaseService.DeleteFlightLog(SelectedFlight.Id);

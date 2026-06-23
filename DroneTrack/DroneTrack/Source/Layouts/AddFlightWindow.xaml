@@ -5,7 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:DroneTrack.Source.Layouts"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="Dodaj nowy lot"
+    Title="Add a new flight"
     Width="400"
     Height="525"
     mc:Ignorable="d">
@@ -14,23 +14,23 @@
             Margin="0,0,0,10"
             FontWeight="Bold"
             Foreground="Gray"
-            Text="DANE LOKALIZACJI" />
+            Text="LOCATION DETAILS" />
 
         <UniformGrid Columns="2">
-            <TextBlock Text="Szerokość (Lat):" />
+            <TextBlock Text="Lat:" />
             <TextBlock FontWeight="SemiBold" Text="{Binding Lat}" />
-            <TextBlock Text="Długość (Lng):" />
+            <TextBlock Text="Lng:" />
             <TextBlock FontWeight="SemiBold" Text="{Binding Lng}" />
-            <TextBlock Text="Czas zgłoszenia:" />
+            <TextBlock Text="Time of reporting:" />
             <TextBlock Foreground="Blue" Text="{Binding CurrentTime}" />
         </UniformGrid>
 
         <Separator Margin="0,15" />
 
-        <TextBlock Margin="0,5,0,0" Text="ID Operatora:" />
+        <TextBlock Margin="0,5,0,0" Text="Operator ID:" />
         <TextBox Margin="0,0,0,10" Text="{Binding OperatorId, UpdateSourceTrigger=PropertyChanged}" />
 
-        <TextBlock Margin="0,5,0,0" Text="Dron:" />
+        <TextBlock Margin="0,5,0,0" Text="Drone:" />
         <ComboBox
             DisplayMemberPath="ModelType"
             ItemsSource="{Binding AvailableDrones}"
@@ -50,7 +50,7 @@
                 Grid.Row="0"
                 Grid.Column="0"
                 Margin="0,0,5,10">
-                <TextBlock Text="Opóźnienie (min):" />
+                <TextBlock Text="Delay (min):" />
                 <TextBox Text="{Binding DelayMinutes}" />
             </StackPanel>
 
@@ -58,7 +58,7 @@
                 Grid.Row="0"
                 Grid.Column="1"
                 Margin="5,0,0,10">
-                <TextBlock Text="Czas lotu (min):" />
+                <TextBlock Text="Flight Duration (min):" />
                 <TextBox Text="{Binding DurationMinutes}" />
             </StackPanel>
 
@@ -71,7 +71,7 @@
             </StackPanel>
         </Grid>
 
-        <TextBlock Margin="0,10,0,0" Text="Opis dodatkowy:" />
+        <TextBlock Margin="0,10,0,0" Text="Additional Description:" />
         <TextBox
             Height="60"
             AcceptsReturn="True"
@@ -84,7 +84,7 @@
             Background="LightGreen"
             Command="{Binding SaveFlightCommand}"
             CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"
-            Content="Zatwierdź lot"
+            Content="Confirm Flight"
             FontWeight="Bold" />
     </StackPanel>
 </Window>

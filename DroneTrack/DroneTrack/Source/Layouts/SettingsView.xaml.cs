@@ -3,11 +3,11 @@
 namespace DroneTrack.Source.Layouts
 {
     /// <summary>
-    /// Klasa reprezentująca widok ustawień aplikacji (SettingsView).
+    /// A class representing the application settings view (SettingsView).
     /// </summary>
-    /// Główne funkcjonalności:
-    /// - Wyświetlanie i modyfikacja ustawień aplikacji, takich jak konfiguracja bazy danych, preferencje użytkownika itp.
-    /// - Zarządzenie flotą za pomocą interaktywnego formularza
+    /// Main functionalities:
+    /// - Displaying and modifying application settings, such as database configuration, user preferences, etc.
+    /// - Managing the fleet using an interactive form
     public partial class SettingsView : UserControl
     {
         public SettingsView()

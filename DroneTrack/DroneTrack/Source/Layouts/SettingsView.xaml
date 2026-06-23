@@ -33,12 +33,12 @@
                                 FontSize="16"
                                 FontWeight="Bold"
                                 Foreground="#FFE53935"
-                                Text="Zarządzanie bazą danych" />
+                                Text="Database Management" />
 
                             <TextBlock
                                 Margin="0,0,0,15"
                                 Foreground="Gray"
-                                Text="Poniższa akcja usunie trwale wszystkie zapisane wpisy z bazy danych. Tej operacji nie można cofnąć!"
+                                Text="The following action will permanently delete all entries from the database. This operation cannot be undone!"
                                 TextWrapping="Wrap" />
 
                             <Button
@@ -46,16 +46,17 @@
                                 HorizontalAlignment="Left"
                                 Background="#FFE53935"
                                 Command="{Binding ClearDatabaseCommand}"
-                                Content="Usuń wszystkie dane"
+                                Content="Delete all data"
                                 Cursor="Hand"
                                 Foreground="White" />
 
                             <Button
-                                Padding="15,8" Margin="0,20"
+                                Margin="0,20"
+                                Padding="15,8"
                                 HorizontalAlignment="Left"
                                 Background="Gray"
                                 Command="{Binding UpdateDatabaseCommand}"
-                                Content="Dodaj dane z pliku"
+                                Content="Add data from file"
                                 Cursor="Hand"
                                 Foreground="White" />
                         </StackPanel>
@@ -63,7 +64,7 @@
                 </Grid>
             </TabItem>
 
-            <TabItem Header="Flota">
+            <TabItem Header="Fleet">
                 <Grid>
 
                     <Grid.ColumnDefinitions>
@@ -83,14 +84,14 @@
                                 FontSize="18"
                                 FontWeight="Bold"
                                 Foreground="#2D3748"
-                                Text="FLOTA" />
+                                Text="FLEET" />
 
                             <Button
                                 Height="35"
                                 Margin="0,10,0,0"
                                 Background="#3182CE"
                                 Command="{Binding AddDroneCommand}"
-                                Content="+ DODAJ NOWEGO DRONA"
+                                Content="+ ADD NEW DRONE"
                                 DockPanel.Dock="Bottom"
                                 FontWeight="Bold"
                                 Foreground="White">
@@ -134,12 +135,12 @@
                             FontSize="20"
                             FontWeight="Bold"
                             Foreground="#2D3748"
-                            Text="EDYCJA" />
+                            Text="EDIT" />
 
                         <TextBlock
                             Margin="0,0,0,5"
                             Foreground="#718096"
-                            Text="Nazwa rejestracyjna / Model:" />
+                            Text="Registration / Model:" />
 
                         <TextBox
                             Margin="0,0,0,25"
@@ -161,7 +162,7 @@
                                 Margin="0,0,10,0"
                                 Background="ForestGreen"
                                 Command="{Binding SaveChangesCommand}"
-                                Content="ZAPISZ ZMIANY"
+                                Content="SAVE CHANGES"
                                 FontWeight="Bold"
                                 Foreground="White">
                                 <Button.Resources>
@@ -177,7 +178,7 @@
                                 Margin="10,0,0,0"
                                 Background="IndianRed"
                                 Command="{Binding DeleteDroneCommand}"
-                                Content="USUŃ DRONA"
+                                Content="REMOVE DRONE"
                                 FontWeight="Bold"
                                 Foreground="White">
                                 <Button.Resources>
@@ -195,7 +196,7 @@
                         VerticalAlignment="Center"
                         FontSize="16"
                         Foreground="#A0AEC0"
-                        Text="Wybierz drona z listy po lewej, aby edytować dane.">
+                        Text="Select a drone from the list on the left to edit its details.">
                         <TextBlock.Style>
                             <Style TargetType="TextBlock">
                                 <Setter Property="Visibility" Value="Collapsed" />

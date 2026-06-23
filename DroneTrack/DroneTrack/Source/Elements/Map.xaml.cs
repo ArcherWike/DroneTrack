@@ -9,8 +9,8 @@ using Microsoft.Web.WebView2.Core;
 
 namespace DroneTrack.Source.Elements
 {
-    /// klasa hostująca komponent WebView2, 
-    /// zarządza dwukierunkową komunikacją między logiką C# a mapą JavaScript
+    /// class that hosts the WebView2 component,
+    /// manages two-way communication between the C# logic and the JavaScript map
 
     public partial class Map : UserControl
     {

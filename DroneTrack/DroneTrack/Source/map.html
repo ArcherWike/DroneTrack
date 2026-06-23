@@ -188,8 +188,8 @@
                 let timeStr = `${mins}:${secs < 10 ? '0' : ''}${secs}`;
 
                 return isActive
-                    ? `<b>ID Misji:</b> ${id}<br/><b>Pozostało lotu:</b> ${timeStr}`
-                    : `<b>ID Misji:</b> ${id}<br/><b>Do wylotu:</b> ${timeStr}`;
+                    ? `<b>ID Mission:</b> ${id}<br/><b>Time remaining:</b> ${timeStr}`
+                    : `<b>ID Mission:</b> ${id}<br/><b>Until departure:</b> ${timeStr}`;
             }
 
             function updatePopup() {

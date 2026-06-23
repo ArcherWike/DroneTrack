@@ -52,30 +52,30 @@ namespace DroneTrack.Source.ViewModels
         {
             if (SelectedDrone == null)
             {
-                MessageBox.Show("Statek powietrzny nie został wybrany!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("No drone selected!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
             if (string.IsNullOrWhiteSpace(OperatorId))
             {
-                MessageBox.Show("Błędny identyfikator operatora!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Invalid operator ID!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
             if (DurationMinutes <= 0)
             {
-                MessageBox.Show("Czas trwania lotu musi być większy niż 0 minut.", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Flight duration must be greater than 0 minutes.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             if (DelayMinutes < 0)
             {
-                MessageBox.Show("Minimalne opóźnienie startu to 0 minut.", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Minimum start delay is 0 minutes.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
             if (MaxAltitude <= 0 || MaxAltitude > 500)
             {
-                MessageBox.Show("Maksymalna wysokość musi być większa niż 0 metrów i mniejsza niż 500 metrów.", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Maximum altitude must be greater than 0 meters and less than 500 meters.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 

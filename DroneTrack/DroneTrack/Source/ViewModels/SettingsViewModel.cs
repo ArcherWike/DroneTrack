@@ -40,7 +40,7 @@ namespace DroneTrack.Source.ViewModels
         [RelayCommand]
         private void AddDrone()
         {
-            var newDrone = new Drone { ModelType = "Nowy Dron (Edytuj nazwę)" };
+            var newDrone = new Drone { ModelType = "New Drone (Edit name)" };
 
             using (var db = new DroneDatabaseContext())
             {
@@ -90,8 +90,8 @@ namespace DroneTrack.Source.ViewModels
         private async Task ClearDatabaseAsync()
         {
             var result = MessageBox.Show(
-            "Czy na pewno chcesz usunąć WSZYSTKIE dane? Tej operacji nie można cofnąć!",
-            "Krytyczne ostrzeżenie",
+            "Are you sure you want to delete ALL data? This action cannot be undone!",
+            "Critical Warning",
             MessageBoxButton.YesNo,
             MessageBoxImage.Warning);
 
@@ -107,11 +107,11 @@ namespace DroneTrack.Source.ViewModels
                     await db.FlightLogs.ExecuteDeleteAsync();
                 }
 
-                    MessageBox.Show("Wszystkie dane zostały pomyślnie usunięte.", "Sukces", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("All data has been successfully deleted.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Wystąpił błąd podczas usuwania danych: {ex.Message}", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"An error occurred while deleting data: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -120,8 +120,8 @@ namespace DroneTrack.Source.ViewModels
         {
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
-                Filter = "Pliki JSON (*.json)|*.json|Wszystkie pliki (*.*)|*.*",
-                Title = "Wybierz plik JSON z rekordami"
+                Filter = "JSON Files (*.json)|*.json|All Files (*.*)|*.*",
+                Title = "Select JSON file with records"
             };
 
             if (openFileDialog.ShowDialog() == true)
@@ -137,7 +137,7 @@ namespace DroneTrack.Source.ViewModels
 
                     if (record == null || record.Count == 0)
                     {
-                        MessageBox.Show("Plik JSON jest pusty lub ma niepoprawny format.", "Informacja", MessageBoxButton.OK, MessageBoxImage.Warning);
+                        MessageBox.Show("The JSON file is empty or has an invalid format.", "Information", MessageBoxButton.OK, MessageBoxImage.Warning);
                         return;
                     }
 
@@ -147,15 +147,15 @@ namespace DroneTrack.Source.ViewModels
                         db.SaveChanges();
                     }
 
-                    MessageBox.Show($"Sukces! Pomyślnie dodano {record.Count} rekordów do bazy danych.", "Import zakończony", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show($"Success! Successfully added {record.Count} records to the database.", "Import Completed", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 catch (JsonException)
                 {
-                    MessageBox.Show("Błąd: Wybrany plik ma nieprawidłową strukturę JSON. Upewnij się, że pasuje do modelu bazy.", "Błąd formatu", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Error: The selected file has an invalid JSON structure. Make sure it matches the database model.", "Format Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Wystąpił nieoczekiwany błąd podczas importu: {ex.Message}", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show($"An unexpected error occurred during import: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
         }
