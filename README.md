@@ -2,22 +2,21 @@
 
 A comprehensive solution for adding, managing, and dynamically filtering archived and upcoming flights.
 
----
 ## Key System Features
 * **Real-Time Visualization:** Interactive map presenting drone positions and statuses.
 * **Operation Reporting:** An intuitive panel allowing operators to quickly register new flights directly into the local database.
 * **Dynamic Filtering:** Advanced time filters (sliders) and spatial filters (drawing a coverage area directly on the map).
 ---
 
-## Management
+### Management
 
 https://github.com/user-attachments/assets/76c2443f-d54e-40af-8b5b-079febe6af00
 
-## Edit mode
+### Edit mode
 
 https://github.com/user-attachments/assets/ae00cc04-b058-4bdb-b3b3-b876b7fd0384
 
-## Add a new flight
+### User Mode (Adding a new flight)
 
 https://github.com/user-attachments/assets/3706cd03-7cd1-4ba5-b7f5-cf824e75a6a4
 
