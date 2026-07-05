@@ -8,17 +8,34 @@ A comprehensive solution for adding, managing, and dynamically filtering archive
 * **Dynamic Filtering:** Advanced time filters (sliders) and spatial filters (drawing a coverage area directly on the map).
 ---
 
-### Management
+## Management
+<img width="1161" height="650" alt="obraz" src="https://github.com/user-attachments/assets/ea9639a4-00db-4ed3-bdb9-eb88d03f9a10" />
 
-https://github.com/user-attachments/assets/76c2443f-d54e-40af-8b5b-079febe6af00
+<details>
+<summary>🎞️ Show the demonstration video</summary>
+<br>
+<video controls width="100%" src="https://github.com/user-attachments/assets/76c2443f-d54e-40af-8b5b-079febe6af00"></video>
+</details>
+<br>
 
-### Edit mode
+## Edit mode
+<details>
+<summary>🎞️ Show the demonstration video</summary>
+<br>
+<video controls width="100%" src="https://github.com/user-attachments/assets/ae00cc04-b058-4bdb-b3b3-b876b7fd0384"></video>
+</details>
 
-https://github.com/user-attachments/assets/ae00cc04-b058-4bdb-b3b3-b876b7fd0384
+## User Mode (Adding a new flight)
+<img width="1158" height="653" alt="obraz" src="https://github.com/user-attachments/assets/fdc5329b-b0d4-4247-9358-4254948cafbd" />
+<br>
+<details>
+<summary>🎞️ Show the demonstration video</summary>
+<br>
+<video controls width="100%" src="https://github.com/user-attachments/assets/3706cd03-7cd1-4ba5-b7f5-cf824e75a6a4"></video>
+</details>
 
-### User Mode (Adding a new flight)
-
-https://github.com/user-attachments/assets/3706cd03-7cd1-4ba5-b7f5-cf824e75a6a4
+### Settings
+<img width="1920" height="1080" alt="System monitorowania BSP" src="https://github.com/user-attachments/assets/a249e21f-b6a2-4dd9-9c73-af978c6c33a1" />
 
 ## Architecture
 * **Desktop Frontend:** WPF (Windows Presentation Foundation) & XAML
@@ -26,6 +43,9 @@ https://github.com/user-attachments/assets/3706cd03-7cd1-4ba5-b7f5-cf824e75a6a4
 * **Communication:** Microsoft.Web.WebView2 (`ExecuteScriptAsync` & `postMessage`)
 * **Database & ORM:** SQLite & Microsoft.EntityFrameworkCore.Sqlite
 * **MVVM Support:** CommunityToolkit.Mvvm (Source Generators)
+<img width="1162" height="655" alt="obraz" src="https://github.com/user-attachments/assets/418810ac-321e-49b7-a577-9d84044993ba" />
+<img width="1160" height="651" alt="obraz" src="https://github.com/user-attachments/assets/609206b7-4014-4b3e-8ec2-3107c829ca2a" />
+
 
 ---
 
