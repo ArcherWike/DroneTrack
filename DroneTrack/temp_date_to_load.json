@@ -1,0 +1,5002 @@
+[
+  {
+    "OperatorIdentity": "POL451455",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-12T10:10:19",
+    "FlightDateEnd": "2026-06-12T13:52:20",
+    "Latitude": 52.614788,
+    "Longitude": 20.57801,
+    "MaxAltitude": 355,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL503324",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-26T04:39:46",
+    "FlightDateEnd": "2026-06-26T05:26:46",
+    "Latitude": 49.943035,
+    "Longitude": 21.413619,
+    "MaxAltitude": 354,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL650009",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-21T10:59:27",
+    "FlightDateEnd": "2026-06-21T15:11:22",
+    "Latitude": 50.53423,
+    "Longitude": 16.78218,
+    "MaxAltitude": 286,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL216499",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-28T04:35:44",
+    "FlightDateEnd": "2026-06-28T05:08:35",
+    "Latitude": 53.807537,
+    "Longitude": 21.239904,
+    "MaxAltitude": 214,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL118226",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-16T02:10:59",
+    "FlightDateEnd": "2026-06-16T07:09:06",
+    "Latitude": 53.799806,
+    "Longitude": 15.343308,
+    "MaxAltitude": 224,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL849733",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-30T05:51:46",
+    "FlightDateEnd": "2026-06-30T06:34:11",
+    "Latitude": 49.34494,
+    "Longitude": 22.55641,
+    "MaxAltitude": 416,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL269863",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-05T06:02:58",
+    "FlightDateEnd": "2026-06-05T08:32:20",
+    "Latitude": 49.355178,
+    "Longitude": 18.323206,
+    "MaxAltitude": 469,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL659290",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-04T11:10:47",
+    "FlightDateEnd": "2026-06-04T15:03:27",
+    "Latitude": 54.013131,
+    "Longitude": 20.656908,
+    "MaxAltitude": 69,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL521888",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-28T04:14:53",
+    "FlightDateEnd": "2026-06-28T06:29:25",
+    "Latitude": 51.820964,
+    "Longitude": 16.511843,
+    "MaxAltitude": 211,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL639141",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-09T21:00:56",
+    "FlightDateEnd": "2026-06-09T21:09:17",
+    "Latitude": 54.010955,
+    "Longitude": 18.938144,
+    "MaxAltitude": 139,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL661240",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-19T20:24:13",
+    "FlightDateEnd": "2026-06-19T21:13:32",
+    "Latitude": 52.92168,
+    "Longitude": 18.762592,
+    "MaxAltitude": 381,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL728552",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-18T01:02:12",
+    "FlightDateEnd": "2026-06-18T04:15:54",
+    "Latitude": 49.219726,
+    "Longitude": 18.972517,
+    "MaxAltitude": 127,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL922376",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-17T13:58:51",
+    "FlightDateEnd": "2026-06-17T14:31:04",
+    "Latitude": 51.182728,
+    "Longitude": 14.945111,
+    "MaxAltitude": 177,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL454053",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-05T06:09:54",
+    "FlightDateEnd": "2026-06-05T10:09:31",
+    "Latitude": 52.653291,
+    "Longitude": 17.696126,
+    "MaxAltitude": 399,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL967356",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-07T23:34:57",
+    "FlightDateEnd": "2026-06-08T01:03:18",
+    "Latitude": 51.757694,
+    "Longitude": 17.349827,
+    "MaxAltitude": 484,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL251302",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-18T05:12:32",
+    "FlightDateEnd": "2026-06-18T06:21:32",
+    "Latitude": 51.062805,
+    "Longitude": 17.507724,
+    "MaxAltitude": 277,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL597607",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-11T22:27:06",
+    "FlightDateEnd": "2026-06-12T03:27:00",
+    "Latitude": 53.846363,
+    "Longitude": 21.77551,
+    "MaxAltitude": 239,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL194118",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-23T07:04:28",
+    "FlightDateEnd": "2026-06-23T08:28:45",
+    "Latitude": 51.247687,
+    "Longitude": 16.869898,
+    "MaxAltitude": 170,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL823104",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-30T11:13:13",
+    "FlightDateEnd": "2026-06-30T11:47:38",
+    "Latitude": 50.928022,
+    "Longitude": 14.510653,
+    "MaxAltitude": 213,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL994201",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-07T08:59:05",
+    "FlightDateEnd": "2026-06-07T11:36:01",
+    "Latitude": 51.760851,
+    "Longitude": 19.471455,
+    "MaxAltitude": 476,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL155969",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-24T21:53:52",
+    "FlightDateEnd": "2026-06-24T23:59:07",
+    "Latitude": 54.220497,
+    "Longitude": 24.048561,
+    "MaxAltitude": 347,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL843634",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-16T15:56:31",
+    "FlightDateEnd": "2026-06-16T19:17:30",
+    "Latitude": 49.937693,
+    "Longitude": 15.448681,
+    "MaxAltitude": 78,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL827923",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-17T04:08:25",
+    "FlightDateEnd": "2026-06-17T07:30:26",
+    "Latitude": 52.444977,
+    "Longitude": 17.553932,
+    "MaxAltitude": 416,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL402303",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-11T09:40:56",
+    "FlightDateEnd": "2026-06-11T10:05:51",
+    "Latitude": 49.817067,
+    "Longitude": 18.264099,
+    "MaxAltitude": 55,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL864900",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-25T13:20:40",
+    "FlightDateEnd": "2026-06-25T14:39:33",
+    "Latitude": 53.27947,
+    "Longitude": 19.09763,
+    "MaxAltitude": 344,
+    "Description": "Lot rekreacyjny"
+  },
+  {
+    "OperatorIdentity": "POL315320",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-13T22:38:18",
+    "FlightDateEnd": "2026-06-14T00:56:36",
+    "Latitude": 52.155294,
+    "Longitude": 17.286545,
+    "MaxAltitude": 465,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL260462",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-07T06:33:00",
+    "FlightDateEnd": "2026-06-07T10:04:00",
+    "Latitude": 53.623447,
+    "Longitude": 16.788706,
+    "MaxAltitude": 179,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL777814",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-12T15:08:55",
+    "FlightDateEnd": "2026-06-12T17:39:37",
+    "Latitude": 53.043005,
+    "Longitude": 21.905744,
+    "MaxAltitude": 460,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL962934",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-09T16:05:10",
+    "FlightDateEnd": "2026-06-09T17:17:09",
+    "Latitude": 54.040406,
+    "Longitude": 18.003428,
+    "MaxAltitude": 403,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL113155",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-04T05:33:39",
+    "FlightDateEnd": "2026-06-04T06:24:07",
+    "Latitude": 51.435076,
+    "Longitude": 22.255564,
+    "MaxAltitude": 456,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL276124",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-27T21:13:18",
+    "FlightDateEnd": "2026-06-27T21:21:33",
+    "Latitude": 49.509571,
+    "Longitude": 17.145062,
+    "MaxAltitude": 55,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL199560",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-04T14:40:09",
+    "FlightDateEnd": "2026-06-04T17:01:37",
+    "Latitude": 51.533863,
+    "Longitude": 23.85698,
+    "MaxAltitude": 245,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL119793",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-04T02:54:31",
+    "FlightDateEnd": "2026-06-04T06:43:59",
+    "Latitude": 53.641016,
+    "Longitude": 14.254329,
+    "MaxAltitude": 42,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL790565",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-24T06:16:54",
+    "FlightDateEnd": "2026-06-24T06:49:48",
+    "Latitude": 49.585075,
+    "Longitude": 19.013756,
+    "MaxAltitude": 475,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL656057",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-08T10:44:58",
+    "FlightDateEnd": "2026-06-08T11:33:33",
+    "Latitude": 51.735871,
+    "Longitude": 22.961836,
+    "MaxAltitude": 18,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL659287",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-08T11:03:48",
+    "FlightDateEnd": "2026-06-08T12:51:47",
+    "Latitude": 50.492641,
+    "Longitude": 22.941731,
+    "MaxAltitude": 66,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL757151",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-18T10:49:27",
+    "FlightDateEnd": "2026-06-18T14:24:40",
+    "Latitude": 54.341861,
+    "Longitude": 21.134971,
+    "MaxAltitude": 115,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL844164",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-10T02:32:07",
+    "FlightDateEnd": "2026-06-10T05:23:46",
+    "Latitude": 51.598542,
+    "Longitude": 15.327318,
+    "MaxAltitude": 313,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL243723",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-04T17:02:03",
+    "FlightDateEnd": "2026-06-04T22:01:30",
+    "Latitude": 49.041603,
+    "Longitude": 21.458463,
+    "MaxAltitude": 351,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL836964",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-11T16:22:57",
+    "FlightDateEnd": "2026-06-11T20:42:02",
+    "Latitude": 51.203629,
+    "Longitude": 18.090824,
+    "MaxAltitude": 346,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL044156",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-28T09:16:42",
+    "FlightDateEnd": "2026-06-28T11:15:29",
+    "Latitude": 50.032544,
+    "Longitude": 15.51238,
+    "MaxAltitude": 490,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL026133",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-03T08:13:13",
+    "FlightDateEnd": "2026-06-03T12:56:14",
+    "Latitude": 53.382114,
+    "Longitude": 14.502427,
+    "MaxAltitude": 152,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL969597",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-17T20:43:11",
+    "FlightDateEnd": "2026-06-18T00:48:49",
+    "Latitude": 54.301644,
+    "Longitude": 19.360041,
+    "MaxAltitude": 232,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL095242",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-12T11:17:53",
+    "FlightDateEnd": "2026-06-12T14:32:57",
+    "Latitude": 52.008283,
+    "Longitude": 20.756213,
+    "MaxAltitude": 244,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL375895",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-03T19:29:50",
+    "FlightDateEnd": "2026-06-03T23:36:21",
+    "Latitude": 51.374747,
+    "Longitude": 16.092543,
+    "MaxAltitude": 54,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL733663",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-21T12:51:20",
+    "FlightDateEnd": "2026-06-21T17:50:31",
+    "Latitude": 52.247135,
+    "Longitude": 14.93488,
+    "MaxAltitude": 15,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL439520",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-13T04:36:12",
+    "FlightDateEnd": "2026-06-13T04:56:10",
+    "Latitude": 53.168734,
+    "Longitude": 19.743837,
+    "MaxAltitude": 296,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL466056",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-06T15:45:42",
+    "FlightDateEnd": "2026-06-06T16:10:34",
+    "Latitude": 50.606161,
+    "Longitude": 14.992941,
+    "MaxAltitude": 396,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL305644",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-30T08:48:22",
+    "FlightDateEnd": "2026-06-30T11:26:01",
+    "Latitude": 54.431566,
+    "Longitude": 19.904518,
+    "MaxAltitude": 151,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL837075",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-22T21:13:03",
+    "FlightDateEnd": "2026-06-22T23:32:24",
+    "Latitude": 52.799089,
+    "Longitude": 16.282312,
+    "MaxAltitude": 300,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL285907",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-25T16:54:34",
+    "FlightDateEnd": "2026-06-25T17:39:56",
+    "Latitude": 51.005601,
+    "Longitude": 18.549285,
+    "MaxAltitude": 119,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL111904",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-08T16:06:54",
+    "FlightDateEnd": "2026-06-08T19:40:32",
+    "Latitude": 53.937367,
+    "Longitude": 15.960472,
+    "MaxAltitude": 493,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL495457",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-12T23:03:02",
+    "FlightDateEnd": "2026-06-13T03:34:17",
+    "Latitude": 49.458546,
+    "Longitude": 23.76388,
+    "MaxAltitude": 149,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL905573",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-17T14:45:50",
+    "FlightDateEnd": "2026-06-17T16:37:02",
+    "Latitude": 51.772476,
+    "Longitude": 16.871753,
+    "MaxAltitude": 450,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL159646",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-01T10:50:44",
+    "FlightDateEnd": "2026-06-01T13:45:01",
+    "Latitude": 49.956364,
+    "Longitude": 14.667191,
+    "MaxAltitude": 269,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL865478",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-17T01:27:20",
+    "FlightDateEnd": "2026-06-17T05:09:06",
+    "Latitude": 53.258734,
+    "Longitude": 19.623319,
+    "MaxAltitude": 255,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL358979",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-13T08:40:52",
+    "FlightDateEnd": "2026-06-13T09:52:57",
+    "Latitude": 52.533483,
+    "Longitude": 22.280976,
+    "MaxAltitude": 217,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL759805",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-10T06:08:10",
+    "FlightDateEnd": "2026-06-10T07:36:43",
+    "Latitude": 51.984211,
+    "Longitude": 16.951283,
+    "MaxAltitude": 130,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL771457",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-05T09:35:09",
+    "FlightDateEnd": "2026-06-05T13:12:56",
+    "Latitude": 49.90369,
+    "Longitude": 19.228595,
+    "MaxAltitude": 59,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL100361",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-19T18:51:10",
+    "FlightDateEnd": "2026-06-19T19:19:26",
+    "Latitude": 49.82014,
+    "Longitude": 21.550388,
+    "MaxAltitude": 464,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL831495",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-14T15:33:27",
+    "FlightDateEnd": "2026-06-14T15:56:02",
+    "Latitude": 51.576337,
+    "Longitude": 23.850214,
+    "MaxAltitude": 213,
+    "Description": "Lot rekreacyjny"
+  },
+  {
+    "OperatorIdentity": "POL244965",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-07T10:56:29",
+    "FlightDateEnd": "2026-06-07T14:49:31",
+    "Latitude": 52.291344,
+    "Longitude": 14.912653,
+    "MaxAltitude": 207,
+    "Description": "Lot rekreacyjny"
+  },
+  {
+    "OperatorIdentity": "POL216332",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-12T22:44:11",
+    "FlightDateEnd": "2026-06-12T23:50:15",
+    "Latitude": 53.053291,
+    "Longitude": 21.006985,
+    "MaxAltitude": 457,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL714238",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-07T03:03:06",
+    "FlightDateEnd": "2026-06-07T06:48:32",
+    "Latitude": 52.481145,
+    "Longitude": 23.781555,
+    "MaxAltitude": 373,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL787931",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-10T06:17:49",
+    "FlightDateEnd": "2026-06-10T10:25:00",
+    "Latitude": 49.758715,
+    "Longitude": 19.657797,
+    "MaxAltitude": 420,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL657773",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-20T22:51:36",
+    "FlightDateEnd": "2026-06-21T03:12:07",
+    "Latitude": 53.198633,
+    "Longitude": 19.872159,
+    "MaxAltitude": 401,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL565891",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-07T06:23:37",
+    "FlightDateEnd": "2026-06-07T07:42:33",
+    "Latitude": 49.971545,
+    "Longitude": 16.895575,
+    "MaxAltitude": 419,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL875413",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-30T19:01:25",
+    "FlightDateEnd": "2026-06-30T21:09:08",
+    "Latitude": 52.977664,
+    "Longitude": 14.162389,
+    "MaxAltitude": 51,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL957687",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-26T19:02:53",
+    "FlightDateEnd": "2026-06-26T20:18:50",
+    "Latitude": 53.1909,
+    "Longitude": 14.397784,
+    "MaxAltitude": 135,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL990613",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-03T18:05:31",
+    "FlightDateEnd": "2026-06-03T21:47:16",
+    "Latitude": 50.627508,
+    "Longitude": 21.393675,
+    "MaxAltitude": 401,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL535787",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-17T04:50:17",
+    "FlightDateEnd": "2026-06-17T07:50:23",
+    "Latitude": 53.315842,
+    "Longitude": 18.955568,
+    "MaxAltitude": 51,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL605500",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-06T07:36:59",
+    "FlightDateEnd": "2026-06-06T11:54:42",
+    "Latitude": 51.288079,
+    "Longitude": 15.492794,
+    "MaxAltitude": 63,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL005069",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-23T20:13:04",
+    "FlightDateEnd": "2026-06-23T21:29:57",
+    "Latitude": 50.563489,
+    "Longitude": 22.32313,
+    "MaxAltitude": 302,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL300514",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-30T07:16:55",
+    "FlightDateEnd": "2026-06-30T12:07:10",
+    "Latitude": 52.351027,
+    "Longitude": 21.063324,
+    "MaxAltitude": 194,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL078195",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-24T00:23:40",
+    "FlightDateEnd": "2026-06-24T02:52:41",
+    "Latitude": 50.011719,
+    "Longitude": 18.686404,
+    "MaxAltitude": 393,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL209245",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-01T13:59:45",
+    "FlightDateEnd": "2026-06-01T17:35:28",
+    "Latitude": 51.573386,
+    "Longitude": 22.420428,
+    "MaxAltitude": 27,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL611988",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-28T02:55:50",
+    "FlightDateEnd": "2026-06-28T03:01:24",
+    "Latitude": 51.29164,
+    "Longitude": 14.732142,
+    "MaxAltitude": 139,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL439862",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-11T09:39:36",
+    "FlightDateEnd": "2026-06-11T14:29:45",
+    "Latitude": 52.123189,
+    "Longitude": 19.503916,
+    "MaxAltitude": 243,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL183947",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-17T07:51:19",
+    "FlightDateEnd": "2026-06-17T10:28:50",
+    "Latitude": 53.720686,
+    "Longitude": 17.438671,
+    "MaxAltitude": 373,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL521559",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-11T18:15:06",
+    "FlightDateEnd": "2026-06-11T20:26:05",
+    "Latitude": 51.460718,
+    "Longitude": 21.508105,
+    "MaxAltitude": 54,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL999576",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-01T23:15:22",
+    "FlightDateEnd": "2026-06-02T02:14:37",
+    "Latitude": 49.169401,
+    "Longitude": 19.443364,
+    "MaxAltitude": 226,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL947064",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-09T00:36:04",
+    "FlightDateEnd": "2026-06-09T05:28:21",
+    "Latitude": 52.252063,
+    "Longitude": 22.284481,
+    "MaxAltitude": 415,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL022695",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-30T00:25:01",
+    "FlightDateEnd": "2026-06-30T01:36:16",
+    "Latitude": 50.670186,
+    "Longitude": 20.117642,
+    "MaxAltitude": 432,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL507753",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-30T18:39:38",
+    "FlightDateEnd": "2026-06-30T23:09:27",
+    "Latitude": 54.342411,
+    "Longitude": 18.756119,
+    "MaxAltitude": 164,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL802326",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-13T06:07:58",
+    "FlightDateEnd": "2026-06-13T10:02:55",
+    "Latitude": 52.592155,
+    "Longitude": 19.285554,
+    "MaxAltitude": 56,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL377006",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-22T21:58:37",
+    "FlightDateEnd": "2026-06-23T00:30:56",
+    "Latitude": 52.89455,
+    "Longitude": 21.120249,
+    "MaxAltitude": 424,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL058965",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-12T08:24:49",
+    "FlightDateEnd": "2026-06-12T09:26:10",
+    "Latitude": 51.937054,
+    "Longitude": 23.086232,
+    "MaxAltitude": 9,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL636883",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-01T05:29:23",
+    "FlightDateEnd": "2026-06-01T06:15:34",
+    "Latitude": 54.296085,
+    "Longitude": 16.360811,
+    "MaxAltitude": 40,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL348150",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-23T18:08:42",
+    "FlightDateEnd": "2026-06-23T21:57:47",
+    "Latitude": 50.810632,
+    "Longitude": 18.960957,
+    "MaxAltitude": 309,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL386656",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-25T01:17:43",
+    "FlightDateEnd": "2026-06-25T01:35:21",
+    "Latitude": 49.353099,
+    "Longitude": 14.610056,
+    "MaxAltitude": 31,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL107920",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-21T06:02:06",
+    "FlightDateEnd": "2026-06-21T07:35:56",
+    "Latitude": 52.291336,
+    "Longitude": 20.104785,
+    "MaxAltitude": 150,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL673129",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-19T09:48:54",
+    "FlightDateEnd": "2026-06-19T12:21:28",
+    "Latitude": 51.82567,
+    "Longitude": 16.104878,
+    "MaxAltitude": 100,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL787626",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-27T07:32:57",
+    "FlightDateEnd": "2026-06-27T09:37:51",
+    "Latitude": 52.260316,
+    "Longitude": 18.150485,
+    "MaxAltitude": 362,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL796276",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-14T18:00:40",
+    "FlightDateEnd": "2026-06-14T21:59:30",
+    "Latitude": 50.491552,
+    "Longitude": 22.890664,
+    "MaxAltitude": 314,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL127653",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-28T04:51:11",
+    "FlightDateEnd": "2026-06-28T09:47:41",
+    "Latitude": 52.593876,
+    "Longitude": 15.799293,
+    "MaxAltitude": 122,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL393170",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-15T05:43:31",
+    "FlightDateEnd": "2026-06-15T07:00:55",
+    "Latitude": 51.918516,
+    "Longitude": 22.185162,
+    "MaxAltitude": 404,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL522328",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-14T12:26:09",
+    "FlightDateEnd": "2026-06-14T16:43:00",
+    "Latitude": 54.173474,
+    "Longitude": 24.025299,
+    "MaxAltitude": 462,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL746468",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-19T17:04:44",
+    "FlightDateEnd": "2026-06-19T17:35:55",
+    "Latitude": 49.557408,
+    "Longitude": 16.946543,
+    "MaxAltitude": 218,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL347561",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-02T20:29:44",
+    "FlightDateEnd": "2026-06-02T20:49:55",
+    "Latitude": 53.481772,
+    "Longitude": 17.115446,
+    "MaxAltitude": 239,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL398399",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-15T17:13:06",
+    "FlightDateEnd": "2026-06-15T20:57:36",
+    "Latitude": 53.570852,
+    "Longitude": 16.659529,
+    "MaxAltitude": 344,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL343751",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-16T12:44:48",
+    "FlightDateEnd": "2026-06-16T13:41:13",
+    "Latitude": 53.631768,
+    "Longitude": 23.584181,
+    "MaxAltitude": 423,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL286910",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-25T14:12:06",
+    "FlightDateEnd": "2026-06-25T16:14:22",
+    "Latitude": 54.513234,
+    "Longitude": 15.404368,
+    "MaxAltitude": 235,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL528579",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-10T12:55:28",
+    "FlightDateEnd": "2026-06-10T16:17:59",
+    "Latitude": 54.567837,
+    "Longitude": 17.787179,
+    "MaxAltitude": 420,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL808907",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-28T17:28:36",
+    "FlightDateEnd": "2026-06-28T17:35:35",
+    "Latitude": 49.30791,
+    "Longitude": 21.394548,
+    "MaxAltitude": 178,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL422886",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-29T00:22:29",
+    "FlightDateEnd": "2026-06-29T01:15:19",
+    "Latitude": 52.830461,
+    "Longitude": 14.244425,
+    "MaxAltitude": 486,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL253281",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-19T20:35:23",
+    "FlightDateEnd": "2026-06-19T21:40:12",
+    "Latitude": 49.389901,
+    "Longitude": 22.621462,
+    "MaxAltitude": 470,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL603679",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-19T07:24:49",
+    "FlightDateEnd": "2026-06-19T09:32:44",
+    "Latitude": 50.62855,
+    "Longitude": 20.114121,
+    "MaxAltitude": 57,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL351421",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-12T03:33:38",
+    "FlightDateEnd": "2026-06-12T07:11:05",
+    "Latitude": 52.572324,
+    "Longitude": 15.035124,
+    "MaxAltitude": 67,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL534724",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-28T20:43:51",
+    "FlightDateEnd": "2026-06-29T00:23:30",
+    "Latitude": 49.983115,
+    "Longitude": 21.934574,
+    "MaxAltitude": 498,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL009681",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-23T03:52:41",
+    "FlightDateEnd": "2026-06-23T06:12:30",
+    "Latitude": 49.978799,
+    "Longitude": 19.172907,
+    "MaxAltitude": 448,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL042039",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-16T22:43:53",
+    "FlightDateEnd": "2026-06-17T03:43:26",
+    "Latitude": 51.533583,
+    "Longitude": 21.678758,
+    "MaxAltitude": 345,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL277663",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-28T11:24:44",
+    "FlightDateEnd": "2026-06-28T13:18:54",
+    "Latitude": 52.802027,
+    "Longitude": 22.950097,
+    "MaxAltitude": 450,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL521437",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-11T14:49:11",
+    "FlightDateEnd": "2026-06-11T16:53:52",
+    "Latitude": 49.390413,
+    "Longitude": 15.736391,
+    "MaxAltitude": 82,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL889488",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-09T11:08:24",
+    "FlightDateEnd": "2026-06-09T15:42:18",
+    "Latitude": 51.543496,
+    "Longitude": 17.777341,
+    "MaxAltitude": 136,
+    "Description": "Lot rekreacyjny"
+  },
+  {
+    "OperatorIdentity": "POL233124",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-28T21:27:07",
+    "FlightDateEnd": "2026-06-29T00:54:28",
+    "Latitude": 54.667437,
+    "Longitude": 16.509447,
+    "MaxAltitude": 457,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL538212",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-03T00:50:53",
+    "FlightDateEnd": "2026-06-03T01:53:05",
+    "Latitude": 54.56941,
+    "Longitude": 17.403224,
+    "MaxAltitude": 199,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL609459",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-27T17:41:58",
+    "FlightDateEnd": "2026-06-27T22:09:44",
+    "Latitude": 52.730913,
+    "Longitude": 15.664452,
+    "MaxAltitude": 469,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL311808",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-09T22:08:42",
+    "FlightDateEnd": "2026-06-09T23:49:14",
+    "Latitude": 52.605222,
+    "Longitude": 15.950228,
+    "MaxAltitude": 481,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL477413",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-08T04:50:18",
+    "FlightDateEnd": "2026-06-08T09:32:01",
+    "Latitude": 54.06796,
+    "Longitude": 20.522888,
+    "MaxAltitude": 256,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL103011",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-19T16:20:21",
+    "FlightDateEnd": "2026-06-19T16:34:37",
+    "Latitude": 50.360148,
+    "Longitude": 17.657149,
+    "MaxAltitude": 77,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL926830",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-07T09:55:06",
+    "FlightDateEnd": "2026-06-07T10:22:06",
+    "Latitude": 50.411557,
+    "Longitude": 23.137089,
+    "MaxAltitude": 291,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL769107",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-14T19:29:58",
+    "FlightDateEnd": "2026-06-14T21:01:15",
+    "Latitude": 53.442926,
+    "Longitude": 21.970219,
+    "MaxAltitude": 225,
+    "Description": "Lot rekreacyjny"
+  },
+  {
+    "OperatorIdentity": "POL461447",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-18T18:01:31",
+    "FlightDateEnd": "2026-06-18T18:10:28",
+    "Latitude": 49.918472,
+    "Longitude": 23.581422,
+    "MaxAltitude": 489,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL640773",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-19T01:52:24",
+    "FlightDateEnd": "2026-06-19T05:39:53",
+    "Latitude": 49.170294,
+    "Longitude": 18.851146,
+    "MaxAltitude": 295,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL063175",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-12T10:36:59",
+    "FlightDateEnd": "2026-06-12T14:36:55",
+    "Latitude": 51.807361,
+    "Longitude": 18.881559,
+    "MaxAltitude": 35,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL984193",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-07T09:32:10",
+    "FlightDateEnd": "2026-06-07T12:51:45",
+    "Latitude": 50.316741,
+    "Longitude": 14.910066,
+    "MaxAltitude": 145,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL305199",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-10T22:54:15",
+    "FlightDateEnd": "2026-06-11T00:45:46",
+    "Latitude": 53.962551,
+    "Longitude": 17.138369,
+    "MaxAltitude": 60,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL027635",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-26T20:04:20",
+    "FlightDateEnd": "2026-06-26T23:23:31",
+    "Latitude": 54.255988,
+    "Longitude": 23.929886,
+    "MaxAltitude": 91,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL327135",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-08T16:26:55",
+    "FlightDateEnd": "2026-06-08T19:51:51",
+    "Latitude": 50.660427,
+    "Longitude": 17.965811,
+    "MaxAltitude": 482,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL521495",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-22T19:34:09",
+    "FlightDateEnd": "2026-06-22T21:13:23",
+    "Latitude": 49.623653,
+    "Longitude": 23.945485,
+    "MaxAltitude": 450,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL563577",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-21T02:04:39",
+    "FlightDateEnd": "2026-06-21T05:54:16",
+    "Latitude": 53.08383,
+    "Longitude": 14.557174,
+    "MaxAltitude": 477,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL360109",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-04T10:31:06",
+    "FlightDateEnd": "2026-06-04T13:42:22",
+    "Latitude": 49.859821,
+    "Longitude": 19.234725,
+    "MaxAltitude": 140,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL547879",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-24T20:15:49",
+    "FlightDateEnd": "2026-06-24T23:03:11",
+    "Latitude": 52.167326,
+    "Longitude": 15.766296,
+    "MaxAltitude": 380,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL784109",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-30T18:01:56",
+    "FlightDateEnd": "2026-06-30T21:40:03",
+    "Latitude": 49.325113,
+    "Longitude": 15.951754,
+    "MaxAltitude": 363,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL869192",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-22T23:27:01",
+    "FlightDateEnd": "2026-06-23T03:23:40",
+    "Latitude": 53.87029,
+    "Longitude": 20.656474,
+    "MaxAltitude": 394,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL992853",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-02T05:16:24",
+    "FlightDateEnd": "2026-06-02T08:51:22",
+    "Latitude": 50.471283,
+    "Longitude": 22.94685,
+    "MaxAltitude": 61,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL649233",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-08T12:10:11",
+    "FlightDateEnd": "2026-06-08T12:30:28",
+    "Latitude": 49.8951,
+    "Longitude": 22.174494,
+    "MaxAltitude": 83,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL649360",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-01T21:28:58",
+    "FlightDateEnd": "2026-06-01T22:43:57",
+    "Latitude": 54.422547,
+    "Longitude": 17.066739,
+    "MaxAltitude": 121,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL758364",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-15T06:04:23",
+    "FlightDateEnd": "2026-06-15T07:30:36",
+    "Latitude": 50.577434,
+    "Longitude": 21.564475,
+    "MaxAltitude": 54,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL505302",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-15T09:12:16",
+    "FlightDateEnd": "2026-06-15T13:45:25",
+    "Latitude": 50.977149,
+    "Longitude": 14.943933,
+    "MaxAltitude": 188,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL719114",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-02T08:30:09",
+    "FlightDateEnd": "2026-06-02T09:15:57",
+    "Latitude": 54.444076,
+    "Longitude": 19.551261,
+    "MaxAltitude": 375,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL642892",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-07T18:29:40",
+    "FlightDateEnd": "2026-06-07T22:18:30",
+    "Latitude": 51.334227,
+    "Longitude": 18.046988,
+    "MaxAltitude": 91,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL005769",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-23T05:21:48",
+    "FlightDateEnd": "2026-06-23T05:26:54",
+    "Latitude": 53.217222,
+    "Longitude": 18.424949,
+    "MaxAltitude": 401,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL636528",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-02T20:10:01",
+    "FlightDateEnd": "2026-06-02T21:47:39",
+    "Latitude": 51.80991,
+    "Longitude": 21.361248,
+    "MaxAltitude": 49,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL752014",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-10T02:47:22",
+    "FlightDateEnd": "2026-06-10T06:43:05",
+    "Latitude": 51.747587,
+    "Longitude": 17.880645,
+    "MaxAltitude": 89,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL559192",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-15T02:05:27",
+    "FlightDateEnd": "2026-06-15T06:57:44",
+    "Latitude": 49.85612,
+    "Longitude": 17.851775,
+    "MaxAltitude": 328,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL222934",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-10T02:26:53",
+    "FlightDateEnd": "2026-06-10T06:58:38",
+    "Latitude": 54.001674,
+    "Longitude": 21.233934,
+    "MaxAltitude": 251,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL178394",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-24T04:24:24",
+    "FlightDateEnd": "2026-06-24T08:58:13",
+    "Latitude": 52.78662,
+    "Longitude": 17.745439,
+    "MaxAltitude": 366,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL214456",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-03T06:38:47",
+    "FlightDateEnd": "2026-06-03T10:53:44",
+    "Latitude": 54.127781,
+    "Longitude": 19.786375,
+    "MaxAltitude": 174,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL796331",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-17T20:10:02",
+    "FlightDateEnd": "2026-06-17T23:30:56",
+    "Latitude": 49.010013,
+    "Longitude": 21.627616,
+    "MaxAltitude": 376,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL098983",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-13T11:27:55",
+    "FlightDateEnd": "2026-06-13T14:32:26",
+    "Latitude": 53.898084,
+    "Longitude": 17.698199,
+    "MaxAltitude": 114,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL196984",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-25T19:11:11",
+    "FlightDateEnd": "2026-06-25T20:01:24",
+    "Latitude": 53.813616,
+    "Longitude": 23.301759,
+    "MaxAltitude": 454,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL806804",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-16T04:01:44",
+    "FlightDateEnd": "2026-06-16T05:45:43",
+    "Latitude": 53.682129,
+    "Longitude": 16.845522,
+    "MaxAltitude": 294,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL488923",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-11T04:14:08",
+    "FlightDateEnd": "2026-06-11T08:45:38",
+    "Latitude": 49.116538,
+    "Longitude": 21.926313,
+    "MaxAltitude": 471,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL931827",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-18T21:53:56",
+    "FlightDateEnd": "2026-06-19T02:37:28",
+    "Latitude": 49.806203,
+    "Longitude": 15.929917,
+    "MaxAltitude": 183,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL651947",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-23T18:25:40",
+    "FlightDateEnd": "2026-06-23T22:11:13",
+    "Latitude": 54.188122,
+    "Longitude": 19.83868,
+    "MaxAltitude": 154,
+    "Description": "Lot rekreacyjny"
+  },
+  {
+    "OperatorIdentity": "POL622921",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-18T18:06:12",
+    "FlightDateEnd": "2026-06-18T20:04:28",
+    "Latitude": 54.676175,
+    "Longitude": 14.578786,
+    "MaxAltitude": 403,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL188657",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-10T23:52:09",
+    "FlightDateEnd": "2026-06-11T00:40:52",
+    "Latitude": 53.100504,
+    "Longitude": 14.504228,
+    "MaxAltitude": 159,
+    "Description": "Lot rekreacyjny"
+  },
+  {
+    "OperatorIdentity": "POL979723",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-02T03:59:55",
+    "FlightDateEnd": "2026-06-02T06:31:38",
+    "Latitude": 49.342677,
+    "Longitude": 17.737521,
+    "MaxAltitude": 135,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL466594",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-24T20:56:47",
+    "FlightDateEnd": "2026-06-24T23:43:24",
+    "Latitude": 53.907061,
+    "Longitude": 14.367305,
+    "MaxAltitude": 105,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL307851",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-11T13:38:10",
+    "FlightDateEnd": "2026-06-11T14:43:40",
+    "Latitude": 54.239146,
+    "Longitude": 22.182278,
+    "MaxAltitude": 272,
+    "Description": "Lot rekreacyjny"
+  },
+  {
+    "OperatorIdentity": "POL611681",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-04T09:03:04",
+    "FlightDateEnd": "2026-06-04T10:12:41",
+    "Latitude": 52.704992,
+    "Longitude": 14.473293,
+    "MaxAltitude": 255,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL136793",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-07T05:43:33",
+    "FlightDateEnd": "2026-06-07T09:27:41",
+    "Latitude": 53.571725,
+    "Longitude": 20.282873,
+    "MaxAltitude": 203,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL928034",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-23T10:11:48",
+    "FlightDateEnd": "2026-06-23T14:24:08",
+    "Latitude": 53.053661,
+    "Longitude": 15.305087,
+    "MaxAltitude": 271,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL280688",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-29T21:26:03",
+    "FlightDateEnd": "2026-06-29T21:55:33",
+    "Latitude": 49.166648,
+    "Longitude": 18.566354,
+    "MaxAltitude": 436,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL078033",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-11T17:27:05",
+    "FlightDateEnd": "2026-06-11T17:51:53",
+    "Latitude": 50.44182,
+    "Longitude": 18.218184,
+    "MaxAltitude": 349,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL275837",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-20T08:09:58",
+    "FlightDateEnd": "2026-06-20T09:27:59",
+    "Latitude": 49.365261,
+    "Longitude": 16.003112,
+    "MaxAltitude": 48,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL277115",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-11T18:14:14",
+    "FlightDateEnd": "2026-06-11T20:36:55",
+    "Latitude": 52.480148,
+    "Longitude": 18.542097,
+    "MaxAltitude": 323,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL294777",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-25T04:01:32",
+    "FlightDateEnd": "2026-06-25T04:22:21",
+    "Latitude": 54.30867,
+    "Longitude": 20.723356,
+    "MaxAltitude": 446,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL539708",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-04T15:39:29",
+    "FlightDateEnd": "2026-06-04T20:35:57",
+    "Latitude": 49.099705,
+    "Longitude": 18.221094,
+    "MaxAltitude": 306,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL550745",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-16T12:44:51",
+    "FlightDateEnd": "2026-06-16T14:26:45",
+    "Latitude": 49.469947,
+    "Longitude": 15.829143,
+    "MaxAltitude": 317,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL578695",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-21T23:41:43",
+    "FlightDateEnd": "2026-06-22T04:37:07",
+    "Latitude": 53.461758,
+    "Longitude": 17.970978,
+    "MaxAltitude": 248,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL616222",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-18T00:57:29",
+    "FlightDateEnd": "2026-06-18T04:21:33",
+    "Latitude": 51.840513,
+    "Longitude": 15.920241,
+    "MaxAltitude": 103,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL945978",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-23T07:26:47",
+    "FlightDateEnd": "2026-06-23T12:10:34",
+    "Latitude": 52.365027,
+    "Longitude": 18.427798,
+    "MaxAltitude": 355,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL886873",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-16T20:03:17",
+    "FlightDateEnd": "2026-06-16T20:28:07",
+    "Latitude": 52.271172,
+    "Longitude": 19.82718,
+    "MaxAltitude": 97,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL513954",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-02T15:05:39",
+    "FlightDateEnd": "2026-06-02T16:53:38",
+    "Latitude": 49.916175,
+    "Longitude": 16.142084,
+    "MaxAltitude": 227,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL409414",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-03T22:16:23",
+    "FlightDateEnd": "2026-06-03T23:16:50",
+    "Latitude": 54.406426,
+    "Longitude": 19.579246,
+    "MaxAltitude": 255,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL885271",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-22T20:40:04",
+    "FlightDateEnd": "2026-06-22T23:05:31",
+    "Latitude": 54.488186,
+    "Longitude": 24.058474,
+    "MaxAltitude": 66,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL372063",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-26T21:29:11",
+    "FlightDateEnd": "2026-06-26T23:08:52",
+    "Latitude": 49.835003,
+    "Longitude": 18.030177,
+    "MaxAltitude": 436,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL290344",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-06T03:21:13",
+    "FlightDateEnd": "2026-06-06T07:33:20",
+    "Latitude": 50.784508,
+    "Longitude": 15.017296,
+    "MaxAltitude": 42,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL486851",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-10T03:54:36",
+    "FlightDateEnd": "2026-06-10T04:33:00",
+    "Latitude": 52.144013,
+    "Longitude": 22.261179,
+    "MaxAltitude": 371,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL610740",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-07T08:03:01",
+    "FlightDateEnd": "2026-06-07T11:06:18",
+    "Latitude": 52.911167,
+    "Longitude": 22.306173,
+    "MaxAltitude": 42,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL604779",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-01T03:50:41",
+    "FlightDateEnd": "2026-06-01T05:03:53",
+    "Latitude": 54.236377,
+    "Longitude": 21.616426,
+    "MaxAltitude": 292,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL546383",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-28T05:51:40",
+    "FlightDateEnd": "2026-06-28T10:03:57",
+    "Latitude": 52.873228,
+    "Longitude": 18.278306,
+    "MaxAltitude": 374,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL464866",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-06T18:54:46",
+    "FlightDateEnd": "2026-06-06T19:15:33",
+    "Latitude": 50.871992,
+    "Longitude": 22.316328,
+    "MaxAltitude": 310,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL337819",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-24T08:06:30",
+    "FlightDateEnd": "2026-06-24T11:53:02",
+    "Latitude": 49.043056,
+    "Longitude": 18.677963,
+    "MaxAltitude": 269,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL593558",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-02T14:27:43",
+    "FlightDateEnd": "2026-06-02T18:16:24",
+    "Latitude": 49.174453,
+    "Longitude": 16.442713,
+    "MaxAltitude": 219,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL885072",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-17T19:31:53",
+    "FlightDateEnd": "2026-06-17T22:52:05",
+    "Latitude": 50.560752,
+    "Longitude": 15.502874,
+    "MaxAltitude": 186,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL456288",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-24T18:10:02",
+    "FlightDateEnd": "2026-06-24T19:23:30",
+    "Latitude": 54.230673,
+    "Longitude": 14.214062,
+    "MaxAltitude": 416,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL164764",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-25T15:56:19",
+    "FlightDateEnd": "2026-06-25T19:52:38",
+    "Latitude": 50.694726,
+    "Longitude": 16.56483,
+    "MaxAltitude": 428,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL451819",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-23T05:42:20",
+    "FlightDateEnd": "2026-06-23T10:17:28",
+    "Latitude": 49.513267,
+    "Longitude": 17.066055,
+    "MaxAltitude": 373,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL869999",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-28T03:46:58",
+    "FlightDateEnd": "2026-06-28T08:27:17",
+    "Latitude": 52.889524,
+    "Longitude": 23.295471,
+    "MaxAltitude": 62,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL457659",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-01T21:48:20",
+    "FlightDateEnd": "2026-06-02T01:22:04",
+    "Latitude": 54.670333,
+    "Longitude": 16.779866,
+    "MaxAltitude": 431,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL850289",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-22T18:35:58",
+    "FlightDateEnd": "2026-06-22T20:15:42",
+    "Latitude": 53.441471,
+    "Longitude": 21.319323,
+    "MaxAltitude": 377,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL521480",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-11T23:59:01",
+    "FlightDateEnd": "2026-06-12T03:09:01",
+    "Latitude": 53.610935,
+    "Longitude": 19.069958,
+    "MaxAltitude": 353,
+    "Description": "Lot rekreacyjny"
+  },
+  {
+    "OperatorIdentity": "POL020294",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-27T17:18:50",
+    "FlightDateEnd": "2026-06-27T22:14:27",
+    "Latitude": 49.088713,
+    "Longitude": 17.344578,
+    "MaxAltitude": 166,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL299387",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-30T09:37:53",
+    "FlightDateEnd": "2026-06-30T10:32:16",
+    "Latitude": 50.346315,
+    "Longitude": 23.512226,
+    "MaxAltitude": 391,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL651209",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-21T16:43:10",
+    "FlightDateEnd": "2026-06-21T17:08:42",
+    "Latitude": 53.078683,
+    "Longitude": 15.153742,
+    "MaxAltitude": 449,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL380022",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-21T15:39:32",
+    "FlightDateEnd": "2026-06-21T16:38:18",
+    "Latitude": 52.569827,
+    "Longitude": 14.718267,
+    "MaxAltitude": 387,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL113594",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-02T01:48:15",
+    "FlightDateEnd": "2026-06-02T03:37:27",
+    "Latitude": 52.095962,
+    "Longitude": 17.960828,
+    "MaxAltitude": 63,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL049237",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-24T20:17:19",
+    "FlightDateEnd": "2026-06-25T00:09:34",
+    "Latitude": 50.104129,
+    "Longitude": 20.553307,
+    "MaxAltitude": 446,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL856964",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-15T19:56:16",
+    "FlightDateEnd": "2026-06-15T21:06:11",
+    "Latitude": 52.67348,
+    "Longitude": 20.657591,
+    "MaxAltitude": 319,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL787496",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-22T05:28:15",
+    "FlightDateEnd": "2026-06-22T06:57:50",
+    "Latitude": 54.746099,
+    "Longitude": 19.817828,
+    "MaxAltitude": 91,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL524858",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-16T00:53:41",
+    "FlightDateEnd": "2026-06-16T05:09:25",
+    "Latitude": 49.417633,
+    "Longitude": 14.563361,
+    "MaxAltitude": 487,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL536035",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-11T11:34:10",
+    "FlightDateEnd": "2026-06-11T12:50:13",
+    "Latitude": 54.278169,
+    "Longitude": 18.072015,
+    "MaxAltitude": 276,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL219934",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-20T18:20:38",
+    "FlightDateEnd": "2026-06-20T22:42:25",
+    "Latitude": 50.763165,
+    "Longitude": 22.387061,
+    "MaxAltitude": 362,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL770671",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-19T05:45:28",
+    "FlightDateEnd": "2026-06-19T07:52:51",
+    "Latitude": 49.665194,
+    "Longitude": 22.469951,
+    "MaxAltitude": 343,
+    "Description": "Lot rekreacyjny"
+  },
+  {
+    "OperatorIdentity": "POL035756",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-28T14:18:32",
+    "FlightDateEnd": "2026-06-28T16:31:50",
+    "Latitude": 54.319459,
+    "Longitude": 21.154163,
+    "MaxAltitude": 5,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL001638",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-29T03:00:11",
+    "FlightDateEnd": "2026-06-29T04:17:43",
+    "Latitude": 53.961008,
+    "Longitude": 16.723796,
+    "MaxAltitude": 486,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL446815",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-26T00:56:57",
+    "FlightDateEnd": "2026-06-26T03:23:08",
+    "Latitude": 53.017366,
+    "Longitude": 21.605576,
+    "MaxAltitude": 62,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL354584",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-25T14:42:01",
+    "FlightDateEnd": "2026-06-25T18:03:22",
+    "Latitude": 51.882751,
+    "Longitude": 16.47521,
+    "MaxAltitude": 379,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL930431",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-19T08:32:45",
+    "FlightDateEnd": "2026-06-19T10:08:00",
+    "Latitude": 52.050608,
+    "Longitude": 16.087453,
+    "MaxAltitude": 122,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL568314",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-01T19:17:27",
+    "FlightDateEnd": "2026-06-01T20:17:42",
+    "Latitude": 52.770763,
+    "Longitude": 17.728909,
+    "MaxAltitude": 319,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL469921",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-22T02:34:03",
+    "FlightDateEnd": "2026-06-22T04:06:04",
+    "Latitude": 49.001663,
+    "Longitude": 20.217878,
+    "MaxAltitude": 435,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL867460",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-13T13:54:48",
+    "FlightDateEnd": "2026-06-13T14:23:57",
+    "Latitude": 52.391958,
+    "Longitude": 19.065604,
+    "MaxAltitude": 340,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL808693",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-23T18:34:12",
+    "FlightDateEnd": "2026-06-23T21:04:15",
+    "Latitude": 52.099262,
+    "Longitude": 17.999605,
+    "MaxAltitude": 349,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL041953",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-27T23:30:22",
+    "FlightDateEnd": "2026-06-28T00:00:24",
+    "Latitude": 52.785439,
+    "Longitude": 20.568792,
+    "MaxAltitude": 324,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL058115",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-27T08:33:00",
+    "FlightDateEnd": "2026-06-27T13:22:27",
+    "Latitude": 50.549577,
+    "Longitude": 18.737212,
+    "MaxAltitude": 219,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL284177",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-27T07:09:33",
+    "FlightDateEnd": "2026-06-27T10:34:06",
+    "Latitude": 51.406618,
+    "Longitude": 23.628244,
+    "MaxAltitude": 398,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL076292",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-10T16:54:49",
+    "FlightDateEnd": "2026-06-10T20:44:40",
+    "Latitude": 54.642108,
+    "Longitude": 21.357333,
+    "MaxAltitude": 263,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL753443",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-08T11:09:09",
+    "FlightDateEnd": "2026-06-08T13:01:01",
+    "Latitude": 50.263217,
+    "Longitude": 14.652756,
+    "MaxAltitude": 187,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL874221",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-13T06:38:48",
+    "FlightDateEnd": "2026-06-13T10:44:13",
+    "Latitude": 52.341574,
+    "Longitude": 20.781724,
+    "MaxAltitude": 136,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL608058",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-14T06:47:50",
+    "FlightDateEnd": "2026-06-14T11:43:50",
+    "Latitude": 54.659877,
+    "Longitude": 17.01907,
+    "MaxAltitude": 396,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL091840",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-27T14:11:40",
+    "FlightDateEnd": "2026-06-27T17:48:01",
+    "Latitude": 50.891925,
+    "Longitude": 20.61204,
+    "MaxAltitude": 207,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL422899",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-12T11:59:14",
+    "FlightDateEnd": "2026-06-12T16:15:56",
+    "Latitude": 52.461845,
+    "Longitude": 20.822898,
+    "MaxAltitude": 130,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL166688",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-14T10:59:31",
+    "FlightDateEnd": "2026-06-14T15:38:57",
+    "Latitude": 52.614015,
+    "Longitude": 17.889617,
+    "MaxAltitude": 427,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL497442",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-23T22:47:32",
+    "FlightDateEnd": "2026-06-24T02:01:12",
+    "Latitude": 51.895908,
+    "Longitude": 21.322147,
+    "MaxAltitude": 499,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL602427",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-28T00:11:00",
+    "FlightDateEnd": "2026-06-28T03:51:56",
+    "Latitude": 53.754273,
+    "Longitude": 23.67966,
+    "MaxAltitude": 181,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL969136",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-13T23:16:11",
+    "FlightDateEnd": "2026-06-14T02:39:06",
+    "Latitude": 52.326871,
+    "Longitude": 17.628186,
+    "MaxAltitude": 8,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL579178",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-04T08:42:56",
+    "FlightDateEnd": "2026-06-04T09:36:33",
+    "Latitude": 53.030051,
+    "Longitude": 23.572383,
+    "MaxAltitude": 363,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL152550",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-06T18:59:06",
+    "FlightDateEnd": "2026-06-06T21:55:29",
+    "Latitude": 54.293106,
+    "Longitude": 17.360291,
+    "MaxAltitude": 377,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL361931",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-17T01:32:16",
+    "FlightDateEnd": "2026-06-17T03:38:21",
+    "Latitude": 53.840841,
+    "Longitude": 14.460173,
+    "MaxAltitude": 53,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL864525",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-29T06:18:40",
+    "FlightDateEnd": "2026-06-29T09:20:35",
+    "Latitude": 51.176076,
+    "Longitude": 16.294611,
+    "MaxAltitude": 78,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL860827",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-02T17:38:53",
+    "FlightDateEnd": "2026-06-02T20:03:05",
+    "Latitude": 49.948178,
+    "Longitude": 14.87987,
+    "MaxAltitude": 134,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL158751",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-26T20:23:36",
+    "FlightDateEnd": "2026-06-26T23:40:10",
+    "Latitude": 50.091387,
+    "Longitude": 20.72056,
+    "MaxAltitude": 16,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL315275",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-24T05:27:05",
+    "FlightDateEnd": "2026-06-24T06:00:46",
+    "Latitude": 50.512582,
+    "Longitude": 21.276025,
+    "MaxAltitude": 149,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL251857",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-20T21:35:18",
+    "FlightDateEnd": "2026-06-21T01:35:38",
+    "Latitude": 50.104587,
+    "Longitude": 20.347374,
+    "MaxAltitude": 16,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL704572",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-25T23:19:42",
+    "FlightDateEnd": "2026-06-26T02:47:54",
+    "Latitude": 50.659798,
+    "Longitude": 20.841099,
+    "MaxAltitude": 36,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL032540",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-18T14:27:01",
+    "FlightDateEnd": "2026-06-18T15:07:23",
+    "Latitude": 52.738932,
+    "Longitude": 14.50685,
+    "MaxAltitude": 368,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL780361",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-17T04:09:43",
+    "FlightDateEnd": "2026-06-17T07:41:27",
+    "Latitude": 49.859106,
+    "Longitude": 21.249132,
+    "MaxAltitude": 128,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL955500",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-16T21:02:44",
+    "FlightDateEnd": "2026-06-17T01:07:12",
+    "Latitude": 50.187725,
+    "Longitude": 17.826926,
+    "MaxAltitude": 456,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL312579",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-10T02:59:08",
+    "FlightDateEnd": "2026-06-10T04:55:38",
+    "Latitude": 52.70725,
+    "Longitude": 17.246004,
+    "MaxAltitude": 158,
+    "Description": "Lot rekreacyjny"
+  },
+  {
+    "OperatorIdentity": "POL378872",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-16T20:10:17",
+    "FlightDateEnd": "2026-06-16T21:08:04",
+    "Latitude": 53.484616,
+    "Longitude": 14.485777,
+    "MaxAltitude": 439,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL568347",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-28T07:31:17",
+    "FlightDateEnd": "2026-06-28T07:44:28",
+    "Latitude": 49.0897,
+    "Longitude": 22.690264,
+    "MaxAltitude": 189,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL436938",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-21T09:56:29",
+    "FlightDateEnd": "2026-06-21T11:58:48",
+    "Latitude": 50.310394,
+    "Longitude": 20.375574,
+    "MaxAltitude": 134,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL845223",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-25T17:15:54",
+    "FlightDateEnd": "2026-06-25T20:38:32",
+    "Latitude": 51.282136,
+    "Longitude": 14.932029,
+    "MaxAltitude": 213,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL724785",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-06T21:47:02",
+    "FlightDateEnd": "2026-06-07T00:03:56",
+    "Latitude": 54.001188,
+    "Longitude": 14.83175,
+    "MaxAltitude": 227,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL349331",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-12T21:45:56",
+    "FlightDateEnd": "2026-06-12T22:41:13",
+    "Latitude": 53.214967,
+    "Longitude": 18.40884,
+    "MaxAltitude": 346,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL968702",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-17T08:33:36",
+    "FlightDateEnd": "2026-06-17T11:29:55",
+    "Latitude": 54.136022,
+    "Longitude": 14.200543,
+    "MaxAltitude": 63,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL409989",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-30T05:00:24",
+    "FlightDateEnd": "2026-06-30T08:34:09",
+    "Latitude": 52.112756,
+    "Longitude": 14.533361,
+    "MaxAltitude": 253,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL945199",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-29T09:39:33",
+    "FlightDateEnd": "2026-06-29T12:26:08",
+    "Latitude": 53.254663,
+    "Longitude": 23.933951,
+    "MaxAltitude": 387,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL983075",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-21T04:16:53",
+    "FlightDateEnd": "2026-06-21T06:30:16",
+    "Latitude": 52.468047,
+    "Longitude": 18.051513,
+    "MaxAltitude": 184,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL840925",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-13T20:00:26",
+    "FlightDateEnd": "2026-06-13T21:34:13",
+    "Latitude": 52.746855,
+    "Longitude": 22.349848,
+    "MaxAltitude": 238,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL393123",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-20T19:42:39",
+    "FlightDateEnd": "2026-06-20T23:19:47",
+    "Latitude": 51.198765,
+    "Longitude": 21.758222,
+    "MaxAltitude": 25,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL505511",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-15T15:42:18",
+    "FlightDateEnd": "2026-06-15T17:55:01",
+    "Latitude": 49.033572,
+    "Longitude": 22.029582,
+    "MaxAltitude": 210,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL467631",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-03T19:45:12",
+    "FlightDateEnd": "2026-06-03T23:18:53",
+    "Latitude": 50.991206,
+    "Longitude": 23.69629,
+    "MaxAltitude": 416,
+    "Description": "Lot rekreacyjny"
+  },
+  {
+    "OperatorIdentity": "POL622999",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-07T04:00:29",
+    "FlightDateEnd": "2026-06-07T06:11:49",
+    "Latitude": 53.071998,
+    "Longitude": 22.267467,
+    "MaxAltitude": 13,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL950183",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-12T16:05:47",
+    "FlightDateEnd": "2026-06-12T20:33:59",
+    "Latitude": 50.068539,
+    "Longitude": 17.610465,
+    "MaxAltitude": 10,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL413552",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-16T13:35:55",
+    "FlightDateEnd": "2026-06-16T14:14:00",
+    "Latitude": 52.522621,
+    "Longitude": 15.298377,
+    "MaxAltitude": 136,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL025543",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-14T03:10:32",
+    "FlightDateEnd": "2026-06-14T05:14:03",
+    "Latitude": 52.570312,
+    "Longitude": 23.050881,
+    "MaxAltitude": 69,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL651546",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-05T18:11:33",
+    "FlightDateEnd": "2026-06-05T22:27:32",
+    "Latitude": 53.276332,
+    "Longitude": 19.753421,
+    "MaxAltitude": 157,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL316868",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-19T12:18:06",
+    "FlightDateEnd": "2026-06-19T14:32:55",
+    "Latitude": 52.094831,
+    "Longitude": 23.996696,
+    "MaxAltitude": 7,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL543755",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-26T22:07:17",
+    "FlightDateEnd": "2026-06-27T02:42:38",
+    "Latitude": 51.154106,
+    "Longitude": 21.023843,
+    "MaxAltitude": 204,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL328916",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-09T00:41:46",
+    "FlightDateEnd": "2026-06-09T04:49:58",
+    "Latitude": 49.014317,
+    "Longitude": 14.727378,
+    "MaxAltitude": 41,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL557169",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-02T19:09:55",
+    "FlightDateEnd": "2026-06-02T22:35:03",
+    "Latitude": 49.91174,
+    "Longitude": 18.659958,
+    "MaxAltitude": 143,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL511094",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-21T12:22:27",
+    "FlightDateEnd": "2026-06-21T13:21:06",
+    "Latitude": 51.625783,
+    "Longitude": 18.492893,
+    "MaxAltitude": 479,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL505662",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-07T15:22:50",
+    "FlightDateEnd": "2026-06-07T19:36:27",
+    "Latitude": 53.808653,
+    "Longitude": 20.303017,
+    "MaxAltitude": 389,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL319767",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-30T00:38:13",
+    "FlightDateEnd": "2026-06-30T01:33:31",
+    "Latitude": 49.8142,
+    "Longitude": 15.479766,
+    "MaxAltitude": 467,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL166897",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-08T23:35:08",
+    "FlightDateEnd": "2026-06-09T00:10:09",
+    "Latitude": 51.932063,
+    "Longitude": 23.83459,
+    "MaxAltitude": 114,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL010441",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-11T04:06:59",
+    "FlightDateEnd": "2026-06-11T05:09:27",
+    "Latitude": 49.045035,
+    "Longitude": 19.26825,
+    "MaxAltitude": 489,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL705118",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-01T17:09:51",
+    "FlightDateEnd": "2026-06-01T18:17:34",
+    "Latitude": 53.955496,
+    "Longitude": 15.488126,
+    "MaxAltitude": 102,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL720543",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-10T13:09:23",
+    "FlightDateEnd": "2026-06-10T17:31:41",
+    "Latitude": 50.997718,
+    "Longitude": 15.547906,
+    "MaxAltitude": 30,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL942749",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-16T15:19:59",
+    "FlightDateEnd": "2026-06-16T18:33:11",
+    "Latitude": 53.466225,
+    "Longitude": 23.368335,
+    "MaxAltitude": 471,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL693744",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-21T15:12:15",
+    "FlightDateEnd": "2026-06-21T16:48:28",
+    "Latitude": 54.018472,
+    "Longitude": 18.365479,
+    "MaxAltitude": 244,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL162250",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-27T17:14:39",
+    "FlightDateEnd": "2026-06-27T21:14:01",
+    "Latitude": 49.751419,
+    "Longitude": 18.930041,
+    "MaxAltitude": 216,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL944983",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-10T03:36:00",
+    "FlightDateEnd": "2026-06-10T06:22:34",
+    "Latitude": 49.305281,
+    "Longitude": 22.560385,
+    "MaxAltitude": 268,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL021839",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-23T06:25:41",
+    "FlightDateEnd": "2026-06-23T06:54:00",
+    "Latitude": 51.951334,
+    "Longitude": 16.36982,
+    "MaxAltitude": 84,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL540092",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-01T22:38:57",
+    "FlightDateEnd": "2026-06-01T23:37:55",
+    "Latitude": 52.496754,
+    "Longitude": 16.539442,
+    "MaxAltitude": 456,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL275349",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-22T23:45:53",
+    "FlightDateEnd": "2026-06-23T00:07:22",
+    "Latitude": 53.559901,
+    "Longitude": 20.376165,
+    "MaxAltitude": 98,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL171786",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-30T18:05:45",
+    "FlightDateEnd": "2026-06-30T21:50:08",
+    "Latitude": 51.457647,
+    "Longitude": 21.405114,
+    "MaxAltitude": 201,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL386010",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-10T19:55:38",
+    "FlightDateEnd": "2026-06-11T00:24:43",
+    "Latitude": 54.590717,
+    "Longitude": 16.338319,
+    "MaxAltitude": 336,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL335323",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-12T01:49:20",
+    "FlightDateEnd": "2026-06-12T06:38:28",
+    "Latitude": 52.281743,
+    "Longitude": 15.557157,
+    "MaxAltitude": 452,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL648465",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-19T05:53:12",
+    "FlightDateEnd": "2026-06-19T07:04:08",
+    "Latitude": 51.419306,
+    "Longitude": 18.283444,
+    "MaxAltitude": 131,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL076657",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-28T22:27:39",
+    "FlightDateEnd": "2026-06-29T02:57:51",
+    "Latitude": 49.326859,
+    "Longitude": 22.371107,
+    "MaxAltitude": 341,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL610962",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-06T22:40:25",
+    "FlightDateEnd": "2026-06-07T02:11:17",
+    "Latitude": 53.446374,
+    "Longitude": 19.046426,
+    "MaxAltitude": 94,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL266912",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-13T08:21:08",
+    "FlightDateEnd": "2026-06-13T10:30:11",
+    "Latitude": 52.897321,
+    "Longitude": 23.568951,
+    "MaxAltitude": 115,
+    "Description": "Lot rekreacyjny"
+  },
+  {
+    "OperatorIdentity": "POL623614",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-02T23:52:17",
+    "FlightDateEnd": "2026-06-03T01:21:23",
+    "Latitude": 50.980011,
+    "Longitude": 14.766899,
+    "MaxAltitude": 209,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL247316",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-08T04:25:29",
+    "FlightDateEnd": "2026-06-08T08:21:33",
+    "Latitude": 54.71165,
+    "Longitude": 18.599824,
+    "MaxAltitude": 125,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL466329",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-29T04:07:21",
+    "FlightDateEnd": "2026-06-29T04:51:28",
+    "Latitude": 49.11477,
+    "Longitude": 23.214182,
+    "MaxAltitude": 208,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL274682",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-11T14:28:50",
+    "FlightDateEnd": "2026-06-11T17:28:07",
+    "Latitude": 54.70744,
+    "Longitude": 20.335833,
+    "MaxAltitude": 22,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL816999",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-20T18:34:40",
+    "FlightDateEnd": "2026-06-20T23:14:13",
+    "Latitude": 49.385006,
+    "Longitude": 23.184335,
+    "MaxAltitude": 404,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL493167",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-10T22:05:02",
+    "FlightDateEnd": "2026-06-10T23:38:56",
+    "Latitude": 49.822758,
+    "Longitude": 16.169143,
+    "MaxAltitude": 149,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL621159",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-14T06:49:45",
+    "FlightDateEnd": "2026-06-14T07:31:45",
+    "Latitude": 51.70199,
+    "Longitude": 20.706691,
+    "MaxAltitude": 173,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL654392",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-26T17:46:04",
+    "FlightDateEnd": "2026-06-26T22:26:50",
+    "Latitude": 50.764186,
+    "Longitude": 20.187862,
+    "MaxAltitude": 459,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL499914",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-01T01:46:12",
+    "FlightDateEnd": "2026-06-01T06:44:36",
+    "Latitude": 49.6158,
+    "Longitude": 18.399136,
+    "MaxAltitude": 14,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL120688",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-11T18:47:04",
+    "FlightDateEnd": "2026-06-11T22:16:08",
+    "Latitude": 53.886456,
+    "Longitude": 20.508881,
+    "MaxAltitude": 332,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL353231",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-03T11:28:37",
+    "FlightDateEnd": "2026-06-03T13:54:22",
+    "Latitude": 50.129185,
+    "Longitude": 14.661535,
+    "MaxAltitude": 349,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL968115",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-30T01:31:12",
+    "FlightDateEnd": "2026-06-30T05:32:47",
+    "Latitude": 54.659629,
+    "Longitude": 20.313981,
+    "MaxAltitude": 16,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL858609",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-26T20:33:02",
+    "FlightDateEnd": "2026-06-26T20:53:52",
+    "Latitude": 50.050479,
+    "Longitude": 21.077379,
+    "MaxAltitude": 69,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL885764",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-22T06:24:53",
+    "FlightDateEnd": "2026-06-22T08:10:57",
+    "Latitude": 51.019513,
+    "Longitude": 18.827772,
+    "MaxAltitude": 398,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL608165",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-07T08:57:51",
+    "FlightDateEnd": "2026-06-07T11:18:01",
+    "Latitude": 50.774344,
+    "Longitude": 21.340057,
+    "MaxAltitude": 84,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL455455",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-19T17:29:15",
+    "FlightDateEnd": "2026-06-19T18:29:59",
+    "Latitude": 53.667177,
+    "Longitude": 21.367477,
+    "MaxAltitude": 163,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL989521",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-03T22:48:44",
+    "FlightDateEnd": "2026-06-04T02:19:05",
+    "Latitude": 49.221284,
+    "Longitude": 23.194359,
+    "MaxAltitude": 170,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL177428",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-27T20:07:57",
+    "FlightDateEnd": "2026-06-28T00:42:42",
+    "Latitude": 49.266768,
+    "Longitude": 17.622795,
+    "MaxAltitude": 8,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL132294",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-22T05:53:58",
+    "FlightDateEnd": "2026-06-22T10:01:30",
+    "Latitude": 53.816024,
+    "Longitude": 15.955091,
+    "MaxAltitude": 21,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL004409",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-16T17:04:33",
+    "FlightDateEnd": "2026-06-16T20:09:32",
+    "Latitude": 50.78134,
+    "Longitude": 15.795877,
+    "MaxAltitude": 193,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL278487",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-16T03:30:57",
+    "FlightDateEnd": "2026-06-16T07:34:37",
+    "Latitude": 52.109431,
+    "Longitude": 21.108061,
+    "MaxAltitude": 422,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL772778",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-27T20:57:54",
+    "FlightDateEnd": "2026-06-27T21:05:23",
+    "Latitude": 52.336487,
+    "Longitude": 17.920757,
+    "MaxAltitude": 483,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL669894",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-24T06:42:39",
+    "FlightDateEnd": "2026-06-24T09:30:07",
+    "Latitude": 51.658353,
+    "Longitude": 19.538149,
+    "MaxAltitude": 215,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL366763",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-01T11:37:10",
+    "FlightDateEnd": "2026-06-01T15:53:30",
+    "Latitude": 53.922405,
+    "Longitude": 19.851213,
+    "MaxAltitude": 65,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL658515",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-23T12:53:31",
+    "FlightDateEnd": "2026-06-23T15:06:34",
+    "Latitude": 53.70098,
+    "Longitude": 21.892088,
+    "MaxAltitude": 24,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL991076",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-19T19:31:40",
+    "FlightDateEnd": "2026-06-19T23:34:50",
+    "Latitude": 49.943311,
+    "Longitude": 22.082927,
+    "MaxAltitude": 174,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL622819",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-13T20:08:39",
+    "FlightDateEnd": "2026-06-13T21:49:03",
+    "Latitude": 52.483521,
+    "Longitude": 15.30435,
+    "MaxAltitude": 350,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL579897",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-12T18:23:34",
+    "FlightDateEnd": "2026-06-12T23:04:14",
+    "Latitude": 51.81686,
+    "Longitude": 21.888185,
+    "MaxAltitude": 295,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL132397",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-26T23:15:07",
+    "FlightDateEnd": "2026-06-26T23:22:44",
+    "Latitude": 53.665689,
+    "Longitude": 23.955767,
+    "MaxAltitude": 420,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL526575",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-22T20:19:37",
+    "FlightDateEnd": "2026-06-22T22:40:57",
+    "Latitude": 51.078038,
+    "Longitude": 17.270387,
+    "MaxAltitude": 235,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL221518",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-30T13:01:31",
+    "FlightDateEnd": "2026-06-30T16:39:54",
+    "Latitude": 51.614833,
+    "Longitude": 20.491852,
+    "MaxAltitude": 64,
+    "Description": "Lot rekreacyjny"
+  },
+  {
+    "OperatorIdentity": "POL805439",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-08T18:39:07",
+    "FlightDateEnd": "2026-06-08T23:16:07",
+    "Latitude": 49.561376,
+    "Longitude": 17.134945,
+    "MaxAltitude": 293,
+    "Description": "Lot rekreacyjny"
+  },
+  {
+    "OperatorIdentity": "POL076974",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-17T10:18:15",
+    "FlightDateEnd": "2026-06-17T10:51:45",
+    "Latitude": 50.940455,
+    "Longitude": 15.556603,
+    "MaxAltitude": 122,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL690818",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-07T12:33:36",
+    "FlightDateEnd": "2026-06-07T14:11:11",
+    "Latitude": 49.802627,
+    "Longitude": 17.41175,
+    "MaxAltitude": 274,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL502633",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-04T02:03:13",
+    "FlightDateEnd": "2026-06-04T06:39:44",
+    "Latitude": 51.81312,
+    "Longitude": 21.038074,
+    "MaxAltitude": 361,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL407163",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-25T06:02:56",
+    "FlightDateEnd": "2026-06-25T08:40:53",
+    "Latitude": 52.123905,
+    "Longitude": 21.409056,
+    "MaxAltitude": 64,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL060672",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-01T15:11:02",
+    "FlightDateEnd": "2026-06-01T19:52:51",
+    "Latitude": 53.986666,
+    "Longitude": 18.46917,
+    "MaxAltitude": 412,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL865500",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-24T20:11:48",
+    "FlightDateEnd": "2026-06-24T20:30:51",
+    "Latitude": 49.502963,
+    "Longitude": 18.249923,
+    "MaxAltitude": 205,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL682769",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-04T05:51:37",
+    "FlightDateEnd": "2026-06-04T08:45:15",
+    "Latitude": 54.404824,
+    "Longitude": 15.306699,
+    "MaxAltitude": 474,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL835371",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-09T20:12:06",
+    "FlightDateEnd": "2026-06-09T21:40:24",
+    "Latitude": 53.689785,
+    "Longitude": 21.35256,
+    "MaxAltitude": 492,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL079512",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-20T22:30:52",
+    "FlightDateEnd": "2026-06-21T01:18:49",
+    "Latitude": 53.528533,
+    "Longitude": 21.75412,
+    "MaxAltitude": 256,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL984267",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-07T09:52:09",
+    "FlightDateEnd": "2026-06-07T10:26:46",
+    "Latitude": 50.120123,
+    "Longitude": 18.709903,
+    "MaxAltitude": 106,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL963743",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-17T02:42:12",
+    "FlightDateEnd": "2026-06-17T06:35:31",
+    "Latitude": 49.287628,
+    "Longitude": 17.768346,
+    "MaxAltitude": 435,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL330617",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-10T00:47:07",
+    "FlightDateEnd": "2026-06-10T04:42:19",
+    "Latitude": 50.789617,
+    "Longitude": 21.459431,
+    "MaxAltitude": 336,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL938066",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-03T16:52:47",
+    "FlightDateEnd": "2026-06-03T21:32:56",
+    "Latitude": 51.195479,
+    "Longitude": 21.526823,
+    "MaxAltitude": 279,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL340011",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-04T04:14:08",
+    "FlightDateEnd": "2026-06-04T06:00:59",
+    "Latitude": 53.190355,
+    "Longitude": 18.362062,
+    "MaxAltitude": 448,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL705034",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-20T03:44:05",
+    "FlightDateEnd": "2026-06-20T03:57:05",
+    "Latitude": 51.799696,
+    "Longitude": 21.935061,
+    "MaxAltitude": 275,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL294303",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-08T11:43:40",
+    "FlightDateEnd": "2026-06-08T14:03:25",
+    "Latitude": 54.019858,
+    "Longitude": 23.784967,
+    "MaxAltitude": 281,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL096000",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-14T09:27:30",
+    "FlightDateEnd": "2026-06-14T12:14:30",
+    "Latitude": 51.466326,
+    "Longitude": 17.166698,
+    "MaxAltitude": 426,
+    "Description": "Lot rekreacyjny"
+  },
+  {
+    "OperatorIdentity": "POL539043",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-24T02:13:53",
+    "FlightDateEnd": "2026-06-24T03:57:59",
+    "Latitude": 52.783463,
+    "Longitude": 22.837488,
+    "MaxAltitude": 233,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL015361",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-05T21:17:59",
+    "FlightDateEnd": "2026-06-05T21:26:32",
+    "Latitude": 49.169359,
+    "Longitude": 23.582307,
+    "MaxAltitude": 455,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL770884",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-13T01:27:43",
+    "FlightDateEnd": "2026-06-13T02:42:06",
+    "Latitude": 50.550085,
+    "Longitude": 18.555359,
+    "MaxAltitude": 467,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL363636",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-23T00:38:51",
+    "FlightDateEnd": "2026-06-23T04:24:47",
+    "Latitude": 49.815557,
+    "Longitude": 19.896849,
+    "MaxAltitude": 25,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL732477",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-02T09:17:39",
+    "FlightDateEnd": "2026-06-02T11:58:41",
+    "Latitude": 52.0775,
+    "Longitude": 17.734814,
+    "MaxAltitude": 130,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL212540",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-22T10:58:37",
+    "FlightDateEnd": "2026-06-22T12:38:48",
+    "Latitude": 52.643706,
+    "Longitude": 20.714142,
+    "MaxAltitude": 273,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL104055",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-06T09:03:56",
+    "FlightDateEnd": "2026-06-06T13:07:26",
+    "Latitude": 50.806189,
+    "Longitude": 17.296249,
+    "MaxAltitude": 347,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL512932",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-19T05:06:25",
+    "FlightDateEnd": "2026-06-19T08:57:44",
+    "Latitude": 54.777906,
+    "Longitude": 20.382486,
+    "MaxAltitude": 377,
+    "Description": "Lot rekreacyjny"
+  },
+  {
+    "OperatorIdentity": "POL034049",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-15T02:59:09",
+    "FlightDateEnd": "2026-06-15T06:47:01",
+    "Latitude": 49.249899,
+    "Longitude": 21.794789,
+    "MaxAltitude": 76,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL600589",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-02T06:53:05",
+    "FlightDateEnd": "2026-06-02T08:52:44",
+    "Latitude": 50.475726,
+    "Longitude": 22.118697,
+    "MaxAltitude": 96,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL465513",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-04T19:01:16",
+    "FlightDateEnd": "2026-06-04T22:19:57",
+    "Latitude": 53.916027,
+    "Longitude": 17.047444,
+    "MaxAltitude": 26,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL219860",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-25T14:29:17",
+    "FlightDateEnd": "2026-06-25T16:56:56",
+    "Latitude": 54.381982,
+    "Longitude": 16.709949,
+    "MaxAltitude": 54,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL025380",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-14T06:46:00",
+    "FlightDateEnd": "2026-06-14T11:33:38",
+    "Latitude": 50.352195,
+    "Longitude": 23.787259,
+    "MaxAltitude": 50,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL339449",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-15T01:48:53",
+    "FlightDateEnd": "2026-06-15T06:19:06",
+    "Latitude": 49.134592,
+    "Longitude": 19.950707,
+    "MaxAltitude": 316,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL461286",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-05T20:06:31",
+    "FlightDateEnd": "2026-06-05T23:19:40",
+    "Latitude": 49.612528,
+    "Longitude": 23.958211,
+    "MaxAltitude": 463,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL809892",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-27T14:18:00",
+    "FlightDateEnd": "2026-06-27T17:08:57",
+    "Latitude": 51.097698,
+    "Longitude": 23.462661,
+    "MaxAltitude": 367,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL037793",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-08T16:43:30",
+    "FlightDateEnd": "2026-06-08T20:24:33",
+    "Latitude": 52.961677,
+    "Longitude": 18.104626,
+    "MaxAltitude": 448,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL402634",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-14T23:09:21",
+    "FlightDateEnd": "2026-06-15T01:40:23",
+    "Latitude": 49.90924,
+    "Longitude": 23.746559,
+    "MaxAltitude": 127,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL141897",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-12T15:56:53",
+    "FlightDateEnd": "2026-06-12T19:32:32",
+    "Latitude": 49.930672,
+    "Longitude": 23.065403,
+    "MaxAltitude": 404,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL465698",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-19T01:53:38",
+    "FlightDateEnd": "2026-06-19T03:33:47",
+    "Latitude": 52.299503,
+    "Longitude": 21.518526,
+    "MaxAltitude": 256,
+    "Description": "Lot rekreacyjny"
+  },
+  {
+    "OperatorIdentity": "POL624422",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-08T23:43:09",
+    "FlightDateEnd": "2026-06-09T01:47:13",
+    "Latitude": 51.117791,
+    "Longitude": 19.646026,
+    "MaxAltitude": 74,
+    "Description": "Lot rekreacyjny"
+  },
+  {
+    "OperatorIdentity": "POL890510",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-08T04:19:08",
+    "FlightDateEnd": "2026-06-08T06:53:51",
+    "Latitude": 51.316063,
+    "Longitude": 17.173523,
+    "MaxAltitude": 373,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL498621",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-04T19:18:54",
+    "FlightDateEnd": "2026-06-04T22:44:31",
+    "Latitude": 52.701505,
+    "Longitude": 20.925179,
+    "MaxAltitude": 448,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL643799",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-12T14:57:53",
+    "FlightDateEnd": "2026-06-12T15:04:41",
+    "Latitude": 50.858206,
+    "Longitude": 19.488664,
+    "MaxAltitude": 399,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL044821",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-19T15:58:32",
+    "FlightDateEnd": "2026-06-19T18:50:26",
+    "Latitude": 52.55952,
+    "Longitude": 22.896549,
+    "MaxAltitude": 7,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL720209",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-09T17:02:06",
+    "FlightDateEnd": "2026-06-09T17:36:01",
+    "Latitude": 50.970457,
+    "Longitude": 16.259674,
+    "MaxAltitude": 449,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL835376",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-20T12:03:51",
+    "FlightDateEnd": "2026-06-20T13:11:04",
+    "Latitude": 50.9926,
+    "Longitude": 18.460068,
+    "MaxAltitude": 200,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL729865",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-12T06:29:49",
+    "FlightDateEnd": "2026-06-12T09:35:06",
+    "Latitude": 50.534092,
+    "Longitude": 17.350312,
+    "MaxAltitude": 378,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL793612",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-22T20:36:10",
+    "FlightDateEnd": "2026-06-23T00:06:32",
+    "Latitude": 53.961908,
+    "Longitude": 15.109748,
+    "MaxAltitude": 494,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL303060",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-21T01:29:43",
+    "FlightDateEnd": "2026-06-21T01:52:29",
+    "Latitude": 52.662105,
+    "Longitude": 19.450506,
+    "MaxAltitude": 238,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL067427",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-21T12:46:17",
+    "FlightDateEnd": "2026-06-21T16:31:24",
+    "Latitude": 52.270007,
+    "Longitude": 15.668802,
+    "MaxAltitude": 36,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL855403",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-29T00:14:56",
+    "FlightDateEnd": "2026-06-29T04:08:27",
+    "Latitude": 53.526427,
+    "Longitude": 14.805287,
+    "MaxAltitude": 339,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL120353",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-19T15:29:39",
+    "FlightDateEnd": "2026-06-19T16:36:24",
+    "Latitude": 54.77681,
+    "Longitude": 19.13187,
+    "MaxAltitude": 348,
+    "Description": "Lot rekreacyjny"
+  },
+  {
+    "OperatorIdentity": "POL521266",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-22T11:12:30",
+    "FlightDateEnd": "2026-06-22T12:23:06",
+    "Latitude": 52.280386,
+    "Longitude": 14.610001,
+    "MaxAltitude": 387,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL729575",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-17T14:46:36",
+    "FlightDateEnd": "2026-06-17T17:01:49",
+    "Latitude": 52.872025,
+    "Longitude": 22.066034,
+    "MaxAltitude": 15,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL490571",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-25T14:05:30",
+    "FlightDateEnd": "2026-06-25T18:12:03",
+    "Latitude": 53.937474,
+    "Longitude": 19.241459,
+    "MaxAltitude": 396,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL972982",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-25T11:42:44",
+    "FlightDateEnd": "2026-06-25T16:26:21",
+    "Latitude": 54.572536,
+    "Longitude": 22.019776,
+    "MaxAltitude": 441,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL267995",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-16T09:47:03",
+    "FlightDateEnd": "2026-06-16T12:08:16",
+    "Latitude": 51.230261,
+    "Longitude": 21.526225,
+    "MaxAltitude": 316,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL511639",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-08T07:26:09",
+    "FlightDateEnd": "2026-06-08T11:36:07",
+    "Latitude": 52.494567,
+    "Longitude": 20.953393,
+    "MaxAltitude": 17,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL918997",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-15T06:55:32",
+    "FlightDateEnd": "2026-06-15T07:50:32",
+    "Latitude": 52.641167,
+    "Longitude": 22.537653,
+    "MaxAltitude": 106,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL039635",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-27T06:32:38",
+    "FlightDateEnd": "2026-06-27T10:41:57",
+    "Latitude": 53.510945,
+    "Longitude": 19.387176,
+    "MaxAltitude": 35,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL783194",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-18T04:19:13",
+    "FlightDateEnd": "2026-06-18T05:04:05",
+    "Latitude": 50.787929,
+    "Longitude": 21.095466,
+    "MaxAltitude": 127,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL150577",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-05T05:52:59",
+    "FlightDateEnd": "2026-06-05T10:21:41",
+    "Latitude": 50.470987,
+    "Longitude": 19.381372,
+    "MaxAltitude": 94,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL142383",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-05T22:40:02",
+    "FlightDateEnd": "2026-06-06T01:35:32",
+    "Latitude": 53.692826,
+    "Longitude": 22.169223,
+    "MaxAltitude": 108,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL540078",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-10T22:33:36",
+    "FlightDateEnd": "2026-06-11T01:38:54",
+    "Latitude": 53.21266,
+    "Longitude": 22.458579,
+    "MaxAltitude": 21,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL412839",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-17T11:21:56",
+    "FlightDateEnd": "2026-06-17T12:31:10",
+    "Latitude": 52.485511,
+    "Longitude": 22.032078,
+    "MaxAltitude": 325,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL485555",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-10T14:46:40",
+    "FlightDateEnd": "2026-06-10T17:07:29",
+    "Latitude": 50.098951,
+    "Longitude": 16.338273,
+    "MaxAltitude": 232,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL530839",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-14T22:03:55",
+    "FlightDateEnd": "2026-06-14T23:32:31",
+    "Latitude": 54.543705,
+    "Longitude": 20.819774,
+    "MaxAltitude": 441,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL774065",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-03T09:30:39",
+    "FlightDateEnd": "2026-06-03T14:11:53",
+    "Latitude": 53.631358,
+    "Longitude": 21.766449,
+    "MaxAltitude": 369,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL633183",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-10T04:36:51",
+    "FlightDateEnd": "2026-06-10T08:44:26",
+    "Latitude": 50.596675,
+    "Longitude": 20.542153,
+    "MaxAltitude": 103,
+    "Description": "Lot rekreacyjny"
+  },
+  {
+    "OperatorIdentity": "POL268879",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-21T17:27:00",
+    "FlightDateEnd": "2026-06-21T18:22:15",
+    "Latitude": 51.220452,
+    "Longitude": 23.410407,
+    "MaxAltitude": 9,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL097088",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-13T17:04:06",
+    "FlightDateEnd": "2026-06-13T17:27:44",
+    "Latitude": 52.561005,
+    "Longitude": 18.125943,
+    "MaxAltitude": 434,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL271318",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-07T11:08:38",
+    "FlightDateEnd": "2026-06-07T14:25:17",
+    "Latitude": 50.926985,
+    "Longitude": 23.883042,
+    "MaxAltitude": 8,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL832076",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-16T05:21:13",
+    "FlightDateEnd": "2026-06-16T08:51:18",
+    "Latitude": 53.898478,
+    "Longitude": 14.649563,
+    "MaxAltitude": 156,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL790409",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-15T04:27:48",
+    "FlightDateEnd": "2026-06-15T08:42:40",
+    "Latitude": 54.55477,
+    "Longitude": 16.668621,
+    "MaxAltitude": 383,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL327697",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-15T01:49:36",
+    "FlightDateEnd": "2026-06-15T05:04:40",
+    "Latitude": 49.807437,
+    "Longitude": 18.873553,
+    "MaxAltitude": 492,
+    "Description": "Lot rekreacyjny"
+  },
+  {
+    "OperatorIdentity": "POL104313",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-09T21:48:26",
+    "FlightDateEnd": "2026-06-10T00:11:59",
+    "Latitude": 53.482031,
+    "Longitude": 20.433706,
+    "MaxAltitude": 131,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL614655",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-22T11:08:22",
+    "FlightDateEnd": "2026-06-22T15:00:13",
+    "Latitude": 53.642568,
+    "Longitude": 23.485108,
+    "MaxAltitude": 244,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL707136",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-17T13:56:16",
+    "FlightDateEnd": "2026-06-17T16:31:44",
+    "Latitude": 49.974173,
+    "Longitude": 20.830866,
+    "MaxAltitude": 344,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL479755",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-26T14:37:00",
+    "FlightDateEnd": "2026-06-26T19:17:47",
+    "Latitude": 53.989276,
+    "Longitude": 22.797762,
+    "MaxAltitude": 285,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL390995",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-13T13:49:53",
+    "FlightDateEnd": "2026-06-13T16:29:10",
+    "Latitude": 51.104098,
+    "Longitude": 21.608748,
+    "MaxAltitude": 450,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL011547",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-19T15:12:24",
+    "FlightDateEnd": "2026-06-19T19:09:31",
+    "Latitude": 50.291811,
+    "Longitude": 22.659296,
+    "MaxAltitude": 416,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL130793",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-07T13:50:19",
+    "FlightDateEnd": "2026-06-07T15:13:37",
+    "Latitude": 53.129989,
+    "Longitude": 16.69111,
+    "MaxAltitude": 319,
+    "Description": "Lot rekreacyjny"
+  },
+  {
+    "OperatorIdentity": "POL888253",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-15T03:19:50",
+    "FlightDateEnd": "2026-06-15T04:15:42",
+    "Latitude": 53.221202,
+    "Longitude": 14.894641,
+    "MaxAltitude": 304,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL549852",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-19T21:39:55",
+    "FlightDateEnd": "2026-06-19T23:06:15",
+    "Latitude": 50.963457,
+    "Longitude": 23.846339,
+    "MaxAltitude": 363,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL292529",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-16T12:23:39",
+    "FlightDateEnd": "2026-06-16T16:31:59",
+    "Latitude": 53.287917,
+    "Longitude": 22.998219,
+    "MaxAltitude": 12,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL603152",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-02T02:14:29",
+    "FlightDateEnd": "2026-06-02T06:59:22",
+    "Latitude": 52.441926,
+    "Longitude": 14.699647,
+    "MaxAltitude": 257,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL886503",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-14T06:35:49",
+    "FlightDateEnd": "2026-06-14T06:51:02",
+    "Latitude": 51.842569,
+    "Longitude": 20.849701,
+    "MaxAltitude": 341,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL015834",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-01T05:29:37",
+    "FlightDateEnd": "2026-06-01T08:56:15",
+    "Latitude": 50.374884,
+    "Longitude": 16.956071,
+    "MaxAltitude": 370,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL908070",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-20T00:28:37",
+    "FlightDateEnd": "2026-06-20T01:59:40",
+    "Latitude": 51.91398,
+    "Longitude": 17.825614,
+    "MaxAltitude": 191,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL316934",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-19T17:30:17",
+    "FlightDateEnd": "2026-06-19T18:22:37",
+    "Latitude": 53.801443,
+    "Longitude": 16.114922,
+    "MaxAltitude": 326,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL131912",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-01T21:13:58",
+    "FlightDateEnd": "2026-06-01T21:59:28",
+    "Latitude": 51.312759,
+    "Longitude": 21.951023,
+    "MaxAltitude": 257,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL022035",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-21T06:46:02",
+    "FlightDateEnd": "2026-06-21T08:57:21",
+    "Latitude": 53.018512,
+    "Longitude": 19.615687,
+    "MaxAltitude": 112,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL916506",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-10T20:00:28",
+    "FlightDateEnd": "2026-06-10T23:58:01",
+    "Latitude": 49.659241,
+    "Longitude": 19.05915,
+    "MaxAltitude": 85,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL962180",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-03T18:07:27",
+    "FlightDateEnd": "2026-06-03T19:13:19",
+    "Latitude": 49.933792,
+    "Longitude": 18.121704,
+    "MaxAltitude": 66,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL934120",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-08T05:29:37",
+    "FlightDateEnd": "2026-06-08T07:42:47",
+    "Latitude": 50.347702,
+    "Longitude": 17.516519,
+    "MaxAltitude": 52,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL471573",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-24T23:42:59",
+    "FlightDateEnd": "2026-06-25T00:03:32",
+    "Latitude": 52.891403,
+    "Longitude": 14.155866,
+    "MaxAltitude": 406,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL128245",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-24T21:11:58",
+    "FlightDateEnd": "2026-06-24T22:40:47",
+    "Latitude": 51.210308,
+    "Longitude": 16.56007,
+    "MaxAltitude": 5,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL695787",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-28T01:44:42",
+    "FlightDateEnd": "2026-06-28T04:16:02",
+    "Latitude": 51.142553,
+    "Longitude": 21.066556,
+    "MaxAltitude": 403,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL095195",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-04T20:53:24",
+    "FlightDateEnd": "2026-06-05T00:29:29",
+    "Latitude": 53.260645,
+    "Longitude": 17.094023,
+    "MaxAltitude": 333,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL402608",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-15T08:33:25",
+    "FlightDateEnd": "2026-06-15T12:46:09",
+    "Latitude": 50.854383,
+    "Longitude": 16.339029,
+    "MaxAltitude": 313,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL745436",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-25T02:17:47",
+    "FlightDateEnd": "2026-06-25T04:44:17",
+    "Latitude": 51.526039,
+    "Longitude": 20.991652,
+    "MaxAltitude": 217,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL429174",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-11T15:26:47",
+    "FlightDateEnd": "2026-06-11T17:12:35",
+    "Latitude": 53.147142,
+    "Longitude": 20.60953,
+    "MaxAltitude": 283,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL438220",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-03T02:00:03",
+    "FlightDateEnd": "2026-06-03T04:04:42",
+    "Latitude": 50.499433,
+    "Longitude": 16.593127,
+    "MaxAltitude": 331,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL998926",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-02T03:19:42",
+    "FlightDateEnd": "2026-06-02T08:11:01",
+    "Latitude": 50.981404,
+    "Longitude": 17.300415,
+    "MaxAltitude": 224,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL006381",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-16T20:09:12",
+    "FlightDateEnd": "2026-06-17T00:27:26",
+    "Latitude": 54.278142,
+    "Longitude": 23.289195,
+    "MaxAltitude": 321,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL386417",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-02T10:34:40",
+    "FlightDateEnd": "2026-06-02T11:44:39",
+    "Latitude": 49.253094,
+    "Longitude": 17.696835,
+    "MaxAltitude": 201,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL902704",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-09T17:03:48",
+    "FlightDateEnd": "2026-06-09T21:06:08",
+    "Latitude": 53.974768,
+    "Longitude": 22.110213,
+    "MaxAltitude": 218,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL739466",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-27T09:02:48",
+    "FlightDateEnd": "2026-06-27T13:43:23",
+    "Latitude": 52.864327,
+    "Longitude": 23.812526,
+    "MaxAltitude": 296,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL219652",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-25T13:29:49",
+    "FlightDateEnd": "2026-06-25T17:16:06",
+    "Latitude": 52.905415,
+    "Longitude": 18.732194,
+    "MaxAltitude": 199,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL002661",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-30T22:40:30",
+    "FlightDateEnd": "2026-06-30T23:59:59",
+    "Latitude": 54.401896,
+    "Longitude": 16.787241,
+    "MaxAltitude": 459,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL658413",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-20T01:51:58",
+    "FlightDateEnd": "2026-06-20T05:41:01",
+    "Latitude": 53.270798,
+    "Longitude": 20.472434,
+    "MaxAltitude": 465,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL601653",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-30T10:17:32",
+    "FlightDateEnd": "2026-06-30T12:17:30",
+    "Latitude": 52.720516,
+    "Longitude": 15.196579,
+    "MaxAltitude": 75,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL874551",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-08T02:09:11",
+    "FlightDateEnd": "2026-06-08T06:28:02",
+    "Latitude": 49.907535,
+    "Longitude": 14.127317,
+    "MaxAltitude": 14,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL480156",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-14T09:13:15",
+    "FlightDateEnd": "2026-06-14T12:55:08",
+    "Latitude": 54.641956,
+    "Longitude": 14.700628,
+    "MaxAltitude": 199,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL334903",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-13T20:52:06",
+    "FlightDateEnd": "2026-06-13T22:41:11",
+    "Latitude": 50.359879,
+    "Longitude": 21.400732,
+    "MaxAltitude": 378,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL546870",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-11T12:36:19",
+    "FlightDateEnd": "2026-06-11T16:36:02",
+    "Latitude": 49.177406,
+    "Longitude": 14.120083,
+    "MaxAltitude": 137,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL796351",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-15T05:22:35",
+    "FlightDateEnd": "2026-06-15T09:10:57",
+    "Latitude": 49.225712,
+    "Longitude": 14.286387,
+    "MaxAltitude": 29,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL773075",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-16T14:54:04",
+    "FlightDateEnd": "2026-06-16T18:44:42",
+    "Latitude": 53.337582,
+    "Longitude": 17.964581,
+    "MaxAltitude": 130,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL437133",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-05T17:13:01",
+    "FlightDateEnd": "2026-06-05T19:27:00",
+    "Latitude": 51.675657,
+    "Longitude": 19.106428,
+    "MaxAltitude": 36,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL047395",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-11T23:59:36",
+    "FlightDateEnd": "2026-06-12T00:51:15",
+    "Latitude": 51.02111,
+    "Longitude": 17.479188,
+    "MaxAltitude": 206,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL340456",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-01T11:00:05",
+    "FlightDateEnd": "2026-06-01T11:46:27",
+    "Latitude": 49.589205,
+    "Longitude": 23.90726,
+    "MaxAltitude": 109,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL842550",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-18T09:03:27",
+    "FlightDateEnd": "2026-06-18T11:59:58",
+    "Latitude": 49.877315,
+    "Longitude": 15.731651,
+    "MaxAltitude": 408,
+    "Description": "Lot rekreacyjny"
+  },
+  {
+    "OperatorIdentity": "POL204933",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-28T03:00:32",
+    "FlightDateEnd": "2026-06-28T06:06:45",
+    "Latitude": 52.305069,
+    "Longitude": 21.091579,
+    "MaxAltitude": 341,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL138771",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-17T05:27:53",
+    "FlightDateEnd": "2026-06-17T09:29:44",
+    "Latitude": 52.834372,
+    "Longitude": 22.680857,
+    "MaxAltitude": 232,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL585280",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-14T11:46:24",
+    "FlightDateEnd": "2026-06-14T14:42:08",
+    "Latitude": 50.085115,
+    "Longitude": 18.428692,
+    "MaxAltitude": 237,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL567677",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-10T01:32:40",
+    "FlightDateEnd": "2026-06-10T05:45:14",
+    "Latitude": 54.751714,
+    "Longitude": 19.614287,
+    "MaxAltitude": 368,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL415634",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-20T09:22:44",
+    "FlightDateEnd": "2026-06-20T11:38:10",
+    "Latitude": 49.789796,
+    "Longitude": 17.68558,
+    "MaxAltitude": 293,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL305024",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-25T10:58:49",
+    "FlightDateEnd": "2026-06-25T13:00:05",
+    "Latitude": 52.318575,
+    "Longitude": 22.595737,
+    "MaxAltitude": 197,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL773935",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-23T02:47:22",
+    "FlightDateEnd": "2026-06-23T04:48:58",
+    "Latitude": 54.097107,
+    "Longitude": 22.125215,
+    "MaxAltitude": 145,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL270076",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-09T21:25:32",
+    "FlightDateEnd": "2026-06-09T21:38:05",
+    "Latitude": 53.602689,
+    "Longitude": 22.646792,
+    "MaxAltitude": 208,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL683958",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-10T10:25:51",
+    "FlightDateEnd": "2026-06-10T14:52:22",
+    "Latitude": 54.73372,
+    "Longitude": 22.404168,
+    "MaxAltitude": 157,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL659975",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-14T20:48:46",
+    "FlightDateEnd": "2026-06-14T23:40:50",
+    "Latitude": 52.647273,
+    "Longitude": 15.537015,
+    "MaxAltitude": 151,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL524611",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-19T20:23:30",
+    "FlightDateEnd": "2026-06-19T23:16:52",
+    "Latitude": 53.046735,
+    "Longitude": 18.293854,
+    "MaxAltitude": 62,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL951588",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-06T08:23:51",
+    "FlightDateEnd": "2026-06-06T10:04:13",
+    "Latitude": 52.251606,
+    "Longitude": 18.060746,
+    "MaxAltitude": 149,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL300483",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-18T17:47:11",
+    "FlightDateEnd": "2026-06-18T19:09:53",
+    "Latitude": 50.961301,
+    "Longitude": 14.26221,
+    "MaxAltitude": 239,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL645733",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-11T01:31:53",
+    "FlightDateEnd": "2026-06-11T02:49:05",
+    "Latitude": 49.395198,
+    "Longitude": 16.142723,
+    "MaxAltitude": 150,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL026880",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-06T08:32:21",
+    "FlightDateEnd": "2026-06-06T08:45:13",
+    "Latitude": 51.458789,
+    "Longitude": 23.069879,
+    "MaxAltitude": 244,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL699369",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-22T19:13:32",
+    "FlightDateEnd": "2026-06-22T21:38:51",
+    "Latitude": 51.650832,
+    "Longitude": 20.473171,
+    "MaxAltitude": 210,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL902651",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-11T16:54:55",
+    "FlightDateEnd": "2026-06-11T17:40:47",
+    "Latitude": 54.119613,
+    "Longitude": 19.88376,
+    "MaxAltitude": 233,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL654059",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-07T19:18:15",
+    "FlightDateEnd": "2026-06-07T20:21:57",
+    "Latitude": 51.38609,
+    "Longitude": 22.751992,
+    "MaxAltitude": 44,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL163660",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-22T15:43:12",
+    "FlightDateEnd": "2026-06-22T19:28:19",
+    "Latitude": 51.70631,
+    "Longitude": 22.052798,
+    "MaxAltitude": 51,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL751560",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-12T10:20:48",
+    "FlightDateEnd": "2026-06-12T10:59:23",
+    "Latitude": 50.806915,
+    "Longitude": 23.853473,
+    "MaxAltitude": 477,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL301113",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-15T21:46:56",
+    "FlightDateEnd": "2026-06-16T00:35:44",
+    "Latitude": 49.350401,
+    "Longitude": 15.64113,
+    "MaxAltitude": 157,
+    "Description": "Inspekcja linii energetycznych"
+  },
+  {
+    "OperatorIdentity": "POL218489",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-06T00:46:04",
+    "FlightDateEnd": "2026-06-06T05:17:21",
+    "Latitude": 49.372866,
+    "Longitude": 18.721271,
+    "MaxAltitude": 143,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL281622",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-03T14:40:11",
+    "FlightDateEnd": "2026-06-03T19:20:11",
+    "Latitude": 50.827169,
+    "Longitude": 17.936666,
+    "MaxAltitude": 225,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL228199",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-05T21:42:28",
+    "FlightDateEnd": "2026-06-06T00:37:14",
+    "Latitude": 51.297115,
+    "Longitude": 20.666614,
+    "MaxAltitude": 248,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL969351",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-02T00:52:21",
+    "FlightDateEnd": "2026-06-02T02:44:46",
+    "Latitude": 52.676875,
+    "Longitude": 17.692886,
+    "MaxAltitude": 93,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL804483",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-12T17:23:27",
+    "FlightDateEnd": "2026-06-12T21:16:56",
+    "Latitude": 52.004117,
+    "Longitude": 14.940716,
+    "MaxAltitude": 35,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL927719",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-25T12:13:21",
+    "FlightDateEnd": "2026-06-25T14:19:41",
+    "Latitude": 51.518255,
+    "Longitude": 14.240161,
+    "MaxAltitude": 272,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL050215",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-29T11:41:22",
+    "FlightDateEnd": "2026-06-29T12:17:48",
+    "Latitude": 49.867554,
+    "Longitude": 16.057381,
+    "MaxAltitude": 98,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL534013",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-06T00:46:49",
+    "FlightDateEnd": "2026-06-06T05:00:29",
+    "Latitude": 52.089075,
+    "Longitude": 22.461716,
+    "MaxAltitude": 448,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL471016",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-20T20:49:59",
+    "FlightDateEnd": "2026-06-20T21:47:01",
+    "Latitude": 52.34468,
+    "Longitude": 16.005606,
+    "MaxAltitude": 73,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL046574",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-28T12:53:04",
+    "FlightDateEnd": "2026-06-28T16:08:49",
+    "Latitude": 49.9584,
+    "Longitude": 18.365136,
+    "MaxAltitude": 392,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL176067",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-04T09:43:27",
+    "FlightDateEnd": "2026-06-04T14:02:35",
+    "Latitude": 52.191749,
+    "Longitude": 17.854462,
+    "MaxAltitude": 459,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL179457",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-07T12:20:09",
+    "FlightDateEnd": "2026-06-07T13:33:11",
+    "Latitude": 54.021498,
+    "Longitude": 18.997421,
+    "MaxAltitude": 346,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL834621",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-06T05:59:07",
+    "FlightDateEnd": "2026-06-06T08:04:23",
+    "Latitude": 53.024934,
+    "Longitude": 18.173743,
+    "MaxAltitude": 276,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL283105",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-26T06:31:51",
+    "FlightDateEnd": "2026-06-26T08:04:37",
+    "Latitude": 50.689569,
+    "Longitude": 15.984316,
+    "MaxAltitude": 51,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL377491",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-25T23:10:03",
+    "FlightDateEnd": "2026-06-25T23:48:51",
+    "Latitude": 54.786587,
+    "Longitude": 23.603933,
+    "MaxAltitude": 73,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL609428",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-10T12:26:39",
+    "FlightDateEnd": "2026-06-10T16:42:01",
+    "Latitude": 49.312821,
+    "Longitude": 17.703776,
+    "MaxAltitude": 238,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL358482",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-12T17:15:14",
+    "FlightDateEnd": "2026-06-12T18:38:40",
+    "Latitude": 49.296217,
+    "Longitude": 16.541114,
+    "MaxAltitude": 79,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL194495",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-14T09:27:19",
+    "FlightDateEnd": "2026-06-14T11:24:55",
+    "Latitude": 54.007455,
+    "Longitude": 15.761179,
+    "MaxAltitude": 211,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL856254",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-26T15:36:47",
+    "FlightDateEnd": "2026-06-26T19:09:51",
+    "Latitude": 54.529974,
+    "Longitude": 16.15284,
+    "MaxAltitude": 298,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL070046",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-12T06:21:02",
+    "FlightDateEnd": "2026-06-12T07:37:18",
+    "Latitude": 49.344275,
+    "Longitude": 16.733806,
+    "MaxAltitude": 270,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL305024",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-04T10:48:06",
+    "FlightDateEnd": "2026-06-04T14:23:17",
+    "Latitude": 49.047165,
+    "Longitude": 19.827139,
+    "MaxAltitude": 98,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL650772",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-12T11:47:57",
+    "FlightDateEnd": "2026-06-12T12:30:37",
+    "Latitude": 53.423667,
+    "Longitude": 18.159502,
+    "MaxAltitude": 203,
+    "Description": "Mapowanie terenu rolniczego"
+  },
+  {
+    "OperatorIdentity": "POL779228",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-15T01:52:16",
+    "FlightDateEnd": "2026-06-15T04:49:19",
+    "Latitude": 53.181379,
+    "Longitude": 23.960881,
+    "MaxAltitude": 154,
+    "Description": "Analiza czystości powietrza"
+  },
+  {
+    "OperatorIdentity": "POL422892",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-25T15:21:28",
+    "FlightDateEnd": "2026-06-25T18:05:04",
+    "Latitude": 50.288094,
+    "Longitude": 14.742394,
+    "MaxAltitude": 141,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL032768",
+    "DroneId": 2,
+    "FlightDateStart": "2026-06-22T14:16:58",
+    "FlightDateEnd": "2026-06-22T16:40:12",
+    "Latitude": 54.46029,
+    "Longitude": 21.162382,
+    "MaxAltitude": 126,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL353013",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-04T16:36:11",
+    "FlightDateEnd": "2026-06-04T21:07:36",
+    "Latitude": 53.147429,
+    "Longitude": 23.669899,
+    "MaxAltitude": 463,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL533508",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-16T14:14:58",
+    "FlightDateEnd": "2026-06-16T17:38:56",
+    "Latitude": 50.35661,
+    "Longitude": 14.105564,
+    "MaxAltitude": 369,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL580363",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-19T17:20:13",
+    "FlightDateEnd": "2026-06-19T19:18:01",
+    "Latitude": 54.549206,
+    "Longitude": 18.699637,
+    "MaxAltitude": 152,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL046529",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-22T10:58:43",
+    "FlightDateEnd": "2026-06-22T13:20:10",
+    "Latitude": 49.042858,
+    "Longitude": 21.637411,
+    "MaxAltitude": 360,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL718453",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-02T08:58:25",
+    "FlightDateEnd": "2026-06-02T13:37:40",
+    "Latitude": 54.208013,
+    "Longitude": 14.793921,
+    "MaxAltitude": 70,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL554903",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-03T07:40:15",
+    "FlightDateEnd": "2026-06-03T12:05:32",
+    "Latitude": 49.086539,
+    "Longitude": 21.943283,
+    "MaxAltitude": 66,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL608798",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-24T16:20:14",
+    "FlightDateEnd": "2026-06-24T18:45:47",
+    "Latitude": 49.933261,
+    "Longitude": 16.84794,
+    "MaxAltitude": 113,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL925259",
+    "DroneId": 1,
+    "FlightDateStart": "2026-06-07T14:43:42",
+    "FlightDateEnd": "2026-06-07T19:09:58",
+    "Latitude": 52.065784,
+    "Longitude": 16.255772,
+    "MaxAltitude": 63,
+    "Description": "Trening pilotażu"
+  },
+  {
+    "OperatorIdentity": "POL074999",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-05T16:33:58",
+    "FlightDateEnd": "2026-06-05T18:20:39",
+    "Latitude": 53.430088,
+    "Longitude": 21.653984,
+    "MaxAltitude": 128,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL608231",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-12T09:13:31",
+    "FlightDateEnd": "2026-06-12T11:42:19",
+    "Latitude": 49.030342,
+    "Longitude": 22.816965,
+    "MaxAltitude": 272,
+    "Description": "Test nowego oprogramowania"
+  },
+  {
+    "OperatorIdentity": "POL143880",
+    "DroneId": 0,
+    "FlightDateStart": "2026-06-30T01:14:51",
+    "FlightDateEnd": "2026-06-30T03:55:31",
+    "Latitude": 52.250221,
+    "Longitude": 18.596621,
+    "MaxAltitude": 12,
+    "Description": ""
+  },
+  {
+    "OperatorIdentity": "POL850527",
+    "DroneId": 4,
+    "FlightDateStart": "2026-06-20T20:18:45",
+    "FlightDateEnd": "2026-06-20T23:58:55",
+    "Latitude": 50.770711,
+    "Longitude": 14.490675,
+    "MaxAltitude": 179,
+    "Description": "Monitorowanie ruchu drogowego"
+  },
+  {
+    "OperatorIdentity": "POL506813",
+    "DroneId": 6,
+    "FlightDateStart": "2026-06-24T17:29:40",
+    "FlightDateEnd": "2026-06-24T20:50:56",
+    "Latitude": 50.117341,
+    "Longitude": 14.394421,
+    "MaxAltitude": 215,
+    "Description": "Sprawdzenie stanu technicznego drona"
+  },
+  {
+    "OperatorIdentity": "POL336796",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-08T22:22:51",
+    "FlightDateEnd": "2026-06-09T00:36:21",
+    "Latitude": 50.218627,
+    "Longitude": 21.63143,
+    "MaxAltitude": 20,
+    "Description": "Sesja fotograficzna z powietrza"
+  },
+  {
+    "OperatorIdentity": "POL905106",
+    "DroneId": 3,
+    "FlightDateStart": "2026-06-20T12:33:02",
+    "FlightDateEnd": "2026-06-20T15:39:37",
+    "Latitude": 50.157416,
+    "Longitude": 15.548849,
+    "MaxAltitude": 78,
+    "Description": "Lot patrolowy nad lasem"
+  },
+  {
+    "OperatorIdentity": "POL850738",
+    "DroneId": 5,
+    "FlightDateStart": "2026-06-21T11:40:05",
+    "FlightDateEnd": "2026-06-21T14:47:42",
+    "Latitude": 49.922727,
+    "Longitude": 15.689518,
+    "MaxAltitude": 182,
+    "Description": "Test nowego oprogramowania"
+  }
+]
